@@ -28,8 +28,8 @@ function App() {
               path="/"
               element={
                 <div>
-                  <HeroPage />
-                  <AboutPage />
+                  {/* <HeroPage /> */}
+                  {/* <AboutPage /> */}
                   <HowItWork />
                 </div>
               }
