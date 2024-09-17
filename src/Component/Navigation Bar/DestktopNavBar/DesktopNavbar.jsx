@@ -7,7 +7,7 @@ const DesktopNavbar = ({ isOpen, setIsOpen }) => {
   const navigate = useNavigate();
 
   return (
-    <main className="navbar flex justify-between w-full max-w-[1280px] py-[16px] px-[20px] bg-gradient-to-r from-[#e6f0e5] to-[#fdf2f7]">
+    <main className="navbar flex justify-between w-full max-w-[1280px] py-[16px] px-[20px]">
       {/* Left section: Logo + Links */}
       <div className="logo-links hidden md:flex space-x-10 items-center text-[18px] w-[70%]">
         {/* Logo */}

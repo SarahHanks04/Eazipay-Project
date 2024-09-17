@@ -7,6 +7,7 @@ import "aos/dist/aos.css";
 import HeroPage from "./Component/Landing Page/HeroPage/HeroPage";
 import AboutPage from "./Component/Landing Page/Aboutpage/AboutPage";
 import HowItWork from "./Component/Landing Page/HowItWorks/HowItWork";
+import SubscribeToEasyLife from "./Component/Landing Page/SubscribeToEasyLife/SubscribeToEasyLife";
 
 function App() {
   useEffect(() => {
@@ -31,6 +32,7 @@ function App() {
                   <HeroPage />
                   <AboutPage />
                   <HowItWork />
+                  <SubscribeToEasyLife />
                 </div>
               }
             />
