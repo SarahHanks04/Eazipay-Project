@@ -8,6 +8,7 @@ import HeroPage from "./Component/Landing Page/HeroPage/HeroPage";
 import AboutPage from "./Component/Landing Page/Aboutpage/AboutPage";
 import HowItWork from "./Component/Landing Page/HowItWorks/HowItWork";
 import SubscribeToEasyLife from "./Component/Landing Page/SubscribeToEasyLife/SubscribeToEasyLife";
+import EasypayDemo from "./Component/Landing Page/EasyPayDemo/EasypayDemo";
 
 function App() {
   useEffect(() => {
@@ -33,6 +34,7 @@ function App() {
                   <AboutPage />
                   <HowItWork />
                   <SubscribeToEasyLife />
+                  <EasypayDemo />
                 </div>
               }
             />
