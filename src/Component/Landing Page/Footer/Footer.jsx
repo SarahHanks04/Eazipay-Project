@@ -1,4 +1,5 @@
 import React from "react";
+import AziPayLogo from "../../../assets/AziPayLogo.svg";
 
 const Footer = () => {
   return (
@@ -12,7 +13,7 @@ const Footer = () => {
           {/* COLUMN ONE */}
           <div className="text-center sm:text-left">
             <img
-              src={LaundryLogo}
+              src={AziPayLogo}
               alt="logo"
               className="mx-auto sm:mx-0 mb-4"
             />
