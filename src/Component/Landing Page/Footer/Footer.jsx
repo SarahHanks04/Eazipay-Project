@@ -30,7 +30,7 @@ const Footer = () => {
               Copyright &copy; {currentYear} Eazypay.
             </p>
             <p className="text-[#7C7C7C] text-sm pt-2">All right reserved</p>
-            <div className="flex justify-center sm:justify-start space-x-4 pt-4">
+            <div className="flex justify-center sm:justify-start space-x-4 pt-4 cursor-pointer">
               <img src={Instagram} alt="Instagram" />
               <img src={Twitter} alt="Twitter" />
               <img src={LinkedIn} alt="LinkedIn" />
@@ -149,7 +149,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/contact-form"
-                  className="text-[#7C7C7C] hover:underline hover:text-teal-600"
+                  className="text-[#7C7C7C] hover:underline hover:text-teal-600 cursor-pointer"
                 >
                   eazipay@gmail.com
                 </Link>
@@ -157,7 +157,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/services"
-                  className="text-[#7C7C7C] hover:underline hover:text-teal-600"
+                  className="text-[#7C7C7C] hover:underline hover:text-teal-600 cursor-pointer"
                 >
                   +234 816 878 9518
                 </Link>
