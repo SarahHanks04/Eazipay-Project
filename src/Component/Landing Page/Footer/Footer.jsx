@@ -17,7 +17,7 @@ const Footer = () => {
         <div
           className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8"
           data-aos="fade-up"
-          data-aos-delay="200"
+          data-aos-delay="100"
         >
           {/* COLUMN ONE */}
           <div className="text-center sm:text-left">
@@ -44,7 +44,7 @@ const Footer = () => {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
-                  to="/"
+                  to="/individuals"
                   className="text-[#7C7C7C] hover:underline hover:text-teal-600"
                 >
                   Individual
@@ -52,7 +52,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/services"
+                  to="/businesses"
                   className="text-[#7C7C7C] hover:underline hover:text-teal-600"
                 >
                   Businesses
@@ -60,7 +60,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/reviews"
+                  to="/request-demo"
                   className="text-[#7C7C7C] hover:underline hover:text-teal-600"
                 >
                   Request Demo
@@ -68,7 +68,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/prices"
+                  to="/pricing"
                   className="text-[#7C7C7C] hover:underline hover:text-teal-600"
                 >
                   Pricing
@@ -83,7 +83,7 @@ const Footer = () => {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
-                  to="/contact-form"
+                  to="/privacy-policy"
                   className="text-[#7C7C7C] hover:underline hover:text-teal-600"
                 >
                   Privacy Policy
@@ -91,7 +91,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/services"
+                  to="/terms-of-service"
                   className="text-[#7C7C7C] hover:underline hover:text-teal-600"
                 >
                   Terms of Service
@@ -107,7 +107,7 @@ const Footer = () => {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
-                  to="/contact-form"
+                  to="/faqs"
                   className="text-[#7C7C7C] hover:underline hover:text-teal-600"
                 >
                   FAQs
@@ -115,7 +115,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/services"
+                  to="/blog"
                   className="text-[#7C7C7C] hover:underline hover:text-teal-600"
                 >
                   Blog
@@ -123,7 +123,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/services"
+                  to="/career"
                   className="text-[#7C7C7C] hover:underline hover:text-teal-600"
                 >
                   Career
@@ -131,7 +131,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/services"
+                  to="/customer-stories"
                   className="text-[#7C7C7C] hover:underline hover:text-teal-600"
                 >
                   Customer Stories
@@ -148,7 +148,7 @@ const Footer = () => {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
-                  to="/contact-form"
+                  to="/contact-us"
                   className="text-[#7C7C7C] hover:underline hover:text-teal-600 cursor-pointer"
                 >
                   eazipay@gmail.com
@@ -156,7 +156,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/services"
+                  to="/"
                   className="text-[#7C7C7C] hover:underline hover:text-teal-600 cursor-pointer"
                 >
                   +234 816 878 9518
