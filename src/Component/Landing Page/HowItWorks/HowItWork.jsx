@@ -10,7 +10,7 @@ const HowItWork = () => {
     >
       
       <header className="text-center mt-[5rem] mb-[2.5rem] mx-auto">
-        <h1 className="text-[#11453B] text-2xl md:text-4xl font-bold">
+        <h1 className="text-[#11453B] text-2xl md:text-4xl font-bold font-serif">
           How Eazipay Works
         </h1>
         <p className="text-[#515251] text-lg md:text-xl mt-4">

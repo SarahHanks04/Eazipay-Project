@@ -8,10 +8,10 @@ const AboutPage = () => {
     <section className="about-container bg-[#F0F7EB] w-full min-h-screen flex justify-center items-center">
       <div className="p-10 w-full" data-aos="fade-up">
         <div className="about-title text-center">
-          <h1 className="text-[#11453B] text-[30px] font-semibold">
+          <h1 className="text-[#11453B] text-[34px] font-bold font-sans">
             For Individuals and Businesses
           </h1>
-          <p className="text-[#292A29] font-normal">
+          <p className="text-[#292A29] font-normal pt-3">
             Join 200+ businesses using Eazipay's easy solution.
           </p>
         </div>

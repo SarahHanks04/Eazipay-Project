@@ -10,14 +10,14 @@ const HeroPage = () => {
   return (
     <main className="homepage-container flex flex-col md:flex-row items-center p-8 bg-gradient-to-r from-[#e6f0e5] to-[#fdf2f7] gap-8 md:gap-4">
       <div className="md:w-1/2 pl-4 md:pl-8 text-start" data-aos="fade-up">
-        <h1 className="text-4xl font-bold text-[#292A29] font-poppins leading-tight tracking-normal">
+        <h1 className="text-4xl font-bold text-[#292A29] font-poppins leading-tight tracking-normal font-serif">
           Run your <span className="text-[#11453B]">payroll</span>
         </h1>
-        <h1 className="text-4xl font-bold text-green text-[#B4A572]">
+        <h1 className="text-4xl font-bold text-green text-[#B4A572] font-serif">
           easily <span className="text-[#292A29]">in</span>{" "}
           <span className="text-[#EA4E4B]">seconds</span>
         </h1>
-        <p className="mt-4 text-lg text-[#515251] font-[400] text-[20px]">
+        <p className="mt-4 text-lg text-[#515251] font-[400] text-[20px] font-sans">
           We’ve built an all-inclusive simple solution for <br /> individual and
           businesses to manage staff, pay <br /> salaries, bills, and relevant
           taxes all at once.
