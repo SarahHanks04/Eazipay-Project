@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-import AziPayColoredLogo from "../../../assets/AziPayColoredLogo.svg"
+import AziPayColoredLogo from "../../../assets/AziPayColoredLogo.svg";
 import { NavLink } from "react-router-dom";
+import DashboardColored from "../../../assets/DashboardColored.svg";
+import Wallet from "../../../assets/Wallet.svg";
 import { FiChevronDown, FiChevronUp } from "react-icons/fi";
 
 const Sidebar = () => {
@@ -23,27 +25,43 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="w-full md:w-1/5 p-4 text-white bg-white min-h-screen flex flex-col">
+    <div className="w-full md:w-1/6 text-white bg-white min-h-screen flex flex-col">
       {/* User info */}
       <div className="mb-6">
-        <img
-          src={AziPayColoredLogo}
-          alt="Eazypay"
-        //   className="w-12 h-12 rounded-full mr-4"
-        />
-        {/* <div>
-          <h3 className="text-lg font-bold">Username</h3>
-          <p className="text-sm">Dashboard</p>
-        </div> */}
+        <img src={AziPayColoredLogo} alt="Eazypay" />
+      </div>
+
+      {/* Dashboard */}
+      <div className="mb-4">
+        <div
+          className="text-[#11453B]  bg-[#F0F7EB80] flex justify-between items-center cursor-pointer"
+          onClick={() => toggleSection("dashboard")}
+        >
+          <div className="flex justify-center gap-4 py-4">
+            <img src={DashboardColored} alt="dashboard" />
+            <span>Dashboard</span>
+          </div>
+          {openSections.wallet ? <FiChevronUp /> : <FiChevronDown />}
+        </div>
+        {openSections.wallet && (
+          <div className="ml-4 mt-2">
+            <NavLink to="/dashboard" className="block py-2">
+              Wallet Balance
+            </NavLink>
+          </div>
+        )}
       </div>
 
       {/* Wallet Section */}
       <div className="mb-4">
         <div
-          className="flex justify-between items-center cursor-pointer"
+          className="flex justify-between items-center cursor-pointer text-black"
           onClick={() => toggleSection("wallet")}
         >
-          <span>Wallet</span>
+          <div className="flex justify-center gap-4">
+            <img src={Wallet} alt="wallet" />
+            <span>Wallet</span>
+          </div>
           {openSections.wallet ? <FiChevronUp /> : <FiChevronDown />}
         </div>
         {openSections.wallet && (
