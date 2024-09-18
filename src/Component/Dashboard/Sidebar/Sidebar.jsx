@@ -4,16 +4,25 @@ import { NavLink } from "react-router-dom";
 import DashboardColored from "../../../assets/DashboardColored.svg";
 import Wallet from "../../../assets/Wallet.svg";
 import { FiChevronDown, FiChevronUp } from "react-icons/fi";
+import User from "../../../assets/User.svg";
+import Payroll from "../../../assets/Payroll.svg";
+import Compliance from "../../../assets/Compliance.svg";
+import Quickloan from "../../../assets/Quickloan.svg";
+import Openbook from "../../../assets/Openbook.svg";
+import Call from "../../../assets/Call.svg";
+import Settings from "../../../assets/Settings.svg";
 
 const Sidebar = () => {
   // State to manage the collapse of each section
   const [openSections, setOpenSections] = useState({
+    dashboard: false,
     wallet: false,
     employeeManagement: false,
     payroll: false,
     compliance: false,
     quickLoan: false,
     bookKeeping: false,
+    support: false,
     settings: false,
   });
 
@@ -41,12 +50,12 @@ const Sidebar = () => {
             <img src={DashboardColored} alt="dashboard" />
             <span>Dashboard</span>
           </div>
-          {/* {openSections.wallet ? <FiChevronUp /> : <FiChevronDown />} */}
+          {/* {openSections.dachboard ? <FiChevronUp /> : <FiChevronDown />} */}
         </div>
-        {/* {openSections.wallet && (
+        {/* {openSections.dashboard && (
           <div className="ml-4 mt-2">
             <NavLink to="/dashboard" className="block py-2 text-[#515251]">
-              Wallet Balance
+              Open Dashboard
             </NavLink>
           </div>
         )} */}
@@ -58,7 +67,7 @@ const Sidebar = () => {
           className="flex justify-between items-center cursor-pointer text-[#515251]"
           onClick={() => toggle("wallet")}
         >
-          <div className="flex justify-center gap-4">
+          <div className="flex justify-center gap-2">
             <img src={Wallet} alt="wallet" />
             <span>Wallet</span>
           </div>
@@ -79,7 +88,10 @@ const Sidebar = () => {
           className="text-[#515251] flex justify-between items-center cursor-pointer"
           onClick={() => toggle("employeeManagement")}
         >
-          <span>Employee Management</span>
+          <div className="flex justify-center gap-2">
+            <img src={User} alt="Users" />
+            <span className="text-sm flex-shrink-0">Employee Management</span>
+          </div>
           {openSections.employeeManagement ? (
             <FiChevronUp />
           ) : (
@@ -104,7 +116,10 @@ const Sidebar = () => {
           className="text-[#515251] flex justify-between items-center cursor-pointer"
           onClick={() => toggle("payroll")}
         >
-          <span>Payroll</span>
+          <div className="flex justify-center gap-2">
+            <img src={Payroll} alt="Payroll" />
+            <span>Payroll</span>
+          </div>
           {openSections.payroll ? <FiChevronUp /> : <FiChevronDown />}
         </div>
         {openSections.payroll && (
@@ -122,7 +137,10 @@ const Sidebar = () => {
           className="text-[#515251] flex justify-between items-center cursor-pointer"
           onClick={() => toggle("compliance")}
         >
-          <span>Compliance</span>
+          <div className="flex justify-center gap-2">
+            <img src={Compliance} alt="Compliance" />
+            <span>Compliance</span>
+          </div>
           {openSections.compliance ? <FiChevronUp /> : <FiChevronDown />}
         </div>
         {openSections.compliance && (
@@ -140,7 +158,10 @@ const Sidebar = () => {
           className="text-[#515251] flex justify-between items-center cursor-pointer"
           onClick={() => toggle("quickLoan")}
         >
-          <span>Quick Loan</span>
+          <div className="flex justify-center gap-2">
+            <img src={Quickloan} alt="QuickLoan" />
+            <span>Quick Loan</span>
+          </div>
           {openSections.quickLoan ? <FiChevronUp /> : <FiChevronDown />}
         </div>
         {openSections.quickLoan && (
@@ -158,7 +179,10 @@ const Sidebar = () => {
           className="text-[#515251] flex justify-between items-center cursor-pointer"
           onClick={() => toggle("bookKeeping")}
         >
-          <span>Book Keeping</span>
+          <div className="flex justify-center gap-2">
+            <img src={Openbook} alt="Openbook" />
+            <span>Book Keeping</span>
+          </div>
           {openSections.bookKeeping ? <FiChevronUp /> : <FiChevronDown />}
         </div>
         {openSections.bookKeeping && (
@@ -170,13 +194,40 @@ const Sidebar = () => {
         )}
       </div>
 
+      {/* Support */}
+      <div className="mb-4">
+        <div
+          className="text-[#515251] flex justify-between items-center cursor-pointer"
+          onClick={() => toggle("settings")}
+        >
+          <div className="flex justify-center gap-2">
+            <img src={Call} alt="Settings" />
+            <span>Support</span>
+          </div>
+          {openSections.support ? <FiChevronUp /> : <FiChevronDown />}
+        </div>
+        {openSections.support && (
+          <div className="ml-4 mt-2 text-[#515251]">
+            <NavLink to="/account-center" className="block py-2">
+              Account Center
+            </NavLink>
+            <NavLink to="/contact-us" className="block py-2">
+              Contact Us
+            </NavLink>
+          </div>
+        )}
+      </div>
+
       {/* Settings */}
       <div className="mb-4">
         <div
           className="text-[#515251] flex justify-between items-center cursor-pointer"
           onClick={() => toggle("settings")}
         >
-          <span>Settings</span>
+          <div className="flex justify-center gap-2">
+            <img src={Settings} alt="Settings" />
+            <span>Settings</span>
+          </div>
           {openSections.settings ? <FiChevronUp /> : <FiChevronDown />}
         </div>
         {openSections.settings && (
