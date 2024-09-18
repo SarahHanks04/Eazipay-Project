@@ -17,7 +17,7 @@ const Sidebar = () => {
     settings: false,
   });
 
-  const toggleSection = (section) => {
+  const toggle = (section) => {
     setOpenSections((prevState) => ({
       ...prevState,
       [section]: !prevState[section],
@@ -35,7 +35,7 @@ const Sidebar = () => {
       <div className="mb-4">
         <div
           className="text-[#11453B]  bg-[#F0F7EB80] flex justify-between items-center cursor-pointer"
-          onClick={() => toggleSection("dashboard")}
+          onClick={() => toggle("dashboard")}
         >
           <div className="flex justify-center gap-4 py-4">
             <img src={DashboardColored} alt="dashboard" />
@@ -56,7 +56,7 @@ const Sidebar = () => {
       <div className="mb-4">
         <div
           className="flex justify-between items-center cursor-pointer text-black"
-          onClick={() => toggleSection("wallet")}
+          onClick={() => toggle("wallet")}
         >
           <div className="flex justify-center gap-4">
             <img src={Wallet} alt="wallet" />
@@ -77,7 +77,7 @@ const Sidebar = () => {
       <div className="mb-4">
         <div
           className="flex justify-between items-center cursor-pointer"
-          onClick={() => toggleSection("employeeManagement")}
+          onClick={() => toggle("employeeManagement")}
         >
           <span>Employee Management</span>
           {openSections.employeeManagement ? (
@@ -102,7 +102,7 @@ const Sidebar = () => {
       <div className="mb-4">
         <div
           className="flex justify-between items-center cursor-pointer"
-          onClick={() => toggleSection("payroll")}
+          onClick={() => toggle("payroll")}
         >
           <span>Payroll</span>
           {openSections.payroll ? <FiChevronUp /> : <FiChevronDown />}
@@ -120,7 +120,7 @@ const Sidebar = () => {
       <div className="mb-4">
         <div
           className="flex justify-between items-center cursor-pointer"
-          onClick={() => toggleSection("compliance")}
+          onClick={() => toggle("compliance")}
         >
           <span>Compliance</span>
           {openSections.compliance ? <FiChevronUp /> : <FiChevronDown />}
@@ -138,7 +138,7 @@ const Sidebar = () => {
       <div className="mb-4">
         <div
           className="flex justify-between items-center cursor-pointer"
-          onClick={() => toggleSection("quickLoan")}
+          onClick={() => toggle("quickLoan")}
         >
           <span>Quick Loan</span>
           {openSections.quickLoan ? <FiChevronUp /> : <FiChevronDown />}
@@ -156,7 +156,7 @@ const Sidebar = () => {
       <div className="mb-4">
         <div
           className="flex justify-between items-center cursor-pointer"
-          onClick={() => toggleSection("bookKeeping")}
+          onClick={() => toggle("bookKeeping")}
         >
           <span>Book Keeping</span>
           {openSections.bookKeeping ? <FiChevronUp /> : <FiChevronDown />}
@@ -174,7 +174,7 @@ const Sidebar = () => {
       <div className="mb-4">
         <div
           className="flex justify-between items-center cursor-pointer"
-          onClick={() => toggleSection("settings")}
+          onClick={() => toggle("settings")}
         >
           <span>Settings</span>
           {openSections.settings ? <FiChevronUp /> : <FiChevronDown />}
