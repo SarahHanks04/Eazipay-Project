@@ -12,6 +12,7 @@ import Openbook from "../../../assets/Openbook.svg";
 import Call from "../../../assets/Call.svg";
 import Settings from "../../../assets/Settings.svg";
 
+
 const Sidebar = () => {
   // State to manage the collapse of each section
   const [openSections, setOpenSections] = useState({
