@@ -9,6 +9,7 @@ import AboutPage from "./Component/Landing Page/Aboutpage/AboutPage";
 import HowItWork from "./Component/Landing Page/HowItWorks/HowItWork";
 import SubscribeToEasyLife from "./Component/Landing Page/SubscribeToEasyLife/SubscribeToEasyLife";
 import EasypayDemo from "./Component/Landing Page/EasyPayDemo/EasypayDemo";
+import Sidebar from "./Component/Dashboard/Sidebar/Sidebar";
 
 function App() {
   useEffect(() => {
@@ -25,7 +26,7 @@ function App() {
     <>
       <div>
         <Routes>
-          <Route path="/" element={<Layout />}>
+          {/* <Route path="/" element={<Layout />}>
             <Route
               path="/"
               element={
@@ -38,7 +39,8 @@ function App() {
                 </div>
               }
             />
-          </Route>
+          </Route> */}
+          <Route path="/" element={<Sidebar />}></Route>
         </Routes>
       </div>
     </>
