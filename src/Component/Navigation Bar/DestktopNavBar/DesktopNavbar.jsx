@@ -7,10 +7,10 @@ const DesktopNavbar = ({ isOpen, setIsOpen }) => {
   const navigate = useNavigate();
 
   return (
-    <main className="navbar flex justify-between w-full max-w-[1280px] py-[16px] px-[20px]">
-      {/* Left section: Logo + Links */}
+    <main className="navbar bg-gradient-to-r from-[#e6f0e5] to-[#fdf2f7] flex justify-between w-full max-w-[1280px] py-[16px] px-[20px]">
+      
       <div className="logo-links hidden md:flex space-x-10 items-center text-[18px] w-[70%]">
-        {/* Logo */}
+        
         <img
           src={AziPayLogo}
           alt="AziPay Logo"
@@ -18,7 +18,7 @@ const DesktopNavbar = ({ isOpen, setIsOpen }) => {
           height={32}
           className="mr-[3rem]"
         />
-        {/* Links */}
+        
         <NavLink
           to="/individual"
           className={({ isActive }) =>
@@ -61,7 +61,7 @@ const DesktopNavbar = ({ isOpen, setIsOpen }) => {
         </NavLink>
       </div>
 
-      {/* Right section: Login + Register Buttons */}
+      
       <div className="register-buttons hidden md:flex gap-[20px] w-[30%] mr-[3rem] justify-end">
         <button
           onClick={() => navigate("/login")}
