@@ -10,6 +10,7 @@ import HowItWork from "./Component/Landing Page/HowItWorks/HowItWork";
 import SubscribeToEasyLife from "./Component/Landing Page/SubscribeToEasyLife/SubscribeToEasyLife";
 import EasypayDemo from "./Component/Landing Page/EasyPayDemo/EasypayDemo";
 import Sidebar from "./Component/Dashboard/Sidebar/Sidebar";
+import Dashboard from "./Component/Dashboard/Dashboard/Dashboard";
 
 function App() {
   useEffect(() => {
@@ -40,7 +41,8 @@ function App() {
               }
             />
           </Route> */}
-          <Route path="/" element={<Sidebar />}></Route>
+          {/* <Route path="/" element={<Sidebar />}></Route> */}
+          <Route path="/" element={<Dashboard />}></Route>
         </Routes>
       </div>
     </>
