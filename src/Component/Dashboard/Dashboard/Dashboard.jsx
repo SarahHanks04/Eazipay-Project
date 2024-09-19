@@ -64,25 +64,25 @@ const Dashboard = () => {
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-6 col-span-2">
           <div className="bg-white rounded-lg p-6 text-center transition-all hover:shadow-md">
             <img src={UserColored} alt="Add Employee" className="bg-[#FFEDEC] p-3 rounded-full m-auto" />
-            <p className="mt-2 text-xs lg:text-base">Add Employee</p>
+            <p className="text-[#515251] mt-2 text-xs lg:text-base">Add Employee</p>
           </div>
 
           {/* Pay Salaries Button */}
           <div className="bg-white rounded-xl p-6 text-center transition-all hover:shadow-md">
             <img src={PayColored} alt="Pay Salaries" className="bg-[#F0F7EB] p-3 rounded-full m-auto" />
-            <p className="mt-2 text-xs lg:text-base">Pay Salaries</p>
+            <p className="text-[#515251] mt-2 text-xs lg:text-base">Pay Salaries</p>
           </div>
 
           {/* Pay Compliances Button */}
           <div className="bg-white rounded-lg p-6 text-center transition-all hover:shadow-md">
             <img src={SendColored} alt="Pay Compliances" className="bg-[#E0F8EA] p-3 rounded-full m-auto" />
-            <p className="mt-2 text-xs lg:text-base">Pay Compliances</p>
+            <p className="text-[#515251] mt-2 text-xs lg:text-base">Pay Compliances</p>
           </div>
 
           {/* Quick Loan Button */}
           <div className="bg-white rounded-lg p-6 text-center transition-all hover:shadow-md">
-            <img src={QuickLoanColored} alt="Quick Loan" className="bg-[#FFEDEC] p-3 rounded-full m-auto" />
-            <p className="mt-2 text-xs lg:text-base">Quick Loan</p>
+            <img src={QuickLoanColored} alt="Quick Loan" className="bg-[#EDF5FF] p-3 rounded-full m-auto" />
+            <p className="text-[#515251] mt-2 text-xs lg:text-base">Quick Loan</p>
           </div>
         </div>
 
