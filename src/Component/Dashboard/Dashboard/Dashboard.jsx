@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from "react";
+import CompanyLogo from "../../../assets/CompanyLogo.svg";
+import Notification from "../../../assets/Notification.svg";
+import KaluAbasiama from "../../../assets/KaluAbasiama.svg";
 import LineChart from "../../../assets/LineChart.svg";
 import Eye from "../../../assets/Eye.svg";
 import UserColored from "../../../assets/UserColored.svg";
@@ -31,26 +34,37 @@ const Dashboard = () => {
   }, []);
 
   return (
-    <section>
-      <nav>
-        <div><img src="" alt="Company Logo" /></div>
+    <section className="bg-[#F2F1F1] min-h-screen mx-auto">
+      <nav className="flex justify-between px-[4rem] bg-white">
+        <div>
+          <img src={CompanyLogo} alt="Company Logo" />
+        </div>
+        <div className="flex gap-[4rem]">
+          <img src={Notification} alt="Notification" width={27} />
+          <div className="flex gap-3">
+            <img src={KaluAbasiama} alt="Kalu Abasiama" width={50} />
+            <div className="align-middle text-center">
+              <h1 className="text-[#2B2B2B] text-[16px] pt-3">Kalu Abasiama</h1>
+              <p className="text-[#898989] text-sm text-start">Admin</p>
+            </div>
+          </div>
+        </div>
       </nav>
       {/* Welcome Section */}
-      <main className="bg-[#F2F1F1] min-h-screen p-4 mx-auto">
-        <div className="text-center lg:text-left">
-          <h1 className="text-xl lg:text-2xl font-bold">Welcome Abasiama</h1>
-          <p className="text-gray-600 text-xs lg:text-sm">
+      <main className=" p-12">
+        <div className="text-center lg:text-left pb-10">
+          <h1 className="text-xl text-[#292A29] font-sans lg:text-2xl font-bold">
+            Welcome Abasiama
+          </h1>
+          <p className="text-[#292A29] pt-4 text-xs lg:text-sm">
             Pay and manage your employee in minutes
           </p>
         </div>
 
         {/* Wallet and Payroll Section using Grid */}
         <div className="grid grid-rows-2 grid-flow-col gap-4">
-          {/* grid grid-cols-1 lg:grid-cols-3 gap-4 mt-6 */}
-          {/* Wallet Balance Card */}
-          <div className="bg-[#0B604F] text-white p-6 rounded-xl w-full row-span-1 col-span-2">
-            {/* col-span-2 */}
-            <p>Wallet Balance</p>
+          <div className="bg-[#11453B] text-white p-6 rounded-xl w-full row-span-1 col-span-2">
+            <p className="text-[#D9EBCD]">Wallet Balance</p>
             <div className="flex flex-col lg:flex-row justify-between pt-4 items-start lg:items-center">
               <div className="flex gap-4 align-middle">
                 <h2 className="text-2xl lg:text-3xl font-bold">
@@ -118,7 +132,6 @@ const Dashboard = () => {
 
           {/* Next Payroll */}
           <div className="rounded-xl shadow-md p-6 row-span-3">
-            {/* flex flex-col justify-between */}
             <div>
               <p className="text-[#515251] bg-[#D9EBCD] text-center py-3 rounded-tr-[1.2rem] rounded-tl-[1.2rem]">
                 Next Payroll
@@ -126,37 +139,31 @@ const Dashboard = () => {
               <div className="mt-4 text-center pb-8 border-b-[1.6px] border-[#E7E8E7]">
                 <div className="flex items-center justify-center gap-2">
                   <img src={Calendar} alt="Calendar" width={25} />
-                  <span className="text-sm">{currentDate}</span>
+                  <span className="text-sm text-[#515251]">{currentDate}</span>
                 </div>
-                <p className="text-gray-600">{formattedDate}</p>
+                <p className="text-[#515251]">{formattedDate}</p>
               </div>
 
               <div>
-                <div>
+                <div className="text-[#515251]">
                   <p className="mt-4 text-lg font-medium">Total Employee</p>
-                  <p className="font-bold">64</p>
+                  <p className="font-bold text-[#292A29]">64</p>
                 </div>
 
                 {/* Single Progress Bar with Two Colors */}
                 <div className="mt-4">
                   <div className="w-full bg-gray-300 rounded-full h-4 mb-4 relative">
-                    <div
-                      className="bg-green-500 h-4 absolute left-0 rounded-l-full transition-all duration-500"
-                      style={{ width: `50%` }} // Male percentage
-                    ></div>
-                    <div
-                      className="bg-red-500 h-4 absolute right-0 rounded-r-full transition-all duration-500"
-                      style={{ width: `50%` }} // Female percentage
-                    ></div>
+                    <div className="bg-[#11453B] h-4 w-[50%] absolute left-0 transition-all duration-500"></div>
+                    <div className="bg-[#EA4E4B] h-4 w-[50%] absolute right-0 transition-all duration-500"></div>
                   </div>
 
-                  <div className="flex justify-between text-sm">
+                  <div className="flex justify-between text-sm text-[#8D8E8D]">
                     <div>
-                      <span className="block text-green-500">Male</span>
+                      <span className="block">Male</span>
                       <span className="font-bold">32</span>
                     </div>
                     <div>
-                      <span className="block text-red-500">Female</span>
+                      <span className="block">Female</span>
                       <span className="font-bold">32</span>
                     </div>
                   </div>
@@ -166,23 +173,18 @@ const Dashboard = () => {
           </div>
         </div>
 
-        {/* Action Buttons Section */}
-        {/* <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-6"> */}
-        {/* Add Employee Button */}
-        {/* </div> */}
-
         {/* Inflow/Outflow Section */}
         <div className="mt-6">
           <div className="bg-white p-6 rounded-xl mt-4">
             {/* Inflow Outflow Numbers */}
             <div className="flex flex-col lg:flex-row justify-between gap-4 lg:gap-[3rem]">
               <div>
-                <p className="text-[#11453B]">Inflow</p>
-                <h3 className="text-green-500 font-bold">₦1,567,552</h3>
+                <p className="text-[#515251]">Inflow</p>
+                <h3 className="text-[#219653] font-bold">₦1,567,552</h3>
               </div>
               <div className="mr-8">
-                <p className="text-[#11453B]">Outflow</p>
-                <h3 className="text-red-500 font-bold">₦1,567,552</h3>
+                <p className="text-[#515251]">Outflow</p>
+                <h3 className="text-[#EF4444] font-bold">₦1,567,552</h3>
               </div>
               <div className="flex gap-2 align-middle">
                 <p className="text-[#11453B]">Inflow/Outflow</p>
@@ -213,147 +215,3 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
-
-// import React from "react";
-// import { useState, useEffect } from "react";
-// import LineChart from "../../../assets/LineChart.svg";
-// import Eye from "../../../assets/Eye.svg";
-// import UserColored from "../../../assets/UserColored.svg";
-// import PayColored from "../../../assets/PayColored.svg";
-// import SendColored from "../../../assets/SendColored.svg";
-// import QuickLoanColored from "../../../assets/QuickLoanColored.svg";
-// import DownArrow from "../../../assets/DownArrow.svg";
-
-// const Dashboard = () => {
-//   const [currentDate, setCurrentDate] = useState("");
-//   const [currentYear, setCurrentYear] = useState("");
-
-//   useEffect(() => {
-//     const date = new Date();
-//     setCurrentDate(
-//       date.toLocaleDateString("en-GB", {
-//         weekday: "long",
-//         day: "numeric",
-//         month: "long",
-//         year: "numeric",
-//       })
-//     );
-//     setCurrentYear(date.getFullYear());
-//   }, []);
-
-//   return (
-//     <div className="bg-[#F2F2F2] min-h-screen p-4">
-//       {/* Welcome Section */}
-//       <div className="text-center lg:text-left">
-//         <h1 className="text-2xl font-bold">Welcome Abasiama</h1>
-//         <p className="text-gray-600 text-sm">
-//           Pay and manage your employee in minutes
-//         </p>
-//       </div>
-
-//       {/* Wallet and Payroll Info Section */}
-//       <div className="flex flex-col lg:flex-row justify-between items-center gap-4">
-//         {/* Wallet Balance Card */}
-//         <div className="bg-[#0B604F] text-white p-4 rounded-xl w-full lg:w-[65%]">
-//           <p>Wallet Balance</p>
-//           <div className="flex justify-between pt-4">
-//             <div className="flex gap-4 align-middle">
-//               <h2 className="text-3xl font-bold">₦12,560,078.00</h2>
-//               <span>
-//                 <img src={Eye} alt="eye" width={30} />
-//               </span>
-//             </div>
-//             <div>
-//               <button className="bg-[#D9EAD3] text-[#11453B] text-center px-8 py-2 rounded-full mb-4">
-//                 Fund Wallet
-//               </button>
-//             </div>
-//           </div>
-//         </div>
-
-//         {/* Next Payroll */}
-//         <div className="bg-[#E8F5E9] p-4 rounded-xl text-center">
-//           <p className="text-[#11453B]">Next Payroll</p>
-//           <div className="mt-4">
-//             <p className="font-bold">{currentDate}</p>
-//             <p>Total Employee</p>
-//             <h2 className="text-3xl font-bold">64</h2>
-//             <div className="flex justify-between items-center mt-2">
-//               <div className="text-sm">
-//                 <span className="block">Male</span>
-//                 <span>32</span>
-//               </div>
-//               <div className="bg-red-400 h-1 w-12 rounded-lg"></div>
-//               <div className="text-sm">
-//                 <span className="block">Female</span>
-//                 <span>32</span>
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-
-//       {/* Action Buttons Section */}
-//       <div className="flex gap-8 mt-6">
-//         {/* Add Employee Button */}
-//         <div className="bg-white rounded-lg p-6 text-center">
-//           <img src={UserColored} alt="Add Employee" />
-//           <p className="mt-2">Add Employee</p>
-//         </div>
-
-//         {/* Pay Salaries Button */}
-//         <div className="bg-white rounded-lg p-6 text-center">
-//           <img src={PayColored} alt="Pay Salaries" />
-//           <p className="mt-2">Pay Salaries</p>
-//         </div>
-
-//         {/* Pay Compliances Button */}
-//         <div className="bg-white rounded-lg p-6 text-center">
-//           <img src={SendColored} alt="Pay Compliances" />
-//           <p className="mt-2">Pay Compliances</p>
-//         </div>
-
-//         {/* Quick Loan Button */}
-//         <div className="bg-white rounded-lg p-6 text-center">
-//           <img src={QuickLoanColored} alt="Quick Loan" />
-//           <p className="mt-2">Quick Loan</p>
-//         </div>
-//       </div>
-
-//       {/* Inflow/Outflow Section */}
-//       <div className="mt-6">
-//         <div className="bg-white p-6 rounded-xl mt-4">
-//           {/* Inflow Outflow Numbers */}
-//           <div className="flex justify-between gap-[3rem]">
-//             <div className="">
-//               <p className="text-[#11453B]">Inflow</p>
-//               <h3 className="text-green-500 font-bold">₦1,567,552</h3>
-//             </div>
-//             <div className="mr-8">
-//               <p className="text-[#11453B]">Outflow</p>
-//               <h3 className="text-red-500 font-bold">₦1,567,552</h3>
-//             </div>
-//             <div className="flex gap-2 align-middle">
-//               <p className="text-[#11453B]">Inflow/Outflow</p>
-//               <span><img src={DownArrow} alt="Arrow Down" /></span>
-//             </div>
-//           </div>
-
-//           {/* Dummy Line Chart */}
-//           <div className="mt-4">
-//             <div className="relative">
-//               <img src={LineChart} alt="Inflow/Outflow chart" />
-//             </div>
-//             <div className="absolute top-[130%] right-[24%]">
-//               <p className="bg-[#11453B] text-white px-3 py-1 rounded">
-//                 {currentYear}
-//               </p>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Dashboard;
