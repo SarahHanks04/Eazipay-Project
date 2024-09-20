@@ -28,7 +28,7 @@ function App() {
     <>
       <div>
         <Routes>
-          {/* <Route path="/" element={<Layout />}>
+          <Route path="/" element={<Layout />}>
             <Route
               path="/"
               element={
@@ -41,10 +41,10 @@ function App() {
                 </div>
               }
             />
-          </Route> */}
+          </Route>
           <Route path="/dashboard-layout" element={<DashboardLayout />}/>
-          {/* <Route path="/dashboard" element={<MainDashboard />} /> */}
-          <Route path="/" element={<MainSidebar />} />
+          <Route path="/dashboard" element={<MainDashboard />} />
+          <Route path="/sidebar" element={<MainSidebar />} />
 
         </Routes>
       </div>

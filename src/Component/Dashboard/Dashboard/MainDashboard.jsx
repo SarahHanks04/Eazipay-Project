@@ -1,14 +1,12 @@
 import React from "react";
-
+import "../DashboardLayout/Layout.css";
 import WalletBalance from "./WalletBalance";
 import Chart from "./Chart";
 
 const MainDashboard = () => {
   return (
-    <section className="bg-[#F2F1F1] min-h-screen mx-auto">
-      
-      <main className="pt-16 p-6 lg:p-16">
-      {/*  lg:pt-28 */}
+    <section className="dashboard bg-[#F2F1F1] min-h-screen w-full">
+      <main className="px-8">
         <div className="text-center lg:text-left pb-6 lg:pb-10">
           <h1 className="text-xl text-[#292A29] font-sans lg:text-2xl font-bold">
             Welcome Abasiama
