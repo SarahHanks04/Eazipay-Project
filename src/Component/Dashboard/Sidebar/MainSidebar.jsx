@@ -10,7 +10,6 @@ import Loan from "./Loan";
 import Support from "./Support";
 import Setting from "./Setting";
 
-
 const MainSidebar = () => {
   const [openSections, setOpenSections] = useState({
     dashboard: false,
@@ -33,12 +32,10 @@ const MainSidebar = () => {
 
   return (
     <section className="w-full md:w-1/6 text-white bg-white min-h-screen flex flex-col">
-      {/* User info */}
       <div className="mb-2">
         <img src={AziPayColoredLogo} alt="Eazypay" />
       </div>
 
-      {/* Dashboard */}
       <DashboardMenu toggle={toggle} />
 
       <WalletSection
