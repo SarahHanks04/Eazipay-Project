@@ -1,8 +1,9 @@
 import React from "react";
 import User from "../../../assets/User.svg";
 import { FiChevronDown, FiChevronUp } from "react-icons/fi";
+import { NavLink } from "react-router-dom";
 
-const EmployeeMgt = ({ toggle, openSections }) => {
+const EmployeeMgt = ({ toggle, isOpen }) => {
   return (
     <main>
       <div className="mb-2 py-4 border-b-[1.2px]">
@@ -14,13 +15,13 @@ const EmployeeMgt = ({ toggle, openSections }) => {
             <img src={User} alt="Users" />
             <span className="text-sm flex-shrink-0">Employee Management</span>
           </div>
-          {openSections.employeeManagement ? (
+          {isOpen.employeeManagement ? (
             <FiChevronUp />
           ) : (
             <FiChevronDown />
           )}
         </div>
-        {openSections.employeeManagement && (
+        {isOpen.employeeManagement && (
           <div className="ml-4 mt-2 text-[#515251] text-sm">
             <NavLink to="/add-employee" className="block py-2">
               Add Employee

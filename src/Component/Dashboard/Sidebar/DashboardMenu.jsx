@@ -2,7 +2,9 @@ import React from "react";
 import DashboardColored from "../../../assets/DashboardColored.svg";
 import { NavLink } from "react-router-dom";
 
-const DashboardMenu = ({ toggle }) => {
+
+const DashboardMenu = ({toggle}) => {
+  
   return (
     <main>
       <div className="mb-2 border-l-[5px] border-[#11453B] bg-[#F0F7EB80] rounded-sm pl-3">

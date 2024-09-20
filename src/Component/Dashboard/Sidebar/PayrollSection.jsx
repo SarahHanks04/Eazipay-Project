@@ -1,8 +1,9 @@
 import React from "react";
 import Payroll from "../../../assets/Payroll.svg";
 import { FiChevronDown, FiChevronUp } from "react-icons/fi";
+import { NavLink } from "react-router-dom";
 
-const PayrollSection = ({ toggle, openSections }) => {
+const PayrollSection = ({ toggle, isOpen }) => {
   return (
     <main>
       <div className="mb-2 px-4 py-2 border-b-[1.2px]">
@@ -14,9 +15,9 @@ const PayrollSection = ({ toggle, openSections }) => {
             <img src={Payroll} alt="Payroll" />
             <span className="text-sm">Payroll</span>
           </div>
-          {openSections.payroll ? <FiChevronUp /> : <FiChevronDown />}
+          {isOpen.payroll ? <FiChevronUp /> : <FiChevronDown />}
         </div>
-        {openSections.payroll && (
+        {isOpen.payroll && (
           <div className="ml-4 mt-2 text-[#515251] text-sm">
             <NavLink to="/payroll" className="block py-2">
               Payroll Details

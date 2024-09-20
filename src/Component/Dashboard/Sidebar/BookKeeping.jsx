@@ -1,8 +1,11 @@
 import React from "react";
 import Openbook from "../../../assets/Openbook.svg";
 import { FiChevronDown, FiChevronUp } from "react-icons/fi";
+import { NavLink } from "react-router-dom";
 
-const BookKeeping = ({ toggle, openSections }) => {
+
+const BookKeeping = ({isOpen, toggle}) => {
+  
   return (
     <main>
       <div className="mb-2 px-4 py-2 border-b-[1.2px]">
@@ -14,9 +17,9 @@ const BookKeeping = ({ toggle, openSections }) => {
             <img src={Openbook} alt="Openbook" />
             <span className="text-sm">Book Keeping</span>
           </div>
-          {openSections.bookKeeping ? <FiChevronUp /> : <FiChevronDown />}
+          {isOpen.bookKeeping ? <FiChevronUp /> : <FiChevronDown />}
         </div>
-        {openSections.bookKeeping && (
+        {isOpen.bookKeeping && (
           <div className="ml-4 mt-2 text-[#515251] text-sm">
             <NavLink to="/book-keeping" className="block py-2">
               Manage Books

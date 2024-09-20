@@ -1,8 +1,9 @@
 import React from "react";
 import Call from "../../../assets/Call.svg";
 import { FiChevronDown, FiChevronUp } from "react-icons/fi";
+import { NavLink } from "react-router-dom";
 
-const Support = ({ toggle, openSections }) => {
+const Support = ({ toggle, isOpen }) => {
   return (
     <main>
       <div className="mb-2 px-4 py-2 border-b-[1.2px]">
@@ -14,9 +15,9 @@ const Support = ({ toggle, openSections }) => {
             <img src={Call} alt="Settings" />
             <span className="text-sm">Support</span>
           </div>
-          {openSections.support ? <FiChevronUp /> : <FiChevronDown />}
+          {isOpen.support ? <FiChevronUp /> : <FiChevronDown />}
         </div>
-        {openSections.support && (
+        {isOpen.support && (
           <div className="ml-4 mt-2 text-[#515251] text-sm">
             <NavLink to="/account-center" className="block py-2">
               Account Center

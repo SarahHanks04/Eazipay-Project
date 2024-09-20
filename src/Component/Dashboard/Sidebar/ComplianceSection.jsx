@@ -1,8 +1,11 @@
 import React from "react";
 import Compliance from "../../../assets/Compliance.svg";
 import { FiChevronDown, FiChevronUp } from "react-icons/fi";
+import { NavLink } from "react-router-dom";
 
-const ComplianceSection = ({ toggle, openSections }) => {
+
+const ComplianceSection = ({isOpen, toggle}) => {
+  
   return (
     <main>
       <div className="mb-2 px-4 py-2 border-b-[1.2px]">
@@ -14,9 +17,9 @@ const ComplianceSection = ({ toggle, openSections }) => {
             <img src={Compliance} alt="Compliance" />
             <span className="text-sm">Compliance</span>
           </div>
-          {openSections.compliance ? <FiChevronUp /> : <FiChevronDown />}
+          {isOpen.compliance ? <FiChevronUp /> : <FiChevronDown />}
         </div>
-        {openSections.compliance && (
+        {isOpen.compliance && (
           <div className="ml-4 mt-2 text-[#515251] text-sm">
             <NavLink to="/compliance" className="block py-2">
               Compliance

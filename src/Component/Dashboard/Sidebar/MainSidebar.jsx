@@ -12,7 +12,7 @@ import Setting from "./Setting";
 import "../DashboardLayout/Layout.css";
 
 const MainSidebar = () => {
-  const [openSections, setOpenSections] = useState({
+  const [isOpen, setIsOpen] = useState({
     dashboard: false,
     wallet: false,
     employeeManagement: false,
@@ -25,71 +25,91 @@ const MainSidebar = () => {
   });
 
   const toggle = (section) => {
-    setOpenSections((prevState) => ({
+    setIsOpen((prevState) => ({
       ...prevState,
       [section]: !prevState[section],
     }));
   };
 
   return (
-    <section className="sidebar w-full md:w-[30%] text-white bg-white min-h-screen flex flex-col">
+    <section className="sidebar w-full md:w-[30%] text-white bg-white max-h-screen flex flex-col">
       {/* Sidebar logo */}
-      <div className="mb-4">
-        <img src={AziPayColoredLogo} alt="Eazypay" className="w-full h-auto" />
+      <div className="">
+        <img src={AziPayColoredLogo} alt="Eazypay" width={400} />
       </div>
 
       {/* Menu Sections */}
       <DashboardMenu toggle={toggle} />
 
-      <WalletSection
-        openSections={openSections}
-        setOpenSections={setOpenSections}
-        toggle={toggle}
-      />
+      <WalletSection isOpen={isOpen} setIsOpen={setIsOpen} toggle={toggle} />
 
-      <EmployeeMgt
-        openSections={openSections}
-        setOpenSections={setOpenSections}
-        toggle={toggle}
-      />
+      <EmployeeMgt isOpen={isOpen} setIsOpen={setIsOpen} toggle={toggle} />
 
-      <PayrollSection
-        openSections={openSections}
-        setOpenSections={setOpenSections}
-        toggle={toggle}
-      />
+      <PayrollSection isOpen={isOpen} setIsOpen={setIsOpen} toggle={toggle} />
 
       <ComplianceSection
-        openSections={openSections}
-        setOpenSections={setOpenSections}
+        isOpen={isOpen}
+        setIsOpen={setIsOpen}
         toggle={toggle}
       />
 
-      <Loan
-        openSections={openSections}
-        setOpenSections={setOpenSections}
-        toggle={toggle}
-      />
+      <Loan isOpen={isOpen} setIsOpen={setIsOpen} toggle={toggle} />
 
-      <BookKeeping
-        openSections={openSections}
-        setOpenSections={setOpenSections}
-        toggle={toggle}
-      />
+      <BookKeeping isOpen={isOpen} setIsOpen={setIsOpen} toggle={toggle} />
 
-      <Support
-        openSections={openSections}
-        setOpenSections={setOpenSections}
-        toggle={toggle}
-      />
+      <Support isOpen={isOpen} setIsOpen={setIsOpen} toggle={toggle} />
 
-      <Setting
-        openSections={openSections}
-        setOpenSections={setOpenSections}
-        toggle={toggle}
-      />
+      <Setting isOpen={isOpen} setIsOpen={setIsOpen} toggle={toggle} />
     </section>
   );
 };
 
 export default MainSidebar;
+
+// import React, { createContext, useState } from "react";
+// import AziPayColoredLogo from "../../../assets/AziPayColoredLogo.svg";
+
+// export const SidebarContext = createContext();
+
+// const SidebarProvider = ({ children }) => {
+//   const [isOpen, setIsOpen] = useState({
+//     dashboard: false,
+//     wallet: false,
+//     employeeManagement: false,
+//     payroll: false,
+//     compliance: false,
+//     quickLoan: false,
+//     bookKeeping: false,
+//     support: false,
+//     settings: false,
+//   });
+
+//   const toggle = (section) => {
+//     setIsOpen((prevState) => ({
+//       ...prevState,
+//       [section]: !prevState[section],
+//     }));
+//   };
+
+//   const values = {
+//     isOpen,
+//     toggle,
+//   };
+
+//   return (
+//     <div className="sidebar w-full md:w-[30%] text-white bg-white min-h-screen flex flex-col">
+//       <SidebarContext.Provider value={values}>
+//         <div className="mb-4">
+//           <img
+//             src={AziPayColoredLogo}
+//             alt="Eazypay"
+//             className="w-full h-auto"
+//           />
+//         </div>
+//         {children}
+//       </SidebarContext.Provider>
+//     </div>
+//   );
+// };
+
+// export default SidebarProvider;

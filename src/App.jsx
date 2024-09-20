@@ -13,6 +13,7 @@ import MainDashboard from "./Component/Dashboard/Dashboard/MainDashboard";
 import DashboardLayout from "./Component/Dashboard/DashboardLayout/DashboardLayout";
 import MainSidebar from "./Component/Dashboard/Sidebar/MainSidebar";
 
+
 function App() {
   useEffect(() => {
     AOS.init({
@@ -28,7 +29,7 @@ function App() {
     <>
       <div>
         <Routes>
-          <Route path="/" element={<Layout />}>
+          {/* <Route path="/" element={<Layout />}>
             <Route
               path="/"
               element={
@@ -41,9 +42,9 @@ function App() {
                 </div>
               }
             />
-          </Route>
-          <Route path="/dashboard-layout" element={<DashboardLayout />}/>
-          <Route path="/dashboard" element={<MainDashboard />} />
+          </Route> */}
+          {/* <Route path="/dashboard-layout" element={<DashboardLayout />}/>
+          <Route path="/dashboard" element={<MainDashboard />} /> */}
           <Route path="/sidebar" element={<MainSidebar />} />
 
         </Routes>

@@ -1,15 +1,16 @@
 import React from "react";
-import MainSidebar from "../Sidebar/MainSidebar";
+// import MainSidebar from "../Sidebar/MainSidebar";
 import CompanyLogo from "../../../assets/CompanyLogo.svg";
 import Notification from "../../../assets/Notification.svg";
 import KaluAbasiama from "../../../assets/KaluAbasiama.svg";
 import MainDashboard from "../Dashboard/MainDashboard";
 import "../DashboardLayout/Layout.css";
+import SidebarProvider from "../Sidebar/MainSidebar";
 
 const DashboardLayout = () => {
   return (
     <div className="dashboard-container flex bg-[#E7E8E7]">
-      <MainSidebar className="fixed top-0 left-0 z-10 bg-white w-[272px] h-[1024px]" />
+      <SidebarProvider className="fixed top-0 left-0 z-10 bg-white w-[272px] h-[1024px]" />
 
       <div className="flex-1">
         <nav className="fixed top-0 left-1/6 w-[77%] z-10 bg-white py-2 shadow-md flex justify-between px-6 lg:px-[4rem]">

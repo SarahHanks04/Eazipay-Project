@@ -1,8 +1,9 @@
 import React from "react";
 import Quickloan from "../../../assets/Quickloan.svg";
 import { FiChevronDown, FiChevronUp } from "react-icons/fi";
+import { NavLink } from "react-router-dom";
 
-const Loan = ({ toggle, openSections }) => {
+const Loan = ({ toggle, isOpen }) => {
   return (
     <main>
       <div className="mb-2 px-4 py-2 border-b-[1.2px]">
@@ -14,9 +15,9 @@ const Loan = ({ toggle, openSections }) => {
             <img src={Quickloan} alt="QuickLoan" />
             <span className="text-sm">Quick Loan</span>
           </div>
-          {openSections.quickLoan ? <FiChevronUp /> : <FiChevronDown />}
+          {isOpen.quickLoan ? <FiChevronUp /> : <FiChevronDown />}
         </div>
-        {openSections.quickLoan && (
+        {isOpen.quickLoan && (
           <div className="ml-4 mt-2 text-[#515251] text-sm">
             <NavLink to="/quick-loan" className="block py-2">
               Apply for Loan
