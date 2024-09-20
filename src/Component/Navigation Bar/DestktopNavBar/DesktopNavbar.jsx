@@ -20,7 +20,7 @@ const DesktopNavbar = ({ isOpen, setIsOpen }) => {
         />
         
         <NavLink
-          to="/individual"
+          to="/sidebar"
           className={({ isActive }) =>
             isActive
               ? "text-red-700 font-bold whitespace-nowrap"
@@ -30,7 +30,7 @@ const DesktopNavbar = ({ isOpen, setIsOpen }) => {
           Individual
         </NavLink>
         <NavLink
-          to="/business"
+          to="/dashboard"
           className={({ isActive }) =>
             isActive
               ? "text-red-700 font-bold whitespace-nowrap"

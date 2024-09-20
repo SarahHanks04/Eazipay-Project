@@ -5,7 +5,7 @@ import KaluAbasiama from "../../../assets/KaluAbasiama.svg";
 import WalletBalance from "./WalletBalance";
 import Chart from "./Chart";
 
-const Dashboard = () => {
+const MainDashboard = () => {
   return (
     <section className="bg-[#F2F1F1] min-h-screen mx-auto">
       <nav className=" fixed top-0 left-0 right-0 z-10 flex justify-between px-6 lg:px-[4rem] bg-white py-2 shadow-md">
@@ -46,4 +46,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default MainDashboard;
