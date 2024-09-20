@@ -52,7 +52,7 @@ const MobileNavBar = () => {
             </li>
             <li>
               <NavLink
-                to="/dashboard"
+                to="/dashboard-layout"
                 onClick={() => setIsOpen(false)}
                 className={({ isActive }) =>
                   isActive ? "text-red-700 font-bold" : "text-black"

@@ -30,7 +30,7 @@ const DesktopNavbar = ({ isOpen, setIsOpen }) => {
           Individual
         </NavLink>
         <NavLink
-          to="/dashboard"
+          to="/dashboard-layout"
           className={({ isActive }) =>
             isActive
               ? "text-red-700 font-bold whitespace-nowrap"
