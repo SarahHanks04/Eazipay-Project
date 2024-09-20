@@ -4,6 +4,7 @@ import Notification from "../../../assets/Notification.svg";
 import KaluAbasiama from "../../../assets/KaluAbasiama.svg";
 import LineChart from "../../../assets/LineChart.svg";
 import Eye from "../../../assets/Eye.svg";
+import EyeColored from "../../../assets/EyeColored.svg";
 import UserColored from "../../../assets/UserColored.svg";
 import PayColored from "../../../assets/PayColored.svg";
 import SendColored from "../../../assets/SendColored.svg";
@@ -16,6 +17,14 @@ const Dashboard = () => {
   const [currentDate, setCurrentDate] = useState("");
   const [formattedDate, setFormattedDate] = useState("");
   const [currentYear, setCurrentYear] = useState("");
+
+  // State to control wallet balance visibility
+  const [isBalanceVisible, setIsBalanceVisible] = useState(false);
+
+  // Toggle the visibility of the wallet balance
+  const toggleBalanceVisibility = () => {
+    setIsBalanceVisible((prev) => !prev);
+  };
 
   // State to control chart visibility
   const [isChartVisible, setIsChartVisible] = useState(false);
@@ -77,17 +86,25 @@ const Dashboard = () => {
         {/* Wallet and Payroll Section using Grid */}
         <div className="grid grid-rows-2 grid-flow-col gap-4 sm:grid-cols-1 lg:grid-cols-2">
           {/* Wallet Balance Section */}
-          <div className="bg-[#11453B] text-white p-4 sm:p-6 rounded-xl w-full row-span-1 col-span-2">
+          <div className="bg-[#11453B] text-white p-6 sm:p-6 rounded-xl w-full row-span-1 col-span-2">
             <p className="text-[#D9EBCD] text-sm sm:text-base">
               Wallet Balance
             </p>
             <div className="flex flex-col lg:flex-row justify-between pt-4 items-start lg:items-center">
               <div className="flex gap-2 sm:gap-4 align-middle">
                 <h2 className="text-lg sm:text-2xl lg:text-3xl font-bold">
-                  ₦12,560,078.00
+                  {isBalanceVisible ? "₦12,560,078.00" : "**********"}
                 </h2>
-                <span>
-                  <img src={Eye} alt="eye" width={20} className="lg:w-[30px]" />
+                <span
+                  onClick={toggleBalanceVisibility}
+                  className="cursor-pointer"
+                >
+                  <img
+                    src={isBalanceVisible ? Eye : EyeColored}
+                    alt={isBalanceVisible ? "Hide Balance" : "Show Balance"}
+                    width={20}
+                    className="lg:w-[30px]"
+                  />
                 </span>
               </div>
               <button className="mt-4 lg:mt-0 bg-[#D9EAD3] text-[#11453B] text-center px-4 sm:px-6 py-2 rounded-full transition-all hover:bg-[#c8e4bf] text-xs sm:text-sm lg:text-base">
@@ -197,7 +214,7 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
-        
+
         {/* Inflow Outflow Numbers */}
         <div className="mt-6">
           <div className="bg-white p-6 rounded-xl mt-4">
