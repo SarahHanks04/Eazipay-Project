@@ -116,8 +116,8 @@ const WalletBalance = () => {
           </div>
 
           {/* Next Payroll Section */}
-          <div className="rounded-xl shadow-md row-span-3">
-            <p className="text-[#515251] bg-[#D9EBCD] text-center px-10 py-2 sm:py-3 rounded-tr-[1.2rem] rounded-tl-[1.2rem]">
+          <div className="rounded-xl shadow-md row-span-3 bg-white rounded-tr-[1rem] rounded-tl-[1rem]">
+            <p className="text-[#515251] bg-[#D9EBCD] text-center px-10 py-2 sm:py-3 rounded-tr-[1rem] rounded-tl-[1rem]">
               Next Payroll
             </p>
             <div>

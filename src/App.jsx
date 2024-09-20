@@ -11,6 +11,7 @@ import SubscribeToEasyLife from "./Component/Landing Page/SubscribeToEasyLife/Su
 import EasypayDemo from "./Component/Landing Page/EasyPayDemo/EasypayDemo";
 import MainDashboard from "./Component/Dashboard/Dashboard/MainDashboard";
 import DashboardLayout from "./Component/Dashboard/DashboardLayout/DashboardLayout";
+import MainSidebar from "./Component/Dashboard/Sidebar/MainSidebar";
 
 function App() {
   useEffect(() => {
@@ -42,7 +43,8 @@ function App() {
             />
           </Route> */}
           <Route path="/dashboard-layout" element={<DashboardLayout />}/>
-          <Route path="/dashboard" element={<MainDashboard />} />
+          {/* <Route path="/dashboard" element={<MainDashboard />} /> */}
+          <Route path="/" element={<MainSidebar />} />
 
         </Routes>
       </div>
