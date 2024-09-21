@@ -8,7 +8,7 @@ import BottomNavbarComponent from "./BottomNavbarComponent";
 const MainIndividualComponent = () => {
   return (
     <div className="p-4">
-      <div className="my-10 flex items-center text-[#515251]">
+      <div className="mb-10 mt-3 flex items-center text-[#515251]">
         <img src={Wasiu} alt="Wasiu"  className="mr-6" />
         <p className="text-lg">Hello Wasiu</p>
       </div>

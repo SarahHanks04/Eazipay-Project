@@ -41,7 +41,7 @@ const MobileNavBar = () => {
           <ul className="space-y-4">
             <li>
               <NavLink
-                to="/sidebar"
+                to="/individual"
                 onClick={() => setIsOpen(false)}
                 className={({ isActive }) =>
                   isActive ? "text-red-700 font-bold" : "text-black"
@@ -74,7 +74,7 @@ const MobileNavBar = () => {
             </li>
             <li>
               <NavLink
-                to="/set-your-payroll"
+                to="/sidebar"
                 onClick={() => setIsOpen(false)}
                 className={({ isActive }) =>
                   isActive ? "text-red-700 font-bold" : "text-black"

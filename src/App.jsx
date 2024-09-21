@@ -33,7 +33,7 @@ function App() {
       <div>
         <IndividualProvider>
           <Routes>
-            {/* <Route path="/" element={<Layout />}>
+            <Route path="/" element={<Layout />}>
               <Route
                 path="/"
                 element={
@@ -46,21 +46,18 @@ function App() {
                   </div>
                 }
               />
-            </Route> */}
-            {/* <Route path="/dashboard-layout" element={<DashboardLayout />} />
+            </Route>
+            <Route path="/dashboard-layout" element={<DashboardLayout />} />
             <Route path="/dashboard" element={<MainDashboard />} />
-            <Route path="/sidebar" element={<MainSidebar />} /> */}
+            <Route path="/sidebar" element={<MainSidebar />} />
             <Route
-              path="/"
+              path="/individual"
               element={
                 <div>
                   <MainIndividualComponent />
-
-                  {/* <QuickActionsComponent /> */}
                 </div>
               }
             />
-            {/* <BottomNavbarComponent /> */}
           </Routes>
         </IndividualProvider>
       </div>

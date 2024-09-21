@@ -20,7 +20,7 @@ const DesktopNavbar = ({ isOpen, setIsOpen }) => {
         />
         
         <NavLink
-          to="/sidebar"
+          to="/individual"
           className={({ isActive }) =>
             isActive
               ? "text-red-700 font-bold whitespace-nowrap"
@@ -50,7 +50,7 @@ const DesktopNavbar = ({ isOpen, setIsOpen }) => {
           Pricing
         </NavLink>
         <NavLink
-          to="/set-your-payroll"
+          to="/sidebar"
           className={({ isActive }) =>
             isActive
               ? "text-red-700 font-bold whitespace-nowrap"
