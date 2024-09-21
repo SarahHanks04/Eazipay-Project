@@ -3,7 +3,7 @@ import React, { createContext, useState } from "react";
 export const IndividualContext = createContext();
 
 const IndividualProvider = ({ children }) => {
-  const [balance, setBalance] = useState();
+  const [balance, setBalance] = useState(false);
 
   const toggleBalance = () => {
     setBalance((prev) => !prev);

@@ -20,7 +20,7 @@ const QuickStatsComponent = () => {
   };
 
   return (
-    <section className="mx-auto py-8 bg-[#F2F1F1]">
+    <section className="mx-auto py-8">
       <h1 className="text-[#515251] text-lg ml-4 mb-6">QUICK STATS</h1>
 
       <motion.div
@@ -31,7 +31,7 @@ const QuickStatsComponent = () => {
         viewport={{ once: false, amount: 0.3 }}
       >
         <motion.div
-          className="rounded-xl shadow-md py-6 pr-6 pl-3 lg:p-6 bg-white w-full"
+          className="rounded-xl shadow-md py-6 pr-6 lg:p-6 bg-[#F2F1F1] w-full"
           variants={statVariants}
         >
           <p>Total Payroll</p>
@@ -39,7 +39,7 @@ const QuickStatsComponent = () => {
         </motion.div>
 
         <motion.div
-          className="rounded-xl shadow-md p-6 bg-white w-full"
+          className="rounded-xl shadow-md p-6 bg-[#F2F1F1] w-full"
           variants={statVariants}
         >
           <p>Total Employees</p>
