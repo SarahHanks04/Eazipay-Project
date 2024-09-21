@@ -37,18 +37,19 @@ const QuickActionsComponent = () => {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
   };
+
+
   return (
     <section className="mb-[4rem]">
       <h1 className="text-[#515251] text-lg ml-4 sm:ml-[2rem] md:ml-[4rem] py-8">
         QUICK ACTION
       </h1>
-      {/* Animated container using motion.div */}
       <motion.div
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-        className="relative grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 gap-4 bg-white mx-4 sm:mx-10 md:mx-20 py-6 rounded-xl shadow-xl"
+        viewport={{ once: false, amount: 0.3 }}
+        className="relative grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 gap-4 bg-white mx-4 sm:mx-4 md:mx-20 py-6 rounded-xl shadow-xl"
       >
         {actions.map((action, index) => (
           <motion.div
