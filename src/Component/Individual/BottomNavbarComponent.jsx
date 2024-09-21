@@ -11,12 +11,6 @@ const BottomNavbarComponent = () => {
     <nav className="bg-white fixed bottom-0 left-0 right-0 shadow-lg p-4 mt-[5rem]">
       <ul className="flex justify-around text-sm">
         <li>
-          {/* <Link to="/home" className="flex flex-col items-center">
-            <span>
-              <img src={Home} alt="Home" />
-            </span>
-            Home
-          </Link> */}
           <NavLink
             to="/individual"
             className={({ isActive }) =>
@@ -29,47 +23,87 @@ const BottomNavbarComponent = () => {
               <img
                 src={Home}
                 alt="Home"
-                className={({ isActive }) =>
-                  isActive
-                    ? "bg-[#11453B]" 
-                    : ""
-                }
+                className={({ isActive }) => (isActive ? "text-[#11453B]" : "")}
               />
             </span>
             Home
           </NavLink>
         </li>
         <li>
-          <Link to="/employee" className="flex flex-col items-center">
+          <NavLink
+            to="/employee"
+            className={({ isActive }) =>
+              isActive
+                ? "flex flex-col items-center text-[#11453B] font-bold whitespace-nowrap"
+                : "flex flex-col items-center text-[#8D8E8D] whitespace-nowrap"
+            }
+          >
             <span>
-              <img src={User} alt="useer" />
+              <img
+                src={User}
+                alt="user"
+                className={({ isActive }) => (isActive ? "text-[#11453B]" : "")}
+              />
             </span>
             Employee
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link to="/payroll" className="flex flex-col items-center">
+          <NavLink
+            to="/payroll"
+            className={({ isActive }) =>
+              isActive
+                ? "flex flex-col items-center text-[#11453B] font-bold whitespace-nowrap"
+                : "flex flex-col items-center text-[#8D8E8D] whitespace-nowrap"
+            }
+          >
             <span>
-              <img src={Payroll} alt="Payroll" />
+              <img
+                src={Payroll}
+                alt="Payroll"
+                className={({ isActive }) => (isActive ? "text-[#11453B]" : "")}
+              />
             </span>
             Payroll
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link to="/loans" className="flex flex-col items-center">
+          <NavLink
+            to="/loans"
+            className={({ isActive }) =>
+              isActive
+                ? "flex flex-col items-center text-[#11453B] font-bold whitespace-nowrap"
+                : "flex flex-col items-center text-[#8D8E8D] whitespace-nowrap"
+            }
+          >
             <span>
-              <img src={Quickloan} alt="Loand" />
+              <img
+                src={Quickloan}
+                alt="Loan"
+                className={({ isActive }) => (isActive ? "text-[#11453B]" : "")}
+              />
             </span>
             Loans
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link to="/more" className="flex flex-col items-center">
+          <NavLink
+            to="/more"
+            className={({ isActive }) =>
+              isActive
+                ? "flex flex-col items-center text-[#11453B] font-bold whitespace-nowrap"
+                : "flex flex-col items-center text-[#8D8E8D] whitespace-nowrap"
+            }
+          >
             <span>
-              <img src={Group} alt="More" />
+              <img
+                src={Group}
+                alt="More"
+                className={({ isActive }) => (isActive ? "text-[#11453B]" : "")}
+              />
             </span>
             More
-          </Link>
+          </NavLink>
         </li>
       </ul>
     </nav>
