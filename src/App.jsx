@@ -12,7 +12,10 @@ import EasypayDemo from "./Component/Landing Page/EasyPayDemo/EasypayDemo";
 import MainDashboard from "./Component/Dashboard/Dashboard/MainDashboard";
 import DashboardLayout from "./Component/Dashboard/DashboardLayout/DashboardLayout";
 import MainSidebar from "./Component/Dashboard/Sidebar/MainSidebar";
-
+import IndividualProvider from "./Component/Individual/IndividualProvider";
+// import WalletComponent from "./Component/Individual/WalletComponent";
+// import QuickStatsComponent from "./Component/Individual/QuickStatsComponent";
+import MainIndividualComponent from "./Component/Individual/MainIndividualComponent";
 
 function App() {
   useEffect(() => {
@@ -28,26 +31,38 @@ function App() {
   return (
     <>
       <div>
-        <Routes>
-          {/* <Route path="/" element={<Layout />}>
+        <IndividualProvider>
+          <Routes>
+            {/* <Route path="/" element={<Layout />}>
+              <Route
+                path="/"
+                element={
+                  <div>
+                    <HeroPage />
+                    <AboutPage />
+                    <HowItWork />
+                    <SubscribeToEasyLife />
+                    <EasypayDemo />
+                  </div>
+                }
+              />
+            </Route> */}
+            {/* <Route path="/dashboard-layout" element={<DashboardLayout />} />
+            <Route path="/dashboard" element={<MainDashboard />} />
+            <Route path="/sidebar" element={<MainSidebar />} /> */}
             <Route
               path="/"
               element={
                 <div>
-                  <HeroPage />
-                  <AboutPage />
-                  <HowItWork />
-                  <SubscribeToEasyLife />
-                  <EasypayDemo />
+                  <MainIndividualComponent />
+
+                  {/* <QuickActionsComponent /> */}
                 </div>
               }
             />
-          </Route> */}
-          {/* <Route path="/dashboard-layout" element={<DashboardLayout />}/>
-          <Route path="/dashboard" element={<MainDashboard />} /> */}
-          <Route path="/sidebar" element={<MainSidebar />} />
-
-        </Routes>
+            {/* <BottomNavbarComponent /> */}
+          </Routes>
+        </IndividualProvider>
       </div>
     </>
   );

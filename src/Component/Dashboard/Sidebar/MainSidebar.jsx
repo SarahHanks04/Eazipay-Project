@@ -32,7 +32,7 @@ const MainSidebar = () => {
   };
 
   return (
-    <section className="sidebar w-full md:w-[30%] text-white bg-white max-h-screen flex flex-col">
+    <section className="sidebar w-full md:w-[30%] text-white bg-white min-h-screen flex flex-col">
       {/* Sidebar logo */}
       <div className="">
         <img src={AziPayColoredLogo} alt="Eazypay" width={400} />
