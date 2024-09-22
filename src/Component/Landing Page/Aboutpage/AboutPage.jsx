@@ -1,36 +1,50 @@
 import React from "react";
 import "aos/dist/aos.css";
 import AboutImage from "../../../assets/AboutImage.svg";
-import "../../../Component/Landing Page/Aboutpage/AboutPage.css"
+import "../../../Component/Landing Page/Aboutpage/AboutPage.css";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const AboutPage = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: false,
+    threshold: 0.2,
+  });
+  
   return (
-    <section className="about-container bg-[#F0F7EB] w-full min-h-screen flex justify-center items-center">
-      <div className="p-10 w-full" data-aos="fade-up">
-        <div className="about-title text-center">
-          <h1 className="text-[#11453B] text-[34px] font-bold font-sans">
-            For Individuals and Businesses
-          </h1>
-          <p className="text-[#292A29] font-normal pt-3">
-            Join 200+ businesses using Eazipay's easy solution.
-          </p>
-        </div>
-
-        <div className="about-image mt-10" data-aos="fade-up">
-          <div className="mx-auto text-center">
-            <img src={AboutImage} alt="About Page" />
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 50 }}
+      animate={inView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.8 }}
+      className="about-section"
+    >
+      <section className="about-container bg-[#F0F7EB] w-full min-h-screen flex justify-center items-center">
+        <div className="p-10 w-full">
+          <div className="about-title text-center">
+            <h1 className="text-[#11453B] text-[34px] font-bold font-sans">
+              For Individuals and Businesses
+            </h1>
+            <p className="text-[#292A29] font-normal pt-3">
+              Join 200+ businesses using Eazipay's easy solution.
+            </p>
           </div>
-        </div>
 
-        <div className="mt-5 text-center">
-          <p className="text-[14px] pb-8">
-            We are happy to answer your queries. Please, reach us at <br />
-            <span className="text-[#EA4E4B]">hello@myeazipay.com</span> and
-            expect our response shortly after.
-          </p>
-        </div>
+          <div className="about-image mt-10">
+            <div className="mx-auto text-center">
+              <img src={AboutImage} alt="About Page" />
+            </div>
+          </div>
 
-        {/* <div className="about-cards grid grid-cols-1 md:grid-cols-3 gap-8 mt-[40px] mx-auto justify-center items-center">
+          <div className="mt-5 text-center">
+            <p className="text-[14px] pb-8">
+              We are happy to answer your queries. Please, reach us at <br />
+              <span className="text-[#EA4E4B]">hello@myeazipay.com</span> and
+              expect our response shortly after.
+            </p>
+          </div>
+
+          {/* <div className="about-cards grid grid-cols-1 md:grid-cols-3 gap-8 mt-[40px] mx-auto justify-center items-center">
           
           <div className="p-8 bg-[#11453B] text-white rounded-lg shadow-md scale-100">
             <h2 className="font-medium text-xl mb-5">
@@ -79,8 +93,9 @@ const AboutPage = () => {
             </div>
           </div>
         </div> */}
-      </div>
-    </section>
+        </div>
+      </section>
+    </motion.div>
   );
 };
 
