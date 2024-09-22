@@ -28,7 +28,7 @@ const HeroPage = () => {
         variants={fadeUp}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true }}
+        viewport={{ once: false }}
       >
         <h1 className="text-5xl font-bold text-[#292A29] font-poppins leading-tight tracking-normal font-serif">
           Run your <span className="text-[#11453B]">payroll</span>
