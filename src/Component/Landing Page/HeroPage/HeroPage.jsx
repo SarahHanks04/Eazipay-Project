@@ -30,10 +30,10 @@ const HeroPage = () => {
         whileInView="visible"
         viewport={{ once: true }}
       >
-        <h1 className="text-4xl font-bold text-[#292A29] font-poppins leading-tight tracking-normal font-serif">
+        <h1 className="text-5xl font-bold text-[#292A29] font-poppins leading-tight tracking-normal font-serif">
           Run your <span className="text-[#11453B]">payroll</span>
         </h1>
-        <h1 className="text-4xl font-bold text-green text-[#B4A572] font-serif">
+        <h1 className="text-5xl font-bold text-green text-[#B4A572] font-serif">
           easily <span className="text-[#292A29]">in</span>{" "}
           <span className="text-[#EA4E4B]">seconds</span>
         </h1>
