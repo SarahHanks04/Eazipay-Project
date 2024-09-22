@@ -10,36 +10,42 @@ const HowItWork = () => {
     threshold: 0.2,
   });
 
-  const containerVariants = {
+  const leftToRightVariants = {
+    hidden: { opacity: 0, x: -100 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { type: "spring", stiffness: 100, damping: 20, delay: 0.2 },
+    },
+  };
+
+  const rightToLeftVariants = {
+    hidden: { opacity: 0, x: 100 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { type: "spring", stiffness: 100, damping: 20, delay: 0.2 },
+    },
+  };
+
+  const textFadeUpVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: {
-        delay: 0.1,
-        staggerChildren: 0.3,
-      },
+      transition: { delay: 0.1 },
     },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0 },
   };
 
   return (
     <motion.div
       ref={ref}
-      variants={containerVariants}
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
       className="about-section"
     >
-      <section
-        className="bg-white w-full min-h-screen flex flex-col items-center mb-6"
-        data-aos="fade-up"
-      >
-        <motion.div variants={itemVariants}>
+      <section className="bg-white w-full min-h-screen flex flex-col items-center mb-6">
+        <motion.div variants={textFadeUpVariants}>
           <header className="text-center mt-[5rem] mb-[2.5rem] mx-auto">
             <h1 className="text-[#11453B] text-2xl md:text-4xl font-bold font-serif">
               How Eazipay Works
@@ -51,7 +57,8 @@ const HowItWork = () => {
         </motion.div>
 
         <main className="relative w-full flex flex-col md:flex-row items-center justify-center mt-10 mx-auto">
-          <motion.div variants={itemVariants}>
+          {/* Mobile image */}
+          <motion.div variants={leftToRightVariants}>
             <div className="relative mt-12 md:mt-0">
               <div className="w-[280px] h-[280px] md:w-[577.15px] md:h-[577.15px] rounded-full bg-[#F0F7EB] flex justify-center items-center">
                 <div className="w-[250px] h-[250px] md:w-[518.16px] md:h-[518.16px] rounded-full bg-[#D9EBCD] flex justify-center items-center">
@@ -67,7 +74,8 @@ const HowItWork = () => {
             </div>
           </motion.div>
 
-          <motion.div variants={itemVariants}>
+          {/* Steps image */}
+          <motion.div variants={rightToLeftVariants}>
             <div className="mt-12 md:mt-0 md:ml-12">
               <img
                 src={Steps}
