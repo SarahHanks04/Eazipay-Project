@@ -13,8 +13,6 @@ import MainDashboard from "./Component/Dashboard/Dashboard/MainDashboard";
 import DashboardLayout from "./Component/Dashboard/DashboardLayout/DashboardLayout";
 import MainSidebar from "./Component/Dashboard/Sidebar/MainSidebar";
 import IndividualProvider from "./Component/Individual/IndividualProvider";
-// import WalletComponent from "./Component/Individual/WalletComponent";
-// import QuickStatsComponent from "./Component/Individual/QuickStatsComponent";
 import MainIndividualComponent from "./Component/Individual/MainIndividualComponent";
 
 function App() {

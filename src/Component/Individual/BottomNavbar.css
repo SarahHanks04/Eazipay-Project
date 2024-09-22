@@ -1,0 +1,9 @@
+.active-image {
+    color: #11453B;
+    background-color: #11453B;
+}
+
+.img-green {
+    filter: brightness(0) saturate(100%) invert(43%) sepia(83%) saturate(505%) hue-rotate(82deg) brightness(93%) contrast(92%);
+    /* Adjust this filter to fine-tune the green effect */
+}

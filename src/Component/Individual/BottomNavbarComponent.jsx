@@ -1,10 +1,11 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Home from "../../assets/Home.svg";
 import User from "../../assets/User.svg";
 import Payroll from "../../assets/Payroll.svg";
 import Quickloan from "../../assets/Quickloan.svg";
 import Group from "../../assets/Group.png";
+// import "../Individual/BottomNavbar.css";
 
 const BottomNavbarComponent = () => {
   return (
@@ -20,11 +21,7 @@ const BottomNavbarComponent = () => {
             }
           >
             <span>
-              <img
-                src={Home}
-                alt="Home"
-                className={({ isActive }) => (isActive ? "text-[#11453B]" : "")}
-              />
+              <img src={Home} alt="Home" />
             </span>
             Home
           </NavLink>
@@ -39,11 +36,7 @@ const BottomNavbarComponent = () => {
             }
           >
             <span>
-              <img
-                src={User}
-                alt="user"
-                className={({ isActive }) => (isActive ? "text-[#11453B]" : "")}
-              />
+              <img src={User} alt="user" />
             </span>
             Employee
           </NavLink>
@@ -58,11 +51,7 @@ const BottomNavbarComponent = () => {
             }
           >
             <span>
-              <img
-                src={Payroll}
-                alt="Payroll"
-                className={({ isActive }) => (isActive ? "text-[#11453B]" : "")}
-              />
+              <img src={Payroll} alt="Payroll" />
             </span>
             Payroll
           </NavLink>
@@ -77,11 +66,7 @@ const BottomNavbarComponent = () => {
             }
           >
             <span>
-              <img
-                src={Quickloan}
-                alt="Loan"
-                className={({ isActive }) => (isActive ? "text-[#11453B]" : "")}
-              />
+              <img src={Quickloan} alt="Loan" />
             </span>
             Loans
           </NavLink>
@@ -96,11 +81,7 @@ const BottomNavbarComponent = () => {
             }
           >
             <span>
-              <img
-                src={Group}
-                alt="More"
-                className={({ isActive }) => (isActive ? "text-[#11453B]" : "")}
-              />
+              <img src={Group} alt="More" />
             </span>
             More
           </NavLink>
