@@ -170,12 +170,12 @@ const TeamContainer = () => {
   }, [dispatch]);
 
   return (
-    <div className="team-container w-full">
+    <div className="team-container w-full mx-10">
       <h1 className="text-center text-[#292A29] text-[20px] p-6">
         Eazipay’s Team
       </h1>
       <div className="w-full h-[1px] bg-gray-100 mb-12"></div>
-      <div className="team-wallet bg-[#11453B] m-10 p-10 rounded-[24px]">
+      <div className="team-wallet bg-[#11453B] p-10 rounded-[24px]">
         <div>
           <p className="font-medium text-white">Total Employee</p>
           <h1 className="font-bold text-white">11264</h1>
