@@ -158,7 +158,7 @@ const TeamContainer = () => {
           },
           {
             id: 10,
-            name: "Product",
+            name: "SoftSkills",
             description: "Creates design for products",
           },
       ])
