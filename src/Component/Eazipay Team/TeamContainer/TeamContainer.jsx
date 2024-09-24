@@ -178,7 +178,7 @@ const TeamContainer = () => {
       <div className="team-total bg-[#11453B] text-white p-6 sm:p-8 lg:p-10 rounded-[24px] w-full mb-8 mx-auto sm:mx-0">
         <div>
           <p className="font-medium">Total Employee</p>
-          <h1 className="font-bold text-2xl sm:text-3xl lg:text-4xl">11264</h1>
+          <h1 className="font-bold text-2xl pt-6 sm:text-3xl lg:text-4xl">11264</h1>
         </div>
       </div>
       <Tabs activeTab={activeTab} setActiveTab={setActiveTab} />
