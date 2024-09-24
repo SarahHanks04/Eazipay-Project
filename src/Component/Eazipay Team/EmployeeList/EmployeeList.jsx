@@ -70,7 +70,6 @@
 
 // export default EmployeeList;
 
-
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import CheckIcon from "../../../assets/CheckIcon.svg";
