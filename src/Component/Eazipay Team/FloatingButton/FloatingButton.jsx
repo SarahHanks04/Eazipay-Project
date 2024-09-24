@@ -1,4 +1,5 @@
 import React from "react";
+import AddPlus from "../../../assets/AddPlus.svg";
 
 const FloatingButton = () => {
   const handleAddClick = () => {
@@ -7,10 +8,10 @@ const FloatingButton = () => {
 
   return (
     <button
-      className="fixed bottom-6 right-6 bg-green-600 text-white p-4 rounded-full shadow-lg"
+      className="fixed bottom-[50px] right-7 bg-[#11453B] text-white p-3 rounded-full shadow-lg"
       onClick={handleAddClick}
     >
-      +
+      <img src={AddPlus} alt="Add new Employee" />
     </button>
   );
 };

@@ -7,7 +7,7 @@ const ViewToggle = () => {
   const isDepartmentView = useSelector((state) => state.team.isDepartmentView);
 
   const handleToggle = () => {
-    dispatch(toggleView()); // Toggles between department and employee views
+    dispatch(toggleView());
   };
 
   return (
