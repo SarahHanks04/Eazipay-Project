@@ -170,15 +170,15 @@ const TeamContainer = () => {
   }, [dispatch]);
 
   return (
-    <div className="team-container w-full px-10">
-      <h1 className="text-center text-[#292A29] text-[20px] p-6">
+    <div className="team-container w-full px-4 sm:px-8 lg:px-10">
+      <h1 className="text-center text-[#292A29] text-[20px] sm:text-[24px] font-semibold p-4 sm:p-6">
         Eazipay’s Team
       </h1>
-      <div className="w-full h-[1px] bg-gray-100 mb-12"></div>
-      <div className="team-wallet bg-[#11453B] p-10 rounded-[24px]">
+      <div className="w-full h-[1px] bg-gray-100 mb-10 sm:mb-12"></div>
+      <div className="team-total bg-[#11453B] text-white p-6 sm:p-8 lg:p-10 rounded-[24px] w-full mb-8 mx-auto sm:mx-0">
         <div>
-          <p className="font-medium text-white">Total Employee</p>
-          <h1 className="font-bold text-white">11264</h1>
+          <p className="font-medium">Total Employee</p>
+          <h1 className="font-bold text-2xl sm:text-3xl lg:text-4xl">11264</h1>
         </div>
       </div>
       <Tabs activeTab={activeTab} setActiveTab={setActiveTab} />
