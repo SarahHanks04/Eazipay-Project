@@ -170,7 +170,7 @@ const TeamContainer = () => {
   }, [dispatch]);
 
   return (
-    <div className="team-container w-full mx-10">
+    <div className="team-container w-full px-10">
       <h1 className="text-center text-[#292A29] text-[20px] p-6">
         Eazipay’s Team
       </h1>
