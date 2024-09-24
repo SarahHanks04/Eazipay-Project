@@ -7,6 +7,7 @@ const initialState = {
   selectedEmployees: [],
   isAllSelected: false,
   departmentView: false,
+  addEmployee: false,
 };
 
 export const teamSlice = createSlice({
@@ -37,13 +38,17 @@ export const teamSlice = createSlice({
       state.departments = action.payload;
     },
     toggleView: (state) => {
-      state.departmentView = !state.departmentView; // Toggle between employees and departments view
+      state.departmentView = !state.departmentView;
+    },
+    addEmployee: (state, action) => {
+      const newEmployee = { ...action.payload, id: state.employees.length + 1 };
+      state.employees = [...state.employees, newEmployee];
     },
 
   },
 });
 
-export const { searchEmployee, selectAll, archiveSelected, setEmployees, setDepartments, toggleView } =
+export const { searchEmployee, selectAll, archiveSelected, setEmployees, setDepartments, toggleView, addEmployee } =
   teamSlice.actions;
 
 export default teamSlice.reducer;

@@ -15,6 +15,7 @@ import MainSidebar from "./Component/Dashboard/Sidebar/MainSidebar";
 import IndividualProvider from "./Component/Individual/IndividualProvider";
 import MainIndividualComponent from "./Component/Individual/MainIndividualComponent";
 import TeamContainer from "./Component/Eazipay Team/TeamContainer/TeamContainer";
+import AddEmployee from "./Component/Eazipay Team/AddnewEmployee/AddEmployee";
 
 function App() {
   useEffect(() => {
@@ -50,7 +51,8 @@ function App() {
             <Route path="/dashboard" element={<MainDashboard />} />
             <Route path="/sidebar" element={<MainSidebar />} />
             <Route path="/individual" element={<MainIndividualComponent />} />
-            <Route path="/pricing" element={<TeamContainer />} />
+            <Route path="/employee" element={<TeamContainer />} />
+            <Route path="/add-employee" element={<AddEmployee />} />
           </Routes>
         </IndividualProvider>
       </div>

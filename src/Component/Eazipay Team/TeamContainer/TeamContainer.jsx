@@ -11,6 +11,7 @@ import CalebNwafor from "../../../assets/CalebNwafor.svg";
 import ToyinFaleke from "../../../assets/ToyinFaleke.svg";
 import Wasiu from "../../../assets/Wasiu.svg";
 import KaluAbasiama from "../../../assets/KaluAbasiama.svg";
+import BottomNavbarComponent from "../../Individual/BottomNavbarComponent";
 
 const TeamContainer = () => {
   const [activeTab, setActiveTab] = useState("employees"); // Tracks tab state
@@ -21,7 +22,6 @@ const TeamContainer = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    // Simulate API call to fetch employees and departments
     dispatch(
       setEmployees([
         {
@@ -36,7 +36,7 @@ const TeamContainer = () => {
         {
           id: 2,
           name: "kalu Abasiama",
-          department: "Accounting",
+          department: "Product Design",
           sex: "Female",
           type: "Monthly",
           salary: "₦550,600.78",
@@ -45,7 +45,7 @@ const TeamContainer = () => {
         {
           id: 3,
           name: "Wasiu Ayinde",
-          department: "Accounting",
+          department: "Product Manager",
           sex: "Female",
           type: "Monthly",
           salary: "₦700,600.78",
@@ -54,7 +54,7 @@ const TeamContainer = () => {
         {
           id: 4,
           name: "Toyin Faleke",
-          department: "Accounting",
+          department: "Customer Service",
           sex: "Female",
           type: "Monthly",
           salary: "₦150,600.78",
@@ -63,7 +63,7 @@ const TeamContainer = () => {
         {
           id: 5,
           name: "Caleb Nwafor",
-          department: "Accounting",
+          department: "Data Analyst",
           sex: "Female",
           type: "Monthly",
           salary: "₦250,600.78",
@@ -72,7 +72,7 @@ const TeamContainer = () => {
         {
           id: 6,
           name: "Caleb Nwafor",
-          department: "Accounting",
+          department: "Frontend Developer",
           sex: "Female",
           type: "Monthly",
           salary: "₦550,600.78",
@@ -81,7 +81,7 @@ const TeamContainer = () => {
         {
           id: 7,
           name: "Wasiu Ayinde",
-          department: "Accounting",
+          department: "Backend Developer",
           sex: "Female",
           type: "Monthly",
           salary: "₦700,600.78",
@@ -90,7 +90,7 @@ const TeamContainer = () => {
         {
           id: 8,
           name: "Kalu Abasiama",
-          department: "Accounting",
+          department: "DevOps Engineeer",
           sex: "Female",
           type: "Monthly",
           salary: "₦150,600.78",
@@ -99,7 +99,7 @@ const TeamContainer = () => {
         {
           id: 9,
           name: "Caleb Nwafor",
-          department: "Accounting",
+          department: "CyberSecurity",
           sex: "Female",
           type: "Monthly",
           salary: "₦250,600.78",
@@ -108,7 +108,7 @@ const TeamContainer = () => {
         {
           id: 10,
           name: "Toyin Faleke",
-          department: "Accounting",
+          department: "SoftSkills",
           sex: "Female",
           type: "Monthly",
           salary: "₦550,600.78",
@@ -119,58 +119,62 @@ const TeamContainer = () => {
 
     dispatch(
       setDepartments([
-        { id: 1, name: "Accounting", description: "Handles financial records" },
+        {
+          id: 1,
+          name: "Accounting",
+          // description: "Handles financial records"
+        },
         {
           id: 2,
           name: "Product Design",
-          description: "Creates design for products",
+          //   description: "Creates design for products",
         },
         {
           id: 3,
           name: "Product Manager",
-          description: "Creates design for products",
+          //   description: "Creates design for products",
         },
         {
           id: 4,
           name: "DevOps Engineeer",
-          description: "Creates design for products",
+          //   description: "Creates design for products",
         },
         {
           id: 5,
           name: "Customer Service",
-          description: "Creates design for products",
+          //   description: "Creates design for products",
         },
         {
           id: 6,
           name: "Data Analyst",
-          description: "Creates design for products",
+          //   description: "Creates design for products",
         },
         {
           id: 7,
           name: "Frontend Developer",
-          description: "Creates design for products",
+          //   description: "Creates design for products",
         },
         {
           id: 8,
           name: "Backend Developer",
-          description: "Creates design for products",
+          //   description: "Creates design for products",
         },
         {
           id: 9,
           name: "CyberSecurity",
-          description: "Creates design for products",
+          //   description: "Creates design for products",
         },
         {
           id: 10,
           name: "SoftSkills",
-          description: "Creates design for products",
+          //   description: "Creates design for products",
         },
       ])
     );
   }, [dispatch]);
 
   return (
-    <div className="team-container w-full px-4 sm:px-8 lg:px-10">
+    <div className="team-container w-full px-4 sm:px-8 lg:px-10 mb-28">
       <h1 className="text-center text-[#292A29] text-[20px] sm:text-[24px] font-semibold p-4 sm:p-6">
         Eazipay’s Team
       </h1>
@@ -178,7 +182,9 @@ const TeamContainer = () => {
       <div className="team-total bg-[#11453B] text-white p-6 sm:p-8 lg:p-10 rounded-[24px] w-full mb-8 mx-auto sm:mx-0">
         <div>
           <p className="font-medium">Total Employee</p>
-          <h1 className="font-bold text-2xl pt-6 sm:text-3xl lg:text-4xl">11264</h1>
+          <h1 className="font-bold text-2xl pt-6 sm:text-3xl lg:text-4xl">
+            11264
+          </h1>
         </div>
       </div>
       <Tabs activeTab={activeTab} setActiveTab={setActiveTab} />
@@ -190,6 +196,7 @@ const TeamContainer = () => {
         <DepartmentList departments={departments} />
       )}
       <FloatingButton />
+      <BottomNavbarComponent />
     </div>
   );
 };
