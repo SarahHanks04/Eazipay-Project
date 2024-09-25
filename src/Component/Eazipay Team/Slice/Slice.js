@@ -1,13 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  employees: [], // Populate from API
+  employees: [],
   departments: [],
   searchQuery: "",
   selectedEmployees: [],
   isAllSelected: false,
   departmentView: false,
   addEmployee: false,
+  archivedEmployees: [],
 };
 
 export const teamSlice = createSlice({
@@ -22,7 +23,9 @@ export const teamSlice = createSlice({
     },
     selectAll: (state) => {
       state.isAllSelected = !state.isAllSelected;
-      state.selectedEmployees = state.isAllSelected ? state.employees : [];
+      state.selectedEmployees = state.isAllSelected
+        ? state.employees.map((employee) => employee.id)
+        : [];
     },
     archiveSelected: (state) => {
       state.employees = state.employees.filter(
@@ -37,18 +40,42 @@ export const teamSlice = createSlice({
     setDepartments: (state, action) => {
       state.departments = action.payload;
     },
-    toggleView: (state) => {
-      state.departmentView = !state.departmentView;
-    },
     addEmployee: (state, action) => {
       const newEmployee = { ...action.payload, id: state.employees.length + 1 };
       state.employees = [...state.employees, newEmployee];
     },
-
+    archiveEmployees(state, action) {
+      const selectedEmployees = action.payload;
+      state.archivedEmployees = [
+        ...state.archivedEmployees,
+        ...selectedEmployees,
+      ];
+      state.employees = state.employees.filter(
+        (employee) => !selectedEmployees.includes(employee.id)
+      );
+    },
+    toggleEmployeeSelection: (state, action) => {
+      const employeeId = action.payload;
+      // state.selectedEmployees = state.selectedEmployees.includes(employeeId)
+      state.selectedEmployees = state.selectedEmployees.includes(employeeId)
+        ? state.selectedEmployees.filter((id) => id !== employeeId)
+        : [...state.selectedEmployees, employeeId];
+      state.isAllSelected =
+        state.selectedEmployees.length === state.employees.length;
+    },
   },
 });
 
-export const { searchEmployee, selectAll, archiveSelected, setEmployees, setDepartments, toggleView, addEmployee } =
-  teamSlice.actions;
+export const {
+  searchEmployee,
+  selectAll,
+  archiveSelected,
+  setEmployees,
+  setDepartments,
+  toggleView,
+  addEmployee,
+  archiveEmployees,
+  toggleEmployeeSelection,
+} = teamSlice.actions;
 
 export default teamSlice.reducer;

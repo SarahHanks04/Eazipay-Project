@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux"; // For Redux state
+import { useDispatch, useSelector } from "react-redux";
 import SearchBar from "../SearchBar/SearchBar";
 import ArchivedSelector from "../Archived/ArchivedSelector";
 import EmployeeList from "../EmployeeList/EmployeeList";
@@ -191,7 +191,8 @@ const TeamContainer = () => {
       <SearchBar />
       <ArchivedSelector />
       {activeTab === "employees" ? (
-        <EmployeeList employees={employees} />
+        <EmployeeList employees={employees} 
+         />
       ) : (
         <DepartmentList departments={departments} />
       )}
