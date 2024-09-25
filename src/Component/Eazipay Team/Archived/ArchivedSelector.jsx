@@ -13,7 +13,7 @@ const ArchivedSelector = () => {
   };
 
   return (
-    <main className="archived-selector-container">
+    <main className="archived-selector-container cursor-pointer">
       <div className="w-full h-[1px] bg-gray-100 mb-6 sm:mb-8"></div>
       <div className="flex items-center justify-between w-full mb-4">
         <div className="flex items-center gap-4">

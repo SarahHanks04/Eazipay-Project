@@ -27,10 +27,10 @@ const AddEmployee = () => {
 
   return (
     <div className="w-full max-w-lg mx-auto p-4 sm:p-6 lg:p-8 bg-white shadow-lg rounded-lg mt-10">
-      <h1 className="text-center text-2xl font-bold text-[#292A29] mb-6">
+      <h1 className="text-center text-2xl font-bold text-[#11453B] mb-6">
         Add New Employee
       </h1>
-      <form onSubmit={handleSubmit} className="space-y-4">
+      <form onSubmit={handleSubmit} className="space-y-4 text-[#292A29]">
         <div className="flex flex-col">
           <label htmlFor="name" className="text-sm font-medium mb-2">
             Employee Name
