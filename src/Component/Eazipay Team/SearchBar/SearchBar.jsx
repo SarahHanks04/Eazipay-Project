@@ -1,16 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
+import { useDispatch } from "react-redux";
+import { archiveSelected } from "../Slice/Slice";
 import SearchIcon from "../../../assets/Searchicon.svg";
 import ArchivedICon from "../../../assets/ArchivedICon.svg";
 
 const SearchBar = () => {
-  const [selectedEmployees, setSelectedEmployees] = useState([]);
-
+  const dispatch = useDispatch();
   const handleArchive = () => {
-    if (selectedEmployees.length > 0) {
-      dispatch(archiveEmployees(selectedEmployees));
-    }
+    dispatch(archiveSelected());
   };
-  
+
   return (
     <div className="w-full flex items-center justify-between mb-4">
       <div className="relative w-full flex-1">
@@ -35,3 +34,5 @@ const SearchBar = () => {
 };
 
 export default SearchBar;
+
+
