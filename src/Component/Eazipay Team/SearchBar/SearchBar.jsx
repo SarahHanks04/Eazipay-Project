@@ -10,6 +10,7 @@ const SearchBar = () => {
       dispatch(archiveEmployees(selectedEmployees));
     }
   };
+  
   return (
     <div className="w-full flex items-center justify-between mb-4">
       <div className="relative w-full flex-1">
@@ -23,12 +24,12 @@ const SearchBar = () => {
         </span>
       </div>
 
-      {/* <button className="ml-4 bg-[#F2F1F1] px-[14px] py-4 rounded-[8px] flex items-center justify-center">
-        <img src={ArchivedICon} alt="Archived ICon" />
-      </button> */}
-      <button onClick={handleArchive} className="ml-4 bg-[#F2F1F1] px-[14px] py-4 rounded-[8px] flex items-center justify-center">
-          <img src={ArchivedICon} alt="Archive Icon" />
-        </button>
+      <button
+        onClick={handleArchive}
+        className="ml-4 bg-[#F2F1F1] px-[14px] py-4 rounded-[8px] flex items-center justify-center"
+      >
+        <img src={ArchivedICon} alt="Archive Icon" />
+      </button>
     </div>
   );
 };
