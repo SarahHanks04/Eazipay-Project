@@ -14,9 +14,9 @@ import KaluAbasiama from "../../../assets/KaluAbasiama.svg";
 import BottomNavbarComponent from "../../Individual/BottomNavbarComponent";
 
 const TeamContainer = () => {
-  const [activeTab, setActiveTab] = useState("employees"); // Tracks tab state
+  const [activeTab, setActiveTab] = useState("employees");
 
-  const employees = useSelector((state) => state.employees); // Redux selector
+  const employees = useSelector((state) => state.employees);
   const departments = useSelector((state) => state.departments);
 
   const dispatch = useDispatch();
@@ -122,52 +122,52 @@ const TeamContainer = () => {
         {
           id: 1,
           name: "Accounting",
-          // description: "Handles financial records"
+          description: "Handles financial records",
         },
         {
           id: 2,
           name: "Product Design",
-          //   description: "Creates design for products",
+          description: "Creates design for products",
         },
         {
           id: 3,
           name: "Product Manager",
-          //   description: "Creates design for products",
+          description: "Creates design for products",
         },
         {
           id: 4,
           name: "DevOps Engineeer",
-          //   description: "Creates design for products",
+          description: "Creates design for products",
         },
         {
           id: 5,
           name: "Customer Service",
-          //   description: "Creates design for products",
+          description: "Creates design for products",
         },
         {
           id: 6,
           name: "Data Analyst",
-          //   description: "Creates design for products",
+          description: "Creates design for products",
         },
         {
           id: 7,
           name: "Frontend Developer",
-          //   description: "Creates design for products",
+          description: "Creates design for products",
         },
         {
           id: 8,
           name: "Backend Developer",
-          //   description: "Creates design for products",
+          description: "Creates design for products",
         },
         {
           id: 9,
           name: "CyberSecurity",
-          //   description: "Creates design for products",
+          description: "Creates design for products",
         },
         {
           id: 10,
           name: "SoftSkills",
-          //   description: "Creates design for products",
+          description: "Creates design for products",
         },
       ])
     );
@@ -191,8 +191,7 @@ const TeamContainer = () => {
       <SearchBar />
       <ArchivedSelector />
       {activeTab === "employees" ? (
-        <EmployeeList employees={employees} 
-         />
+        <EmployeeList employees={employees} />
       ) : (
         <DepartmentList departments={departments} />
       )}
