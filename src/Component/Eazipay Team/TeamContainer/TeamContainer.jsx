@@ -122,52 +122,62 @@ const TeamContainer = () => {
         {
           id: 1,
           name: "Accounting",
-          description: "Handles financial records",
+          description:
+            "Handles financial records, ensuring accurate tracking of income and expenses. This department prepares financial statements and provides insights into financial health, supporting strategic decisions.",
         },
         {
           id: 2,
           name: "Product Design",
-          description: "Creates design for products",
+          description:
+            "Creates design for products, focusing on user experience and functionality. The team conducts user research and iterates on design prototypes to ensure that products meet user needs and expectations.",
         },
         {
           id: 3,
           name: "Product Manager",
-          description: "Creates design for products",
+          description:
+            "Oversees product development from conception to launch. They collaborate with cross-functional teams, prioritize features based on customer feedback, and ensure that the product aligns with business objectives.",
         },
         {
           id: 4,
-          name: "DevOps Engineeer",
-          description: "Creates design for products",
+          name: "DevOps Engineer",
+          description:
+            "Bridges the gap between development and operations, focusing on automating and streamlining the software delivery process. This role involves monitoring system performance and managing infrastructure to support continuous integration and deployment.",
         },
         {
           id: 5,
           name: "Customer Service",
-          description: "Creates design for products",
+          description:
+            "Provides support to customers, addressing inquiries and resolving issues related to products and services. This department plays a vital role in ensuring customer satisfaction and fostering long-term relationships.",
         },
         {
           id: 6,
           name: "Data Analyst",
-          description: "Creates design for products",
+          description:
+            "Analyzes data to provide insights that inform business strategies. They utilize statistical tools and techniques to identify trends, generate reports, and support decision-making across the organization.",
         },
         {
           id: 7,
           name: "Frontend Developer",
-          description: "Creates design for products",
+          description:
+            "Responsible for implementing visual elements that users interact with in a web application. They work closely with designers and backend developers to ensure a seamless user experience across various devices.",
         },
         {
           id: 8,
           name: "Backend Developer",
-          description: "Creates design for products",
+          description:
+            "Handles server-side application logic and integration, ensuring that the backend processes data efficiently. They create APIs and manage databases to support frontend functionality.",
         },
         {
           id: 9,
           name: "CyberSecurity",
-          description: "Creates design for products",
+          description:
+            "Protects the organization’s data and systems from cyber threats. This department implements security protocols, conducts risk assessments, and responds to incidents to safeguard sensitive information.",
         },
         {
           id: 10,
-          name: "SoftSkills",
-          description: "Creates design for products",
+          name: "Soft Skills",
+          description:
+            "Focuses on the interpersonal skills necessary for effective communication and collaboration within the workplace. This department provides training and resources to enhance team dynamics and foster a positive work environment.",
         },
       ])
     );
