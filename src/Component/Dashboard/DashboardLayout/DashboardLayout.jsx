@@ -1,7 +1,6 @@
 import React from "react";
-// import MainSidebar from "../Sidebar/MainSidebar";
 import CompanyLogo from "../../../assets/CompanyLogo.svg";
-import Notification from "../../../assets/Notification.svg";
+import Bell from "../../../assets/Bell.svg";
 import KaluAbasiama from "../../../assets/KaluAbasiama.svg";
 import MainDashboard from "../Dashboard/MainDashboard";
 import "../DashboardLayout/Layout.css";
@@ -18,7 +17,7 @@ const DashboardLayout = () => {
             <img src={CompanyLogo} alt="Company Logo" />
           </div>
           <div className="flex gap-6 lg:gap-[4rem]">
-            <img src={Notification} alt="Notification" width={27} />
+            <img src={Bell} alt="Notification" width={27} />
             <div className="flex gap-3 items-center">
               <img src={KaluAbasiama} alt="Kalu Abasiama" width={40} />
               <div className="text-center">
