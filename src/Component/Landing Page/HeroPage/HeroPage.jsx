@@ -7,7 +7,6 @@ import GoggleLogo from "../../../assets/GoggleLogo.svg";
 import "../HeroPage/HeroPage.css";
 
 const HeroPage = () => {
-  // Variants for fade-up animation
   const fadeUp = {
     hidden: { opacity: 0, y: 50 },
     visible: {
@@ -22,7 +21,6 @@ const HeroPage = () => {
 
   return (
     <main className="homepage-container flex flex-col md:flex-row items-center p-8 bg-gradient-to-r from-[#e6f0e5] to-[#fdf2f7] gap-8 md:gap-4">
-      {/* Left Text Content */}
       <motion.div
         className="md:w-1/2 pl-4 md:pl-8 text-start"
         variants={fadeUp}
@@ -83,13 +81,12 @@ const HeroPage = () => {
         </motion.div>
       </motion.div>
 
-      {/* Right Image Content */}
       <motion.div
         className="image-container md:w-1/2 flex justify-center md:ml-0 mt-4 md:mt-0"
         variants={fadeUp}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true }}
+        viewport={{ once: false }}
         transition={{ delay: 0.8 }}
       >
         <img
