@@ -210,6 +210,14 @@ export const {
   toggleView,
   addEmployee,
   archiveEmployees,
+  setLogo,
+  setCompanyName,
+  setIsRegistered,
+  setCACDocument,
+  setOfficeAddress,
+  setProofOfAddress,
+  setCompanySize,
+  setPensionCode,
 } = teamSlice.actions;
 
 export default teamSlice.reducer;
