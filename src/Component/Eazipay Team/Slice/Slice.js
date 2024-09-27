@@ -91,6 +91,16 @@ const initialState = {
   isAllSelected: false,
   departmentView: false,
   addEmployee: false,
+
+  // FTHE FORMS IN SETTINGS
+  logo: null,
+  companyName: "",
+  isRegistered: null,
+  cacDocument: null,
+  officeAddress: "",
+  proofOfAddress: null,
+  companySize: "",
+  pensionCode: "",
 };
 
 export const teamSlice = createSlice({
@@ -159,6 +169,32 @@ export const teamSlice = createSlice({
       state.selectedEmployees = state.isAllSelected
         ? state.employees.map((employee) => employee.id)
         : [];
+    },
+
+    // FOR FORMS IN SETTINGS
+    setLogo: (state, action) => {
+      state.logo = action.payload;
+    },
+    setCompanyName: (state, action) => {
+      state.companyName = action.payload;
+    },
+    setIsRegistered: (state, action) => {
+      state.isRegistered = action.payload;
+    },
+    setCACDocument: (state, action) => {
+      state.cacDocument = action.payload;
+    },
+    setOfficeAddress: (state, action) => {
+      state.officeAddress = action.payload;
+    },
+    setProofOfAddress: (state, action) => {
+      state.proofOfAddress = action.payload;
+    },
+    setCompanySize: (state, action) => {
+      state.companySize = action.payload;
+    },
+    setPensionCode: (state, action) => {
+      state.pensionCode = action.payload;
     },
   },
 });
