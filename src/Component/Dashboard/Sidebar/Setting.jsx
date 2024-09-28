@@ -1,6 +1,6 @@
 import React from "react";
 import Settings from "../../../assets/Settings.svg";
-import { FiChevronDown, FiChevronUp } from "react-icons/fi";
+import { FiChevronDown, FiChevronRight } from "react-icons/fi";
 import { NavLink } from "react-router-dom";
 
 const Setting = ({ toggle, isOpen }) => {
@@ -15,16 +15,37 @@ const Setting = ({ toggle, isOpen }) => {
             <img src={Settings} alt="Settings" />
             <span className="text-sm">Settings</span>
           </div>
-          {isOpen.settings ? <FiChevronUp /> : <FiChevronDown />}
+          {isOpen.settings ? <FiChevronRight /> : <FiChevronDown />}
         </div>
         {isOpen.settings && (
           <div className="ml-4 mt-2 text-[#515251] text-sm">
-            <NavLink to="/settings" className="block py-2">
-              Account Settings
-            </NavLink>
-            <NavLink to="/support" className="block py-2">
-              Support
-            </NavLink>
+            <ul role="list" className="marker:text-black list-disc">
+              <li>
+                <NavLink to="/profile" className="block py-2">
+                  Profile
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/manage-account" className="block py-2">
+                  Manage Account
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/security" className="block py-2">
+                  Security
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/settings" className="block py-2">
+                  Manage Settings
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/support" className="block py-2">
+                  Support
+                </NavLink>
+              </li>
+            </ul>
           </div>
         )}
       </div>

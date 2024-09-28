@@ -1,9 +1,9 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
+import AbstractCompany from "../../assets/AbstractCompany.svg";
 import { setLogo } from "./Slice";
 
-
-const LogoUpload = () => {
+const CompanyInfo = () => {
   const dispatch = useDispatch();
   const logo = useSelector((state) => state.form.logo);
 
@@ -15,12 +15,19 @@ const LogoUpload = () => {
   };
 
   return (
-    <div>
-      <label htmlFor="logoUpload">Change Logo</label>
-      <input type="file" id="logoUpload" placeholder="Change logo" onChange={handleLogoChange} />
-      {logo && <img src={logo} alt="Company Logo" />}
-    </div>
+    <main>
+      <div>
+        <img src={AbstractCompany} alt="Abstract Company" />
+        <input
+          type="file"
+          id="logoUpload"
+          placeholder="Change logo"
+          onChange={handleLogoChange}
+        />
+        {logo && <img src={logo} alt="Company Logo" />}
+      </div>
+    </main>
   );
 };
 
-export default LogoUpload;
+export default CompanyInfo;

@@ -1,6 +1,6 @@
 import React from "react";
 import User from "../../../assets/User.svg";
-import { FiChevronDown, FiChevronUp } from "react-icons/fi";
+import { FiChevronDown, FiChevronRight } from "react-icons/fi";
 import { NavLink } from "react-router-dom";
 
 const EmployeeMgt = ({ toggle, isOpen }) => {
@@ -15,20 +15,27 @@ const EmployeeMgt = ({ toggle, isOpen }) => {
             <img src={User} alt="Users" />
             <span className="text-sm flex-shrink-0">Employee Management</span>
           </div>
-          {isOpen.employeeManagement ? (
-            <FiChevronUp />
-          ) : (
-            <FiChevronDown />
-          )}
+          {isOpen.employeeManagement ? <FiChevronRight /> : <FiChevronDown /> }
         </div>
         {isOpen.employeeManagement && (
           <div className="ml-4 mt-2 text-[#515251] text-sm">
-            <NavLink to="/add-employee" className="block py-2">
-              Add Employee
-            </NavLink>
-            <NavLink to="/employee-list" className="block py-2">
-              Employee List
-            </NavLink>
+            <ul role="list" className="marker:text-black list-disc">
+              <li>
+                <NavLink to="/add-employee" className="block py-2">
+                  Add Employee
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/view-employee" className="block py-2">
+                  View Employee
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/edit-employee" className="block py-2">
+                  Edit Employee
+                </NavLink>
+              </li>
+            </ul>
           </div>
         )}
       </div>

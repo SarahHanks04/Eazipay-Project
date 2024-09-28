@@ -1,6 +1,6 @@
 import React from "react";
 import Quickloan from "../../../assets/Quickloan.svg";
-import { FiChevronDown, FiChevronUp } from "react-icons/fi";
+import { FiChevronDown, FiChevronRight } from "react-icons/fi";
 import { NavLink } from "react-router-dom";
 
 const Loan = ({ toggle, isOpen }) => {
@@ -15,13 +15,27 @@ const Loan = ({ toggle, isOpen }) => {
             <img src={Quickloan} alt="QuickLoan" />
             <span className="text-sm">Quick Loan</span>
           </div>
-          {isOpen.quickLoan ? <FiChevronUp /> : <FiChevronDown />}
+          {isOpen.quickLoan ? <FiChevronRight /> : <FiChevronDown />}
         </div>
         {isOpen.quickLoan && (
           <div className="ml-4 mt-2 text-[#515251] text-sm">
-            <NavLink to="/quick-loan" className="block py-2">
-              Apply for Loan
-            </NavLink>
+            <ul role="list" className="marker:text-black list-disc">
+              <li>
+                <NavLink to="/quick-loan" className="block py-2">
+                  Application
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/quick-loan" className="block py-2">
+                  Manage Loans
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/quick-loan" className="block py-2">
+                  Loan History
+                </NavLink>
+              </li>
+            </ul>
           </div>
         )}
       </div>

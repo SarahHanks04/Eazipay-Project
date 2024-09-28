@@ -21,7 +21,7 @@ const CompanySize = () => {
   const industry = useSelector((state) => state.form.industry);
 
   return (
-    <form className="relative mb-4">
+    <main className="relative mb-4">
       {/* company Size */}
       <label
         htmlFor="companySize"
@@ -150,7 +150,7 @@ const CompanySize = () => {
           onChange={(e) => dispatch(setIndustry(e.target.value))}
         />
       </div>
-    </form>
+    </main>
   );
 };
 

@@ -15,17 +15,20 @@ const CompanyName = () => {
     }
   };
 
-  
+
   return (
-    <form>
+    <main>
       {/* COMPANY NAME */}
-      <label htmlFor="companyName">Company Name</label>
+      <div className="relative mb-4">
+      <label htmlFor="companyName" className="absolute -top-2 left-3 bg-white px-1 text-sm text-[#8D8E8D]">Company Name</label>
       <input
         type="text"
         id="companyName"
+        className="block w-full px-4 py-2 border border-[#B5B6B5] rounded-md focus:outline-none focus:ring-1 focus:ring-[#11453B]"
         value={companyName}
         onChange={(e) => dispatch(setCompanyName(e.target.value))}
       />
+      </div>
 
       {/* COMPANY REGISTRATION */}
       <div>
@@ -50,7 +53,7 @@ const CompanyName = () => {
         <input type="file" id="cacUpload" onChange={handleCACChange} />
         {cacDocument && <p>{cacDocument.name}</p>}
       </div>
-    </form>
+    </main>
   );
 };
 

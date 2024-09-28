@@ -15,7 +15,7 @@ const CompanyAddress = () => {
   };
 
   return (
-    <form>
+    <main>
       {/* COMPANY ADDRESS */}
       <div className="relative mb-4">
         <label
@@ -40,7 +40,7 @@ const CompanyAddress = () => {
         <input type="file" id="cacUpload" onChange={handleOfficeChange} />
         {officeAddress && <p>{officeAddress.name}</p>}
       </div>
-    </form>
+    </main>
   );
 };
 
