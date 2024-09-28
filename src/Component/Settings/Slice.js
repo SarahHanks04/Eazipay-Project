@@ -9,6 +9,11 @@ const initialState = {
   proofOfAddress: null,
   companySize: "",
   pensionCode: "",
+  payeState: "",
+  payeId: "",
+  nhfCode: "",
+  website: "",
+  industry: "",
 };
 
 export const formSlice = createSlice({
@@ -39,6 +44,21 @@ export const formSlice = createSlice({
     setPensionCode: (state, action) => {
       state.pensionCode = action.payload;
     },
+    setPayeState: (state, action) => {
+      state.payeId = action.payload;
+    },
+    setPayeId: (state, action) => {
+      state.payeState = action.payload;
+    },
+    setNhfCode: (state, action) => {
+      state.payeState = action.payload;
+    },
+    setWebsite: (state, action) => {
+      state.payeState = action.payload;
+    },
+    setIndustry: (state, action) => {
+      state.payeState = action.payload;
+    },
   },
 });
 
@@ -51,6 +71,11 @@ export const {
   setProofOfAddress,
   setCompanySize,
   setPensionCode,
+  setPayeState,
+  setPayeId,
+  setNhfCode,
+  setWebsite,
+  setIndustry,
 } = formSlice.actions;
 
 export default formSlice.reducer;
