@@ -84,7 +84,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   employees: [],
   archivedEmployees: [],
-  // selectedEmployees: [],
+  selectedEmployees: [],
   isAllSelected: false,
   departments: [],
   searchQuery: "",
