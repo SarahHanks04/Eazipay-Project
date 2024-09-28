@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 const WalletSection = ({ toggle, isOpen }) => {
   return (
     <main>
-      <div className="mb-2 px-4 py-2 border-b-[1.2px]">
+      <div className="px-4 py-3 border-b-[1.2px] hover:bg-[#F0F7EB80]">
         <div
           className="flex justify-between items-center cursor-pointer text-[#515251]"
           onClick={() => toggle("wallet")}

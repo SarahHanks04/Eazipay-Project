@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 const PayrollSection = ({ toggle, isOpen }) => {
   return (
     <main>
-      <div className="mb-2 px-4 py-2 border-b-[1.2px]">
+      <div className="px-4 py-3 border-b-[1.2px] hover:bg-[#F0F7EB80]">
         <div
           className="text-[#515251] flex justify-between items-center cursor-pointer"
           onClick={() => toggle("payroll")}
@@ -19,7 +19,7 @@ const PayrollSection = ({ toggle, isOpen }) => {
         </div>
         {isOpen.payroll && (
           <div className="ml-4 mt-2 text-[#515251] text-sm">
-            <ul role="list" className="marker:text-black list-disc">
+            <ul role="list" className="marker:text-[#11453B] list-disc">
               <li>
                 <NavLink to="/add-salary" className="block py-2">
                   Add Salary

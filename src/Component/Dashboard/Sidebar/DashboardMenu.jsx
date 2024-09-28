@@ -7,7 +7,7 @@ const DashboardMenu = ({toggle}) => {
   
   return (
     <main>
-      <div className="mb-2 border-l-[5px] border-[#11453B] bg-[#F0F7EB80] rounded-sm pl-3">
+      <div className="border-l-[5px] border-[#11453B] bg-[#F0F7EB80] rounded-sm pl-3">
         <div
           className="text-[#11453B] flex justify-between items-center cursor-pointer"
           onClick={() => toggle("dashboard")}

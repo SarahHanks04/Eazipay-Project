@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 const Setting = ({ toggle, isOpen }) => {
   return (
     <main>
-      <div className="px-4 py-2">
+      <div className="px-4 py-3 hover:bg-[#F0F7EB80]">
         <div
           className="text-[#515251] flex justify-between items-center cursor-pointer"
           onClick={() => toggle("settings")}
@@ -19,7 +19,7 @@ const Setting = ({ toggle, isOpen }) => {
         </div>
         {isOpen.settings && (
           <div className="ml-4 mt-2 text-[#515251] text-sm">
-            <ul role="list" className="marker:text-black list-disc">
+            <ul role="list" className="marker:text-[#11453B] list-disc">
               <li>
                 <NavLink to="/profile" className="block py-2">
                   Profile
