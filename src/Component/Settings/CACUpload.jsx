@@ -1,6 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { setCACDocument } from '../Eazipay Team/Slice/Slice';
+import { setCACDocument } from './Slice';
+
 
 const CACUpload = () => {
   const dispatch = useDispatch();

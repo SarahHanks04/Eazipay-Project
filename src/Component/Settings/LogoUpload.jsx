@@ -1,7 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setLogo } from "../Eazipay Team/Slice/Slice";
-import AbstractCompany from "../../assets/AbstractCompany.svg";
+import { setLogo } from "./Slice";
 
 
 const LogoUpload = () => {
@@ -18,8 +17,8 @@ const LogoUpload = () => {
   return (
     <div>
       <label htmlFor="logoUpload">Change Logo</label>
-      <input type="file" id="logoUpload" onChange={handleLogoChange} />
-      {logo && <img src={AbstractCompany} alt="Company Logo" />}
+      <input type="file" id="logoUpload" placeholder="Change logo" onChange={handleLogoChange} />
+      {logo && <img src={logo} alt="Company Logo" />}
     </div>
   );
 };

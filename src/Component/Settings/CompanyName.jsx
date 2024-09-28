@@ -1,6 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setCompanyName } from "../Eazipay Team/Slice/Slice";
+import { setCompanyName } from "./Slice";
+
 
 const CompanyName = () => {
   const dispatch = useDispatch();

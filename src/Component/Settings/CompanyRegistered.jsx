@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { setIsRegistered } from '../Eazipay Team/Slice/Slice';
+import { setIsRegistered } from './Slice';
 
 
 const CompanyRegistered = () => {
