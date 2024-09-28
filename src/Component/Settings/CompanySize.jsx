@@ -25,13 +25,13 @@ const CompanySize = () => {
       {/* company Size */}
       <label
         htmlFor="companySize"
-        className="absolute -top-2 left-3 bg-white px-1 text-sm text-green-600"
+        className="absolute -top-2 left-3 bg-white px-1 text-sm text-[#8D8E8D]"
       >
         Company Size
       </label>
       <select
         id="companySize"
-        className="block w-full px-4 py-2 border border-green-600 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+        className="block w-full px-4 py-2 border border-[#B5B6B5] rounded-md focus:outline-none focus:ring-1 focus:ring-[#11453B]"
         value={companySize}
         onChange={(e) => dispatch(setCompanySize(e.target.value))}
       >
@@ -46,14 +46,14 @@ const CompanySize = () => {
       <div className="relative mb-4">
         <label
           htmlFor="pensionCode"
-          className="absolute -top-2 left-3 bg-white px-1 text-sm text-green-600"
+          className="absolute -top-2 left-3 bg-white px-1 text-sm text-[#8D8E8D]"
         >
           Pension Code
         </label>
         <input
           type="text"
           id="pensionCode"
-          className="block w-full px-4 py-2 border border-green-600 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+          className="block w-full px-4 py-2 border border-[#B5B6B5] rounded-md focus:outline-none focus:ring-1 focus:ring-[#11453B]"
           value={pensionCode}
           onChange={(e) => dispatch(setPensionCode(e.target.value))}
         />
@@ -62,13 +62,13 @@ const CompanySize = () => {
       {/* PAYE State */}
       <label
         htmlFor="payeState"
-        className="absolute -top-2 left-3 bg-white px-1 text-sm text-green-600"
+        className="absolute -top-2 left-3 bg-white px-1 text-sm text-[#8D8E8D]"
       >
         PAYE State
       </label>
       <select
         id="payeState"
-        className="block w-full px-4 py-2 border border-green-600 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+        className="block w-full px-4 py-2 border border-[#B5B6B5] rounded-md focus:outline-none focus:ring-1 focus:ring-[#11453B]"
         value={payeState}
         onChange={(e) => dispatch(setPayeState(e.target.value))}
       >
@@ -87,14 +87,14 @@ const CompanySize = () => {
       <div className="relative mb-4">
         <label
           htmlFor="payeId"
-          className="absolute -top-2 left-3 bg-white px-1 text-sm text-green-600"
+          className="absolute -top-2 left-3 bg-white px-1 text-sm text-[#8D8E8D]"
         >
           PAYE ID
         </label>
         <input
           type="text"
           id="payeId"
-          className="block w-full px-4 py-2 border border-green-600 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+          className="block w-full px-4 py-2 border border-[#B5B6B5] rounded-md focus:outline-none focus:ring-1 focus:ring-[#11453B]"
           value={payeId}
           onChange={(e) => dispatch(setPayeId(e.target.value))}
         />
@@ -104,14 +104,14 @@ const CompanySize = () => {
       <div className="relative mb-4">
         <label
           htmlFor="nhfCode"
-          className="absolute -top-2 left-3 bg-white px-1 text-sm text-green-600"
+          className="absolute -top-2 left-3 bg-white px-1 text-sm text-[#8D8E8D]"
         >
           NHF Code
         </label>
         <input
           type="text"
           id="nhfCode"
-          className="block w-full px-4 py-2 border border-green-600 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+          className="block w-full px-4 py-2 border border-[#B5B6B5] rounded-md focus:outline-none focus:ring-1 focus:ring-[#11453B]"
           value={nhfCode}
           onChange={(e) => dispatch(setNhfCode(e.target.value))}
         />
@@ -121,14 +121,14 @@ const CompanySize = () => {
       <div className="relative mb-4">
         <label
           htmlFor="website"
-          className="absolute -top-2 left-3 bg-white px-1 text-sm text-green-600"
+          className="absolute -top-2 left-3 bg-white px-1 text-sm text-[#8D8E8D]"
         >
           Website
         </label>
         <input
           type="text"
           id="website"
-          className="block w-full px-4 py-2 border border-green-600 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+          className="block w-full px-4 py-2 border border-[#B5B6B5] rounded-md focus:outline-none focus:ring-1 focus:ring-[#11453B]"
           value={website}
           onChange={(e) => dispatch(setWebsite(e.target.value))}
         />
@@ -138,14 +138,14 @@ const CompanySize = () => {
       <div className="relative mb-4">
         <label
           htmlFor="industry"
-          className="absolute -top-2 left-3 bg-white px-1 text-sm text-green-600"
+          className="absolute -top-2 left-3 bg-white px-1 text-sm text-[#8D8E8D]"
         >
           Industry
         </label>
         <input
           type="text"
           id="industry"
-          className="block w-full px-4 py-2 border border-green-600 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+          className="block w-full px-4 py-2 border border-[#B5B6B5] rounded-md focus:outline-none focus:ring-1 focus:ring-[#11453B]"
           value={industry}
           onChange={(e) => dispatch(setIndustry(e.target.value))}
         />
