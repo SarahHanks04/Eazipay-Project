@@ -16,7 +16,7 @@ const CompanyInfo = () => {
 
   return (
     <main>
-      <div>
+      <div className="flex gap-10 mb-6">
         <img src={AbstractCompany} alt="Abstract Company" />
         <input
           type="file"
