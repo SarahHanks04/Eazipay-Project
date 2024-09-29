@@ -23,7 +23,11 @@ const Form = () => {
           onClick={() => toggle("editCompanyInfo")}
         >
           <div className="flex gap-6">
-            {open.editCompanyInfo ? <FiChevronLeft className="flex justify-center items-center mt-1" /> : <FiChevronDown  className="flex justify-center items-center mt-1" />}
+            {open.editCompanyInfo ? (
+              <FiChevronLeft className="flex justify-center items-center mt-1" />
+            ) : (
+              <FiChevronDown className="flex justify-center items-center mt-1" />
+            )}
             <h1>Edit Company Information</h1>
           </div>
           <div className="w-full h-[1px] bg-[#E7E8E7] my-6"></div>

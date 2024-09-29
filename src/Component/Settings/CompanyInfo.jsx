@@ -17,16 +17,14 @@ const CompanyInfo = () => {
   };
 
   return (
-    <main>
+    <main className="px-8">
       <div className="flex items-baseline gap-8 mb-6">
-        {/* Abstract Company Image */}
         <img
           src={AbstractCompany}
           alt="Abstract Company"
-          className="w-24 h-24 object-contain"
+          className="object-contain"
         />
 
-        {/* Custom file input */}
         <div className="relative">
           <input
             type="file"
@@ -36,7 +34,7 @@ const CompanyInfo = () => {
           />
           <label
             htmlFor="logoUpload"
-            className="bg-[#F0F7EB] border border-[#11453B] px-4 py-2 rounded-[8px] cursor-pointer shadow-sm text-[#11453B] hover:bg-gray-100 transition"
+            className="bg-[#F0F7EB] border-[1.5px] border-[#11453B] px-4 py-2 rounded-[8px] cursor-pointer shadow-sm text-[#11453B] hover:bg-gray-100 transition"
           >
             {fileName}
           </label>
