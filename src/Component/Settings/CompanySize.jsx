@@ -23,7 +23,7 @@ const CompanySize = () => {
   return (
     <main className="px-4 sm:px-8">
       {/* COMPANY SIZE */}
-      <div className="relative my-4 sm:my-8">
+      <div className="relative my-10 sm:my-8">
         <label
           htmlFor="companySize"
           className="absolute -top-3 left-4 sm:left-5 bg-white px-[8px] sm:px-[16px] text-[14px] sm:text-[16px] text-[#8D8E8D]"
@@ -46,7 +46,7 @@ const CompanySize = () => {
       </div>
 
       {/* PENSION CODE */}
-      <div className="relative my-4 sm:my-8">
+      <div className="relative my-10 sm:my-8">
         <label
           htmlFor="pensionCode"
           className="absolute -top-3 left-4 sm:left-5 bg-white px-[8px] sm:px-[16px] text-[14px] sm:text-[16px] text-[#8D8E8D]"
@@ -63,7 +63,7 @@ const CompanySize = () => {
       </div>
 
       {/* PAYE STATE */}
-      <div className="relative my-5 sm:my-8">
+      <div className="relative my-10 sm:my-8">
         <label
           htmlFor="payeState"
           className="absolute -top-3 left-4 sm:left-5 bg-white px-[8px] sm:px-[16px] text-[14px] sm:text-[16px] text-[#8D8E8D]"
@@ -76,7 +76,7 @@ const CompanySize = () => {
           value={payeState}
           onChange={(e) => dispatch(setPayeState(e.target.value))}
         >
-        <option value="">Select</option>
+          <option value=""></option>
           <option value="lagos">Lagos</option>
           <option value="abuja">Abuja</option>
           <option value="portHarcort">Port Harcort</option>
@@ -90,7 +90,7 @@ const CompanySize = () => {
       </div>
 
       {/* PAYE ID */}
-      <div className="relative my-5 sm:my-8">
+      <div className="relative my-10 sm:my-8">
         <label
           htmlFor="payeId"
           className="absolute -top-3 left-4 sm:left-5 bg-white px-[8px] sm:px-[16px] text-[14px] sm:text-[16px] text-[#8D8E8D]"
@@ -107,7 +107,7 @@ const CompanySize = () => {
       </div>
 
       {/* NHF CODE */}
-      <div className="relative my-5 sm:my-8">
+      <div className="relative my-10 sm:my-8">
         <label
           htmlFor="nhfCode"
           className="absolute -top-3 left-4 sm:left-5 bg-white px-[8px] sm:px-[16px] text-[14px] sm:text-[16px] text-[#8D8E8D]"
@@ -124,7 +124,7 @@ const CompanySize = () => {
       </div>
 
       {/* WEBSITE */}
-      <div className="relative my-5 sm:my-8">
+      <div className="relative my-10 sm:my-8">
         <label
           htmlFor="website"
           className="absolute -top-3 left-4 sm:left-5 bg-white px-[8px] sm:px-[16px] text-[14px] sm:text-[16px] text-[#8D8E8D]"
@@ -141,7 +141,7 @@ const CompanySize = () => {
       </div>
 
       {/* INDUSTRY */}
-      <div className="relative my-5 sm:my-8">
+      <div className="relative my-10 sm:my-8">
         <label
           htmlFor="industry"
           className="absolute -top-3 left-4 sm:left-5 bg-white px-[8px] sm:px-[16px] text-[14px] sm:text-[16px] text-[#8D8E8D]"
@@ -151,7 +151,7 @@ const CompanySize = () => {
         <input
           type="text"
           id="industry"
-          className="block w-full px-3 py-2 sm:px-4 sm:py-2 border-[1.3px] border-[#B5B6B5] rounded-[12px] sm:rounded-[16px] focus:outline-none focus:ring-1 focus:ring-[#11453B]"
+          className="block w-full px-3 py-2 sm:px-4 sm:py-2 border-[1.3px] border-[#B5B6B5] rounded-[12px] sm:rounded-[16px] focus:outline-none focus:ring-1 focus:ring-[#11453B] mb-6"
           value={industry}
           onChange={(e) => dispatch(setIndustry(e.target.value))}
         />
