@@ -16,10 +16,10 @@ const Form = () => {
   };
 
   return (
-    <form>
+    <form className="main-form bg-white my-6 rounded-[16px]">
       <div>
         <div
-          className="text-[#515251] font-medium text-[18px]"
+          className="text-[#515251] font-medium text-[18px] p-4"
           onClick={() => toggle("editCompanyInfo")}
         >
           <div className="flex gap-6">
