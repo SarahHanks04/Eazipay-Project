@@ -16,7 +16,6 @@ import IndividualProvider from "./Component/Individual/IndividualProvider";
 import MainIndividualComponent from "./Component/Individual/MainIndividualComponent";
 import TeamContainer from "./Component/Eazipay Team/TeamContainer/TeamContainer";
 import AddEmployee from "./Component/Eazipay Team/AddnewEmployee/AddEmployee";
-// import Form from "./Component/Settings/Form";
 import MainSettings from "./Component/Settings/MainSettings";
 
 function App() {
