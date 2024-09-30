@@ -30,7 +30,7 @@ const BusinessProfile = () => {
             <NavLink
               to="/company"
               className={({ isActive }) =>
-                `py-[16px] px-[8px] border-2 rounded-[10px] text-center overflow-hidden whitespace-nowrap ${
+                `py-[16px] px-[8px] border-2 rounded-[10px] text-center overflow-hidden whitespace-nowrap hover:bg-[#F0F7EB] ${
                   isActive ? "bg-[#F0F7EB]" : ""
                 }`
               }
@@ -41,7 +41,7 @@ const BusinessProfile = () => {
             <NavLink
               to="/ceo-founder"
               className={({ isActive }) =>
-                `py-[16px] px-[8px] border-2 rounded-[10px] text-center overflow-hidden whitespace-nowrap ${
+                `py-[16px] px-[8px] border-2 rounded-[10px] text-center overflow-hidden whitespace-nowrap hover:bg-[#F0F7EB] ${
                   isActive ? "bg-[#F0F7EB]" : ""
                 }`
               }
@@ -52,7 +52,7 @@ const BusinessProfile = () => {
             <NavLink
               to="/company-director"
               className={({ isActive }) =>
-                `py-[16px] px-[8px] border-2 rounded-[10px] text-center overflow-hidden whitespace-nowrap ${
+                `py-[16px] px-[8px] border-2 rounded-[10px] text-center overflow-hidden whitespace-nowrap hover:bg-[#F0F7EB] ${
                   isActive ? "bg-[#F0F7EB]" : ""
                 }`
               }
@@ -63,7 +63,7 @@ const BusinessProfile = () => {
             <NavLink
               to="/account-info"
               className={({ isActive }) =>
-                `py-[16px] px-[8px] border-2 rounded-[10px] text-center overflow-hidden whitespace-nowrap ${
+                `py-[16px] px-[8px] border-2 rounded-[10px] text-center overflow-hidden whitespace-nowrap hover:bg-[#F0F7EB] ${
                   isActive ? "bg-[#F0F7EB]" : ""
                 }`
               }
@@ -74,7 +74,7 @@ const BusinessProfile = () => {
             <NavLink
               to="/branch-department"
               className={({ isActive }) =>
-                `py-[16px] px-[8px] border-2 rounded-[10px] text-center overflow-hidden whitespace-nowrap ${
+                `py-[16px] px-[8px] border-2 rounded-[10px] text-center overflow-hidden whitespace-nowrap hover:bg-[#F0F7EB] ${
                   isActive ? "bg-[#F0F7EB]" : ""
                 }`
               }
@@ -85,7 +85,7 @@ const BusinessProfile = () => {
             <NavLink
               to="/kyc-info"
               className={({ isActive }) =>
-                `py-[16px] px-[8px] border-2 rounded-[10px] text-center overflow-hidden whitespace-nowrap ${
+                `py-[16px] px-[8px] border-2 rounded-[10px] text-center overflow-hidden whitespace-nowrap hover:bg-[#F0F7EB] ${
                   isActive ? "bg-[#F0F7EB]" : ""
                 }`
               }
