@@ -23,7 +23,7 @@ const CompanySize = () => {
   return (
     <main className="px-4 sm:px-8">
       {/* COMPANY SIZE */}
-      <div className="relative my-10 sm:my-8">
+      <div className="relative mt-10 sm:my-8">
         <label
           htmlFor="companySize"
           className="absolute -top-3 left-4 sm:left-5 bg-white px-[8px] sm:px-[16px] text-[14px] sm:text-[16px] text-[#8D8E8D]"
