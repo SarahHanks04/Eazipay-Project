@@ -25,73 +25,45 @@ const BusinessProfile = () => {
       {/* Profile Details */}
       {showDetails && (
         <div className="profile-details border mt-4">
-          <div className="main-profile grid grid-cols-2 gap-4 bg-white p-[2rem] rounded-[16px] shadow-md text-[#515251] text-[18px] font-medium">
-            {/* Card Items */}
-            <NavLink
-              to="/company"
-              className={({ isActive }) =>
-                `py-[16px] px-[8px] border-2 rounded-[10px] text-center overflow-hidden whitespace-nowrap hover:bg-[#F0F7EB] ${
-                  isActive ? "bg-[#F0F7EB]" : ""
-                }`
-              }
-            >
-              <span>Company</span>
-            </NavLink>
-
-            <NavLink
-              to="/ceo-founder"
-              className={({ isActive }) =>
-                `py-[16px] px-[8px] border-2 rounded-[10px] text-center overflow-hidden whitespace-nowrap hover:bg-[#F0F7EB] ${
-                  isActive ? "bg-[#F0F7EB]" : ""
-                }`
-              }
-            >
-              <span>CEO/Founder</span>
-            </NavLink>
-
-            <NavLink
-              to="/company-director"
-              className={({ isActive }) =>
-                `py-[16px] px-[8px] border-2 rounded-[10px] text-center overflow-hidden whitespace-nowrap hover:bg-[#F0F7EB] ${
-                  isActive ? "bg-[#F0F7EB]" : ""
-                }`
-              }
-            >
-              <span>Company Director</span>
-            </NavLink>
-
-            <NavLink
-              to="/account-info"
-              className={({ isActive }) =>
-                `py-[16px] px-[8px] border-2 rounded-[10px] text-center overflow-hidden whitespace-nowrap hover:bg-[#F0F7EB] ${
-                  isActive ? "bg-[#F0F7EB]" : ""
-                }`
-              }
-            >
-              <span>Account Information</span>
-            </NavLink>
-
-            <NavLink
-              to="/branch-department"
-              className={({ isActive }) =>
-                `py-[16px] px-[8px] border-2 rounded-[10px] text-center overflow-hidden whitespace-nowrap hover:bg-[#F0F7EB] ${
-                  isActive ? "bg-[#F0F7EB]" : ""
-                }`
-              }
-            >
-              <span>Branch/Department</span>
-            </NavLink>
-
-            <NavLink
-              to="/kyc-info"
-              className={({ isActive }) =>
-                `py-[16px] px-[8px] border-2 rounded-[10px] text-center overflow-hidden whitespace-nowrap hover:bg-[#F0F7EB] ${
-                  isActive ? "bg-[#F0F7EB]" : ""
-                }`
-              }
-            >
-              <span>KYC Information</span>
-            </NavLink>
+          <div className="flex justify-center items-center">
+            <div className="bg-white p-6 shadow-lg rounded-[16px] w-full max-w-6xl">
+              <div className="">
+                <table className="w-full table-fixed border rounded-tl-[16px] border-spacing-2">
+                  <tbody className="rounded-[16px]">
+                    <tr className="border-t-2 border-[#E7E8E7] rounded-bl-[16px]">
+                      <td className="border-r-2 p-4 text-center text-[#515251] text-[16px] font-normal hover:bg-[#F0F7EB]">
+                        <NavLink to="/company">Company</NavLink>
+                      </td>
+                      <td className="p-4 text-center text-[#515251] text-[16px] font-normal hover:bg-[#F0F7EB]">
+                        <NavLink to="/ceo-founder">CEO/Founder</NavLink>
+                      </td>
+                    </tr>
+                    <tr className="border-t-2 border-[#E7E8E7] rounded-bl-[16px]">
+                      <td className="border-r-2 p-4 text-center text-[#515251] text-[16px] font-normal hover:bg-[#F0F7EB]">
+                        <NavLink to="/company-director">
+                          Company Director
+                        </NavLink>
+                      </td>
+                      <td className="p-4 text-[#515251] text-[16px] text-center font-normal hover:bg-[#F0F7EB]">
+                        <NavLink to="/account-info">
+                          Account Information
+                        </NavLink>
+                      </td>
+                    </tr>
+                    <tr className="border-t-2 border-[#E7E8E7] rounded-bl-[16px]">
+                      <td className="p-4 border-r-2 text-center text-[#515251] text-[16px] font-normal whitespace-normal break-words hover:bg-[#F0F7EB]">
+                        <NavLink to="/branch-department">
+                          Branch/Department
+                        </NavLink>
+                      </td>
+                      <td className="p-4 text-center text-[#515251] text-[16px] font-normal hover:bg-[#F0F7EB]">
+                        <NavLink to="/kyc-info">KYC Information</NavLink>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
           </div>
         </div>
       )}
