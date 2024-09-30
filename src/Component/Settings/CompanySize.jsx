@@ -151,7 +151,7 @@ const CompanySize = () => {
         <input
           type="text"
           id="industry"
-          className="block w-full px-3 py-2 sm:px-4 sm:py-2 border-[1.3px] border-[#B5B6B5] rounded-[12px] sm:rounded-[16px] focus:outline-none focus:ring-1 focus:ring-[#11453B] mb-6"
+          className="block w-full px-3 py-2 sm:px-4 sm:py-2 border-[1.3px] border-[#B5B6B5] rounded-[12px] sm:rounded-[16px] focus:outline-none focus:ring-1 focus:ring-[#11453B]"
           value={industry}
           onChange={(e) => dispatch(setIndustry(e.target.value))}
         />

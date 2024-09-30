@@ -1,15 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setOfficeAddress } from "./Slice";
 
 const CompanyAddress = () => {
   const dispatch = useDispatch();
   const officeAddress = useSelector((state) => state.form.officeAddress);
+  // Local state for Proof of Address File
+  const [proofOfAddressFile, setProofOfAddressFile] = useState(null);
+
 
   const handleOfficeChange = (e) => {
+    const value = e.target.value;
+    dispatch(setOfficeAddress(value));
+  };
+
+  // Handle File Input Change
+  const handleProofOfAddressChange = (e) => {
     const file = e.target.files[0];
     if (file) {
-      dispatch(setOfficeAddress(file));
+      setProofOfAddressFile(file);
     }
   };
 
@@ -28,7 +37,7 @@ const CompanyAddress = () => {
           id="officeAddress"
           className="block w-full px-3 py-2 sm:px-4 sm:py-2 border-[1.3px] border-[#B5B6B5] rounded-[12px] sm:rounded-[16px] focus:outline-none focus:ring-1 focus:ring-[#11453B]"
           value={officeAddress}
-          onChange={(e) => dispatch(setOfficeAddress(e.target.value))}
+          onChange={handleOfficeChange}
         />
       </div>
 
@@ -37,12 +46,12 @@ const CompanyAddress = () => {
         <div>
           <input
             type="file"
-            id="uploadAddress"
+            id="uploadProofOfAddress"
             className="absolute inset-0 opacity-0 cursor-pointer"
-            onChange={handleOfficeChange}
+            onChange={handleProofOfAddressChange}
           />
           <label
-            htmlFor="uploadAddress"
+            htmlFor="uploadProofOfAddress"
             className="bg-[#F0F7EB] border-[1.5px] border-[#11453B] px-4 py-2 rounded-[8px] cursor-pointer shadow-sm text-[#11453B] hover:bg-[#4E4E4E] hover:text-white transition"
           >
             Upload Proof of Address
@@ -51,7 +60,8 @@ const CompanyAddress = () => {
         <span className="text-[12px] sm:text-[13px] text-[#4E4E4E]">
           e.g Nepa Bill, etc
         </span>
-        {officeAddress && <p>{officeAddress.name}</p>}
+        {/* {officeAddress && <p>{officeAddress.name}</p>} */}
+        {proofOfAddressFile && <p>{proofOfAddressFile.name}</p>}
       </div>
     </main>
   );

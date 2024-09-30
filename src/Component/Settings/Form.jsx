@@ -4,6 +4,7 @@ import CompanyAddress from "./CompanyAddress";
 import CompanySize from "./CompanySize";
 import CompanyInfo from "./CompanyInfo";
 import { FiChevronDown, FiChevronLeft } from "react-icons/fi";
+import SettingButtons from "./SettingButtons";
 
 const Form = () => {
   const [open, setOpen] = useState({ editCompanyInfo: "false" });
@@ -16,7 +17,7 @@ const Form = () => {
   };
 
   return (
-    <form className="main-form bg-white my-6 rounded-[16px]">
+    <form className="main-form bg-white my-6 py-5 rounded-[16px]">
       <div>
         <div
           className="text-[#515251] font-medium text-[18px] p-4"
@@ -38,6 +39,7 @@ const Form = () => {
             <CompanyName />
             <CompanyAddress />
             <CompanySize />
+            <SettingButtons />
           </div>
         )}
       </div>

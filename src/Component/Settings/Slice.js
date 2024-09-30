@@ -6,7 +6,7 @@ const initialState = {
   isRegistered: null,
   cacDocument: null,
   officeAddress: "",
-  proofOfAddress: null,
+  // proofOfAddress: null,
   companySize: "",
   pensionCode: "",
   payeState: "",
@@ -35,9 +35,9 @@ export const formSlice = createSlice({
     setOfficeAddress: (state, action) => {
       state.officeAddress = action.payload;
     },
-    setProofOfAddress: (state, action) => {
-      state.proofOfAddress = action.payload;
-    },
+    // setProofOfAddress: (state, action) => {
+    //   state.proofOfAddress = action.payload;
+    // },
     setCompanySize: (state, action) => {
       state.companySize = action.payload;
     },
@@ -45,20 +45,21 @@ export const formSlice = createSlice({
       state.pensionCode = action.payload;
     },
     setPayeState: (state, action) => {
-      state.payeId = action.payload;
+      state.payeState = action.payload;
     },
     setPayeId: (state, action) => {
-      state.payeState = action.payload;
+      state.payeId = action.payload;
     },
     setNhfCode: (state, action) => {
-      state.payeState = action.payload;
+      state.nhfCode = action.payload;
     },
     setWebsite: (state, action) => {
-      state.payeState = action.payload;
+      state.website = action.payload;
     },
     setIndustry: (state, action) => {
-      state.payeState = action.payload;
+      state.industry = action.payload;
     },
+    resetForm: () => initialState, // Added Reset Action
   },
 });
 
@@ -68,7 +69,7 @@ export const {
   setIsRegistered,
   setCACDocument,
   setOfficeAddress,
-  setProofOfAddress,
+  // setProofOfAddress,
   setCompanySize,
   setPensionCode,
   setPayeState,
@@ -76,6 +77,7 @@ export const {
   setNhfCode,
   setWebsite,
   setIndustry,
+  resetForm,
 } = formSlice.actions;
 
 export default formSlice.reducer;
