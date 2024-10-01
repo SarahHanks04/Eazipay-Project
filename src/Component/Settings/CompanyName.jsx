@@ -7,6 +7,7 @@ const CompanyName = () => {
   const companyName = useSelector((state) => state.form.companyName);
   const [cacDocumentFile, setCacDocumentFile] = useState(null);
 
+  // Handle Text Input
   const handleCompanyName = (e) => {
     const value = e.target.value;
     dispatch(setCompanyName(value));
