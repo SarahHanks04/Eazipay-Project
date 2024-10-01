@@ -9,12 +9,14 @@ const SettingButtons = () => {
   // Handle Cancel Button
   const handleCancel = () => {
     dispatch(resetForm());
+    // clearFileInput()
   };
 
   // Handle Save Button
   const handleSave = () => {
     console.log("Saved Data:", formData);
     dispatch(resetForm());
+    // clearFileInput();
   };
 
   return (
