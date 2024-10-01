@@ -60,7 +60,6 @@ const CompanyAddress = () => {
         <span className="text-[12px] sm:text-[13px] text-[#4E4E4E]">
           e.g Nepa Bill, etc
         </span>
-        {/* {officeAddress && <p>{officeAddress.name}</p>} */}
         {proofOfAddressFile && <p>{proofOfAddressFile.name}</p>}
       </div>
     </main>

@@ -1,17 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setCACDocument, setCompanyName } from "./Slice";
+import { setCompanyName } from "./Slice";
 
 const CompanyName = () => {
   const dispatch = useDispatch();
   const companyName = useSelector((state) => state.form.companyName);
-  const cacDocument = useSelector((state) => state.form.cacDocument);
+  const [cacDocumentFile, setCacDocumentFile] = useState(null);
 
-  const handleCACChange = (e) => {
+  const handleCompanyName = (e) => {
+    const value = e.target.value;
+    dispatch(setCompanyName(value));
+  };
+
+  // Handle File Input Change
+  const handleCacDocument = (e) => {
     const file = e.target.files[0];
     if (file) {
-      setFileName(file.name);
-      dispatch(setCACDocument(file));
+      setCacDocumentFile(file);
     }
   };
 
@@ -30,7 +35,7 @@ const CompanyName = () => {
           id="companyName"
           className="block w-full px-3 py-2 sm:px-4 sm:py-2 border-[1.3px] border-[#B5B6B5] rounded-[12px] sm:rounded-[16px] focus:outline-none focus:ring-1 focus:ring-[#11453B]"
           value={companyName}
-          onChange={(e) => dispatch(setCompanyName(e.target.value))}
+          onChange={handleCompanyName}
         />
       </div>
 
@@ -56,7 +61,7 @@ const CompanyName = () => {
             type="file"
             id="cacDocument"
             className="absolute inset-0 opacity-0 cursor-pointer"
-            onChange={handleCACChange}
+            onChange={handleCacDocument}
           />
           <label
             htmlFor="cacDocument"
@@ -68,7 +73,7 @@ const CompanyName = () => {
         <span className="text-[12px] sm:text-[13px] text-[#4E4E4E]">
           Jpeg and Png Only (2mb max)
         </span>
-        {cacDocument && <p>{cacDocument.name}</p>}
+        {cacDocumentFile && <p>{cacDocumentFile.name}</p>}
       </div>
     </main>
   );

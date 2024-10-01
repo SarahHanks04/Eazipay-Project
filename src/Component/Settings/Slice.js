@@ -4,7 +4,7 @@ const initialState = {
   logo: null,
   companyName: "",
   isRegistered: null,
-  cacDocument: null,
+  // cacDocument: null,
   officeAddress: "",
   // proofOfAddress: null,
   companySize: "",
@@ -29,9 +29,9 @@ export const formSlice = createSlice({
     setIsRegistered: (state, action) => {
       state.isRegistered = action.payload;
     },
-    setCACDocument: (state, action) => {
-      state.cacDocument = action.payload;
-    },
+    // setCACDocument: (state, action) => {
+    //   state.cacDocument = action.payload;
+    // },
     setOfficeAddress: (state, action) => {
       state.officeAddress = action.payload;
     },
@@ -59,7 +59,7 @@ export const formSlice = createSlice({
     setIndustry: (state, action) => {
       state.industry = action.payload;
     },
-    resetForm: () => initialState, // Added Reset Action
+    resetForm: () => initialState,
   },
 });
 
@@ -67,7 +67,7 @@ export const {
   setLogo,
   setCompanyName,
   setIsRegistered,
-  setCACDocument,
+  // setCACDocument,
   setOfficeAddress,
   // setProofOfAddress,
   setCompanySize,

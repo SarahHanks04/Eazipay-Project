@@ -36,6 +36,7 @@ const CompanySize = () => {
           value={companySize}
           onChange={(e) => dispatch(setCompanySize(e.target.value))}
         >
+          <option value=""></option>
           <option value="100 and above">100 and above</option>
           <option value="81-99">81-99</option>
           <option value="61-80">61-80</option>
