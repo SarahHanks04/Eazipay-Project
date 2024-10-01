@@ -1,18 +1,27 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import AbstractCompany from "../../assets/AbstractCompany.svg";
-import { setLogo } from "./Slice";
+// import { setLogo } from "./Slice";
 
 const CompanyInfo = () => {
   const dispatch = useDispatch();
   const logo = useSelector((state) => state.form.logo);
   const [fileName, setFileName] = useState("Change Logo");
+  const [logoFile, setLogoFile] = useState(null);
 
-  const handleLogoChange = (e) => {
+  // const handleLogoChange = (e) => {
+  //   const file = e.target.files[0];
+  //   if (file) {
+  //     setFileName(file.name);
+  //     dispatch(setLogo(URL.createObjectURL(file)));
+  //   }
+  // };
+
+  // Handle File Input Change
+  const handleLogoFile = (e) => {
     const file = e.target.files[0];
     if (file) {
-      setFileName(file.name);
-      dispatch(setLogo(URL.createObjectURL(file)));
+      setLogoFile(file);
     }
   };
 
@@ -30,7 +39,7 @@ const CompanyInfo = () => {
             type="file"
             id="logoUpload"
             className="absolute inset-0 opacity-0 cursor-pointer"
-            onChange={handleLogoChange}
+            onChange={handleLogoFile}
           />
           <label
             htmlFor="logoUpload"
@@ -39,6 +48,7 @@ const CompanyInfo = () => {
             {fileName}
           </label>
         </div>
+        {logoFile && <p>{logoFile.name}</p>}
 
         {/* Display the logo */}
         {logo && (

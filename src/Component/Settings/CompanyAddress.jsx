@@ -9,6 +9,7 @@ const CompanyAddress = () => {
   const [proofOfAddressFile, setProofOfAddressFile] = useState(null);
 
 
+  // Handle Text Input
   const handleOfficeChange = (e) => {
     const value = e.target.value;
     dispatch(setOfficeAddress(value));
