@@ -1,11 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setCompanyName } from "./Slice";
+import { setCompanyName, setCACDocument } from "./Slice";
 
 const CompanyName = () => {
   const dispatch = useDispatch();
   const companyName = useSelector((state) => state.form.companyName);
+  const cacDocument = useSelector((state) => state.form.cacDocument);
   const [cacDocumentFile, setCacDocumentFile] = useState(null);
+  const [fileName, setFileName] = useState("Upload CAC Doc.");
+  const [previewURL, setPreviewURL] = useState(null);
 
   // Handle Text Input
   const handleCompanyName = (e) => {
@@ -13,13 +16,33 @@ const CompanyName = () => {
     dispatch(setCompanyName(value));
   };
 
-  // Handle File Input Change
   const handleCacDocument = (e) => {
     const file = e.target.files[0];
     if (file) {
+      // Log the file to the console
+      console.log("Uploaded CAC Document File:", file);
+
+      // Update local state
       setCacDocumentFile(file);
+      setFileName(file.name);
+
+      // Create a preview URL
+      const url = URL.createObjectURL(file);
+      setPreviewURL(url);
+
+      // Dispatch the preview URL to Redux
+      dispatch(setCACDocument(url));
     }
   };
+
+  // Clean up the object URL to prevent memory leaks
+  useEffect(() => {
+    return () => {
+      if (previewURL) {
+        URL.revokeObjectURL(previewURL);
+      }
+    };
+  }, [previewURL]);
 
   return (
     <main className="px-4 sm:px-8">
@@ -46,10 +69,16 @@ const CompanyName = () => {
           Is your company registered?
         </label>
         <div className="mt-4 sm:mt-[1rem] flex gap-4 sm:gap-8">
-          <button className="flex-1 py-2 rounded-md text-white bg-[#11453B] hover:bg-white hover:text-[#4E4E4E] transition-all">
+          <button
+            type="button"
+            className="flex-1 py-2 rounded-md text-white bg-[#11453B] hover:bg-white hover:text-[#4E4E4E] transition-all"
+          >
             Yes
           </button>
-          <button className="flex-1 py-2 rounded-md border-[2px] text-[#4E4E4E] border-[#F0F7EB] hover:bg-[#11453B] hover:text-white transition-all">
+          <button
+            type="button"
+            className="flex-1 py-2 rounded-md border-[2px] text-[#4E4E4E] border-[#F0F7EB] hover:bg-[#11453B] hover:text-white transition-all"
+          >
             No
           </button>
         </div>
@@ -57,10 +86,11 @@ const CompanyName = () => {
 
       {/* CAC DOCUMENT */}
       <div className="relative flex flex-wrap sm:flex-nowrap items-center gap-2 my-[2rem] sm:my-[3rem]">
-        <div>
+        <div className="relative">
           <input
             type="file"
             id="cacDocument"
+            accept="image/*"
             className="absolute inset-0 opacity-0 cursor-pointer"
             onChange={handleCacDocument}
           />
@@ -68,7 +98,7 @@ const CompanyName = () => {
             htmlFor="cacDocument"
             className="bg-[#F0F7EB] border-[1.5px] border-[#11453B] px-4 py-2 rounded-[8px] cursor-pointer shadow-sm text-[#11453B] hover:bg-[#4E4E4E] hover:text-white transition"
           >
-            Upload CAC Doc.
+            {fileName}
           </label>
         </div>
         <span className="text-[12px] sm:text-[13px] text-[#4E4E4E]">
@@ -76,6 +106,19 @@ const CompanyName = () => {
         </span>
         {cacDocumentFile && <p>{cacDocumentFile.name}</p>}
       </div>
+
+      {/* Display the uploaded CAC Document */}
+      {cacDocument && (
+        <div className="mt-4 sm:mt-6">
+          <p className="text-[#4E4E4E] mb-2">Uploaded CAC Document:</p>
+          <img
+            src={cacDocument}
+            alt="CAC Document"
+            className="w-32 h-32 object-cover rounded-md"
+          />
+          <p className="text-[#4E4E4E] mt-2">{cacDocumentFile.name}</p>
+        </div>
+      )}
     </main>
   );
 };
