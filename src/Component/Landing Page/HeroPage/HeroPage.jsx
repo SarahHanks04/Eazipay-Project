@@ -20,7 +20,7 @@ const HeroPage = () => {
   };
 
   return (
-    <main className="homepage-container flex flex-col md:flex-row items-center p-8 bg-gradient-to-r from-[#e6f0e5] to-[#fdf2f7] gap-8 md:gap-4">
+    <main className="homepage-container flex flex-col md:flex-row items-center p-12 bg-gradient-to-r from-[#e6f0e5] to-[#fdf2f7] gap-8 md:gap-4">
       <motion.div
         className="md:w-1/2 pl-4 md:pl-8 text-start"
         variants={fadeUp}
@@ -92,7 +92,7 @@ const HeroPage = () => {
         <img
           src={Hero1}
           alt="Hero Image"
-          className="w-[600px] md:w-[700px] lg:w-[800px] max-w-full h-auto"
+          className="w-[600px] md:w-[700px] lg:w-[800px] mr-4 max-w-full h-auto"
         />
       </motion.div>
     </main>

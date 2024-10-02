@@ -1,15 +1,12 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import MobileNavBar from "./Navigation Bar/MobileNavBar/MobileNavBar";
-import DesktopNavbar from "./Navigation Bar/DestktopNavBar/DesktopNavbar";
 import Footer from "./Landing Page/Footer/Footer";
-
+import NavigationBar from "./Navigation Bar/Navigation Bar/NavigationBar";
 
 const Layout = () => {
   return (
     <div>
-      <MobileNavBar />
-      <DesktopNavbar />
+      <NavigationBar />
       <main>
         <Outlet />
       </main>
