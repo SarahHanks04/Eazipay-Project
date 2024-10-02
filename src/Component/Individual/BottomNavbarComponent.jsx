@@ -5,7 +5,7 @@ import User from "../../assets/User.svg";
 import Payroll from "../../assets/Payroll.svg";
 import Quickloan from "../../assets/Quickloan.svg";
 import Group from "../../assets/Group.png";
-// import "../Individual/BottomNavbar.css";
+
 
 const BottomNavbarComponent = () => {
   return (
