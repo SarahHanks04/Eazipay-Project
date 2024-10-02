@@ -4,11 +4,7 @@ import Layout from "./Component/Layout";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import HeroPage from "./Component/Landing Page/HeroPage/HeroPage";
-import AboutPage from "./Component/Landing Page/Aboutpage/AboutPage";
-import HowItWork from "./Component/Landing Page/HowItWorks/HowItWork";
-import SubscribeToEasyLife from "./Component/Landing Page/SubscribeToEasyLife/SubscribeToEasyLife";
-import EasypayDemo from "./Component/Landing Page/EasyPayDemo/EasypayDemo";
+import LandingPage from "./Component/Landing Page/Landing Page/LandingPage";
 import MainDashboard from "./Component/Dashboard/Dashboard/MainDashboard";
 import DashboardLayout from "./Component/Dashboard/DashboardLayout/DashboardLayout";
 import MainSidebar from "./Component/Dashboard/Sidebar/MainSidebar";
@@ -26,7 +22,6 @@ function App() {
       easing: "ease-in-out",
       once: true,
     });
-    // Aos.refresh();
   }, []);
 
   return (
@@ -34,7 +29,7 @@ function App() {
       <div>
         <IndividualProvider>
           <Routes>
-            <Route path="/" element={<Layout />}>
+            {/* <Route path="/" element={<Layout />}>
               <Route
                 path="/"
                 element={
@@ -47,6 +42,9 @@ function App() {
                   </div>
                 }
               />
+            </Route> */}
+            <Route path="/" element={<Layout />}>
+              <Route path="/" element={<LandingPage />} />
             </Route>
             <Route path="/dashboard-layout" element={<DashboardLayout />} />
             <Route path="/dashboard" element={<MainDashboard />} />
