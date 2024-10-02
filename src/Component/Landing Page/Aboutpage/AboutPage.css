@@ -35,7 +35,7 @@
   transform: scale(0.2); 
 } */
 
-.about-cards:hover {
+/* .about-cards:hover {
   margin-left: 0 !important;
   transform: scale(1); 
   z-index: 1; 
@@ -45,17 +45,11 @@
   transform: scale(0.9); 
   transition: transform 0.3s ease;
 }
-.about-cards {
-  position: relative;
-}
 
 .about-card-2 {
-  position: absolute;
-  left: 20%;
-  /* margin-left: 0px; */
+  margin-left: -160px;
 }
 
 .about-card-3 {
-  /* position: absolute; */
-  left: 36%;
-}
+  margin-left: -350px;
+} */
