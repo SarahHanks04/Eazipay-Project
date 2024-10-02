@@ -45,7 +45,7 @@ const AboutPage = () => {
           </div> */}
 
           <div className="about-cards grid grid-cols-1 md:grid-cols-3 gap-8 mt-[40px] mx-auto justify-center items-center">
-            <div className="p-8 bg-[#11453B] text-white rounded-lg shadow-md scale-100">
+            <div className="about-card p-8 bg-[#11453B] text-white rounded-lg shadow-md scale-100">
               <h2 className="font-medium text-xl mb-5">
                 Tamper-proof Payroll for Life
               </h2>
@@ -62,7 +62,7 @@ const AboutPage = () => {
               </div>
             </div>
 
-            <div className="p-8 bg-[#11453B] text-white rounded-lg shadow-lg scale-100">
+            <div className="about-card p-8 bg-[#11453B] text-white rounded-lg shadow-lg scale-100">
               <h2 className="font-medium text-xl mb-5">
                 All Payroll, Anytime Anywhere
               </h2>
@@ -79,7 +79,7 @@ const AboutPage = () => {
               </div>
             </div>
 
-            <div className="p-8 bg-[#11453B] text-white rounded-lg shadow-lg scale-100">
+            <div className="about-card p-8 bg-[#11453B] text-white rounded-lg shadow-lg scale-100">
               <h2 className="font-medium text-xl mb-5">Payroll in Seconds</h2>
               <div>
                 <p className="text-[12px] pb-4">

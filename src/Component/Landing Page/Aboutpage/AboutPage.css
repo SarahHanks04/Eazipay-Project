@@ -21,3 +21,41 @@
 .about-image:hover {
   transform: translateY(-5px) scale(1.03);
 }
+
+/* .about-cards {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+} */
+
+/* .about-card {
+  position: relative;
+  margin-left: -50px; 
+  transform: scale(0.2); 
+} */
+
+.about-cards:hover {
+  margin-left: 0 !important;
+  transform: scale(1); 
+  z-index: 1; 
+}
+
+.about-cards .about-card:not(:hover) {
+  transform: scale(0.9); 
+  transition: transform 0.3s ease;
+}
+.about-cards {
+  position: relative;
+}
+
+.about-card-2 {
+  position: absolute;
+  left: 20%;
+  /* margin-left: 0px; */
+}
+
+.about-card-3 {
+  /* position: absolute; */
+  left: 36%;
+}
