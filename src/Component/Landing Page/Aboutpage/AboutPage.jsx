@@ -30,7 +30,7 @@ const AboutPage = () => {
             </p>
           </div>
 
-          {/* <div className="about-image mt-10">
+          <div className="about-image mt-10">
             <div className="mx-auto text-center">
               <img src={AboutImage} alt="About Page" />
             </div>
@@ -42,9 +42,9 @@ const AboutPage = () => {
               <span className="text-[#EA4E4B]">hello@myeazipay.com</span> and
               expect our response shortly after.
             </p>
-          </div> */}
+          </div>
 
-          <div className="about-cards grid grid-cols-1 md:grid-cols-3 gap-8 mt-[40px] mx-auto justify-center items-center">
+          {/* <div className="about-cards grid grid-cols-1 md:grid-cols-3 gap-8 mt-[40px] mx-auto justify-center items-center">
             <div className="about-card p-8 bg-[#11453B] text-white rounded-lg shadow-md scale-100">
               <h2 className="font-medium text-xl mb-5">
                 Tamper-proof Payroll for Life
@@ -91,7 +91,7 @@ const AboutPage = () => {
                 <p className="text-[12px]">Payment is done permanently.</p>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
     </motion.div>
