@@ -5,8 +5,17 @@ import KaluAbasiama from "../../../assets/KaluAbasiama.svg";
 import MainDashboard from "../Dashboard/MainDashboard";
 import "../DashboardLayout/Layout.css";
 import SidebarProvider from "../Sidebar/MainSidebar";
+import { useNavigate } from "react-router-dom";
 
 const DashboardLayout = () => {
+  const navigate = useNavigate();
+
+  // Logout function
+  const handleLogout = () => {
+    // Clear tokens or user data from localStorage or context if any
+    localStorage.removeItem("token"); // Example if token is stored in localStorage
+    navigate("/login"); // Redirect to login page
+  };
   return (
     <div className="dashboard-container flex bg-[#E7E8E7]">
       <SidebarProvider className="fixed top-0 left-0 z-10 bg-white w-[272px] h-[1024px]" />
@@ -31,6 +40,13 @@ const DashboardLayout = () => {
                 </p>
               </div>
             </div>
+            {/* Logout Button */}
+            <button
+              onClick={handleLogout}
+              className="mt-4 lg:mt-4 text-red-500 hover:bg-red-700 transition duration-300 text-[10px]"
+            >
+              Logout
+            </button>
           </div>
         </nav>
       </div>

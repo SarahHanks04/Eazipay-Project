@@ -5,7 +5,7 @@ export const IndividualContext = createContext();
 
 const IndividualProvider = ({ children }) => {
   const [balance, setBalance] = useState(false);
-  const [user, setUser] = useState("")
+  const [user, setUser] = useState("");
   const [error, setError] = useState(null); // Error state
 
   // Toggle Balance Visibility
@@ -27,12 +27,32 @@ const IndividualProvider = ({ children }) => {
     }
   };
 
+  // const login = async (username, password) => {
+  //   try {
+  //     const response = await axios.post(
+  //       "https://dummyjson.com/auth/login",
+  //       {
+  //         username: username,
+  //         password: password,
+  //       },
+  //       {
+  //         headers: {
+  //           "Content-Type": "application/json",
+  //         },
+  //       }
+  //     );
+  //     console.log("Login successful:", response.data);
+  //     return response.data;
+  //   } catch (error) {
+  //     console.error("Login failed", error);
+  //     throw error;
+  //   }
+  // };
 
   // Logout function
   const logout = () => {
     setUser(""); // Clear the user state to simulate logout
   };
-
 
   const values = {
     balance,
