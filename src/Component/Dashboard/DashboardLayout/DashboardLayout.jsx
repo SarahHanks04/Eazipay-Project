@@ -43,7 +43,7 @@ const DashboardLayout = () => {
             {/* Logout Button */}
             <button
               onClick={handleLogout}
-              className="mt-4 lg:mt-4 text-red-500 hover:bg-red-700 transition duration-300 text-[10px]"
+              className="mt-4 lg:mt-4 text-red-500 transition duration-300 text-[10px]"
             >
               Logout
             </button>
