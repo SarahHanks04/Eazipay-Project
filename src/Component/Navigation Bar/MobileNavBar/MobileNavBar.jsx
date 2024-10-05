@@ -85,7 +85,7 @@ const MobileNavBar = () => {
             </li>
           </ul>
           <button
-            onClick={() => navigate("/log-in")}
+            onClick={() => navigate("/login")}
             className="bg-blue-950 text-white px-4 py-2 rounded-[16px] w-full mt-4"
           >
             Log in

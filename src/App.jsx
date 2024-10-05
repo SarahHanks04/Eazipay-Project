@@ -14,6 +14,7 @@ import TeamContainer from "./Component/Eazipay Team/TeamContainer/TeamContainer"
 import AddEmployee from "./Component/Eazipay Team/AddnewEmployee/AddEmployee";
 import MainSettings from "./Component/Settings/MainSettings";
 import LoginPage from "./Component/Login Page/LoginPage";
+import RegisterPage from "./Component/Register Page/RegisterPage";
 
 function App() {
   useEffect(() => {
@@ -55,6 +56,7 @@ function App() {
             <Route path="/add-employee" element={<AddEmployee />} />
             <Route path="/settings" element={<MainSettings />} />
             <Route path="/login" element={<LoginPage />} />
+            <Route path="/register" element={<RegisterPage />} />
           </Routes>
         </IndividualProvider>
       </div>

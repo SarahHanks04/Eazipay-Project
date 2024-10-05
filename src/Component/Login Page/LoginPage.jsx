@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { IndividualContext } from "../Individual/IndividualProvider";
 
 const LoginPage = () => {
@@ -44,7 +44,9 @@ const LoginPage = () => {
               required
             />
           </div>
-          {error && <p className="text-red-500 text-center mb-2 text-sm">{error}</p>}
+          {error && (
+            <p className="text-red-500 text-center mb-2 text-sm">{error}</p>
+          )}
           <button
             type="submit"
             className="w-full bg-[#11453B] text-white py-2 rounded-lg hover:bg-[#DAE9D0] hover:text-[#515251] transition-colors duration-300"
@@ -54,7 +56,12 @@ const LoginPage = () => {
         </form>
         <p className="text-[#515251] text-center mt-4">
           Don't have an account?{" "}
-          <span className="text-[#EA4E4B] cursor-pointer"> Register</span>
+          <Link
+            to="/register"
+            className="text-[#EA4E4B] cursor-pointer pl-[3px]"
+          >
+            Register
+          </Link>
         </p>
       </div>
     </div>
