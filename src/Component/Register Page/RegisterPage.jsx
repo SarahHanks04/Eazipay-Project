@@ -205,10 +205,10 @@ const RegisterPage = () => {
   };
 
   return (
-    <div className="register-page bg-[#FFE9E7] min-h-screen flex justify-center items-center">
+    <div className="register-page bg-[#DAE9D0] min-h-screen flex justify-center items-center">
       <form
         onSubmit={handleSubmit}
-        className="bg-[#DAE9D0] p-8 shadow-md rounded-lg max-w-md w-full"
+        className="bg-[#FFE9E7] p-8 shadow-md rounded-lg max-w-md w-full"
       >
         <h2 className="text-xl text-[#515251] text-center font-bold mb-6">
           Register
