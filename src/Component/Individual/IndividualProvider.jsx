@@ -98,7 +98,7 @@ const IndividualProvider = ({ children }) => {
     login,
     logout,
     error,
-    register, 
+    register,
     registrationSuccess,
   };
 
