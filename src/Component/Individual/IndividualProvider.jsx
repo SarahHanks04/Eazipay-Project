@@ -98,7 +98,7 @@ const IndividualProvider = ({ children }) => {
     login,
     logout,
     error,
-    register, // Add the register function to the context
+    register, 
     registrationSuccess,
   };
 
