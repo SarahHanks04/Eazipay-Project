@@ -12,7 +12,7 @@ const LoginPage = () => {
     e.preventDefault();
     await login(username, password);
     if (user) {
-      navigate("/dashboard");
+      navigate("/dashboard-layout");
     }
   };
 
