@@ -1,34 +1,3 @@
-// import axios from "axios";
-// import React, { createContext, useState } from "react";
-
-// export const IndividualContext = createContext();
-
-// const IndividualProvider = ({ children }) => {
-//   const [balance, setBalance] = useState(false);
-//   const [user, setUser] = useState("");
-//   const [error, setError] = useState(null); // Error state
-
-//   // Toggle Balance Visibility
-//   const toggleBalance = () => {
-//     setBalance((prev) => !prev);
-//   };
-
-// const login = async (username, password) => {
-//   try {
-//     const response = await axios.get("https://jsonplaceholder.typicode.com/users", {
-//       username,
-//       password,
-//     });
-//     setUser(response.data); // Set the user data returned by the API
-//     setError(null); // Clear any previous errors
-//   } catch (err) {
-//     console.error("Login failed", err);
-//     setError("Invalid username or password");
-//   }
-// };
-
-//
-
 import axios from "axios";
 import React, { createContext, useState } from "react";
 
@@ -68,14 +37,14 @@ const IndividualProvider = ({ children }) => {
   // Register function
   const register = async (username, email, password) => {
     try {
-      // In a real application, you would have a different API endpoint for registration
+      // API Endpoint For Registration
       const response = await axios.post("https://reqres.in/api/register", {
         // username,
         email,
         password,
       });
 
-      // Assuming a successful registration will return user data or a success message
+      // Return User Data or Success Message
       setRegistrationSuccess("Registration successful!");
       setError(null);
     } catch (err) {

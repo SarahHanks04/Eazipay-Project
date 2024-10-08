@@ -12,9 +12,8 @@ const DashboardLayout = () => {
 
   // Logout function
   const handleLogout = () => {
-    // Clear tokens or user data from localStorage or context if any
-    localStorage.removeItem("token"); // Example if token is stored in localStorage
-    navigate("/login"); // Redirect to login page
+    localStorage.removeItem("token");
+    navigate("/login");
   };
   return (
     <div className="dashboard-container flex bg-[#E7E8E7]">

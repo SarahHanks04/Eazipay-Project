@@ -19,7 +19,7 @@ const CompanyName = () => {
   const handleCacDocument = (e) => {
     const file = e.target.files[0];
     if (file) {
-      // Log the file to the console
+      // clg file
       console.log("Uploaded CAC Document File:", file);
 
       // Update local state
@@ -30,7 +30,7 @@ const CompanyName = () => {
       const url = URL.createObjectURL(file);
       setPreviewURL(url);
 
-      // Dispatch the preview URL to Redux
+      // Dispatch the preview URL
       dispatch(setCACDocument(url));
     }
   };

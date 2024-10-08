@@ -32,13 +32,13 @@ const CompanyAddress = () => {
       }
 
       // Validate file size (2MB max)
-      const maxSizeInBytes = 2 * 1024 * 1024; // 2MB
+      const maxSizeInBytes = 2 * 1024 * 1024;
       if (file.size > maxSizeInBytes) {
         setError("File size exceeds 2MB.");
         return;
       }
 
-      // Log the file to the console
+      // clg file
       console.log("Uploaded Proof of Address File:", file);
 
       // Update local state
@@ -49,7 +49,7 @@ const CompanyAddress = () => {
       const url = URL.createObjectURL(file);
       setPreviewURL(url);
 
-      // Dispatch the preview URL to Redux
+      // Dispatch the preview URL
       dispatch(setProofOfAddress(url));
     }
   };

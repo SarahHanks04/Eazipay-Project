@@ -14,18 +14,18 @@ const CompanyInfo = () => {
     const file = e.target.files[0];
     if (file) {
       setLogoFile(file);
-      // setFileName(file.name); // Update the button label to the file name
+      // setFileName(file.name);
 
       // Create a preview URL for the image
       const logoURL = URL.createObjectURL(file);
-      dispatch(setLogo(logoURL)); // Store the preview URL in Redux
+      dispatch(setLogo(logoURL)); 
 
-      // Log the file details to the console
+      // clg file details
       console.log("Uploaded Logo File:", file);
     }
   };
 
-  // Clean up the object URL when the component unmounts or when logoFile changes
+  // Clean up object URL when logoFile changes
   useEffect(() => {
     return () => {
       if (logo) {
@@ -47,7 +47,7 @@ const CompanyInfo = () => {
           <input
             type="file"
             id="logoUpload"
-            accept="image/*" // Restrict to image files
+            accept="image/*" 
             className="absolute inset-0 opacity-0 cursor-pointer"
             onChange={handleLogoFile}
           />
