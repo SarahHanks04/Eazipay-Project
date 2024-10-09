@@ -38,7 +38,7 @@ const RegisterPage = () => {
     const validationError = validateForm();
     if (validationError) {
       setError(validationError);
-      return; // Return if validation fails
+      return; 
     }
 
     // Call register function from context
