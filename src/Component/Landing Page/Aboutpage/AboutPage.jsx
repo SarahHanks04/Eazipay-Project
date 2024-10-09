@@ -5,7 +5,7 @@ import "../../../Component/Landing Page/Aboutpage/AboutPage.css";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import EaziWave from "../../../assets/EaziWave.png";
-// import BackgroundImage from "../../../assets/your-background-image.png"; // Import your background PNG
+
 
 const AboutPage = () => {
   const { ref, inView } = useInView({
@@ -28,7 +28,7 @@ const AboutPage = () => {
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
-          // backgroundColor: '#F0F7EB', // Optional fallback color
+          // backgroundColor: '#F0F7EB',
         }}
       >
         <div className="p-10 w-full">
