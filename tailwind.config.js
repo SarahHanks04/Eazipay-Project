@@ -8,7 +8,6 @@ export default {
     extend: {
       backgroundImage: {
         'about-container': "url('/img/EaziWave.svg')",
-        // 'footer-texture': "url('/img/footer-texture.png')",
       }
     },
   },
