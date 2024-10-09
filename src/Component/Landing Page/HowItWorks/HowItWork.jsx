@@ -68,7 +68,7 @@ const HowItWork = () => {
               <img
                 src="https://s3-alpha-sig.figma.com/img/afa0/c1e6/561787658c7d935e98021ba603c76f08?Expires=1729468800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=TPPRwWaYy4E-KvxruRUnEPre0X6c2LcrdcjQ0LJhPS5rLrc9HquPQsIe~1mMf4E8Oej4-2mZ9koYZpCHqgKN1wniOCwCIiLeCSwEjGvAP-FKMU9lp~QmeRs5k~Pm4NZtY7kYLCczDIGQ1SwAoL~eEVC7o7qJJvIePyOKtHXEIYzUOsC0KegLcukzjw64GAvzbl8pPRzPCgsx5q2GFSgxaH2mw6bLQQPd0TmqneP0vcXPjsUVc0l~Nu7piQEfbC5Ii4DuwivlWBbzxzsprcTHJMV7~VEd8YqUhsesF60TlaLM5pkwEb0GNCYmZ4mxeX8F3XrQISgsYp2O1ZGV6vM4NQ__" 
                 alt="Run Payroll Easily"
-                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[200px] md:w-[350px] rounded-[63px]"
+                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[200px] md:w-[350px] rounded-[40px] md:rounded-[63px]"
               />
             </div>
           </motion.div>
