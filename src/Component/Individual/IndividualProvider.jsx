@@ -9,7 +9,7 @@ const IndividualProvider = ({ children }) => {
   const [error, setError] = useState(null);
   const [registrationSuccess, setRegistrationSuccess] = useState(null);
 
-  // Toggle Balance Visibility
+  // Balance Visibility
   const toggleBalance = () => {
     setBalance((prev) => !prev);
   };
@@ -37,14 +37,11 @@ const IndividualProvider = ({ children }) => {
   // Register function
   const register = async (username, email, password) => {
     try {
-      // API Endpoint For Registration
-      const response = await axios.post("https://reqres.in/api/register", {
-        // username,
+      const response = await axios.post("https://jsonplaceholder.typicode.com/users", {
+        username,
         email,
         password,
       });
-
-      // Return User Data or Success Message
       setRegistrationSuccess("Registration successful!");
       setError(null);
     } catch (err) {
