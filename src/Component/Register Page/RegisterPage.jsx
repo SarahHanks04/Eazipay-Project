@@ -12,7 +12,7 @@ const RegisterPage = () => {
     confirmPassword: "",
   });
 
-  // Handle form input changes
+  // Handle input 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -29,10 +29,10 @@ const RegisterPage = () => {
     if (!/\S+@\S+\.\S+/.test(email)) {
       return "Please enter a valid email";
     }
-    return null; // No errors
+    return null; 
   };
 
-  // Handle form submission
+  // Handle Submission
   const handleSubmit = async (e) => {
     e.preventDefault();
     const validationError = validateForm();
