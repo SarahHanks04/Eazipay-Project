@@ -4,6 +4,7 @@ import AboutImage from "../../../assets/AboutImage.svg";
 import "../../../Component/Landing Page/Aboutpage/AboutPage.css";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import EaziWaze from "../../../assets/EaziWaze.png";
 
 const AboutPage = () => {
   const { ref, inView } = useInView({
@@ -43,55 +44,6 @@ const AboutPage = () => {
               expect our response shortly after.
             </p>
           </div>
-
-          {/* <div className="about-cards grid grid-cols-1 md:grid-cols-3 gap-8 mt-[40px] mx-auto justify-center items-center">
-            <div className="about-card p-8 bg-[#11453B] text-white rounded-lg shadow-md scale-100">
-              <h2 className="font-medium text-xl mb-5">
-                Tamper-proof Payroll for Life
-              </h2>
-              <div>
-                <p className="text-[12px] pb-4">
-                  Your staff payroll history is kept in one place forever.
-                </p>
-                <p className="text-[12px] pb-4">
-                  No more excel sheets or manual records.
-                </p>
-                <p className="text-[12px]">
-                  Download your payroll history anytime you need it.
-                </p>
-              </div>
-            </div>
-
-            <div className="about-card p-8 bg-[#11453B] text-white rounded-lg shadow-lg scale-100">
-              <h2 className="font-medium text-xl mb-5">
-                All Payroll, Anytime Anywhere
-              </h2>
-              <div>
-                <p className="text-[12px] pb-4">
-                  Wherever you are, Eazipay has got you covered on all your
-                  Payroll tasks.
-                </p>
-                <p className="text-[12px]">
-                  Whether it is Taxes, Pension insurances HMOs, trust funds,
-                  Eazipay handles all your compliances in one place and easily,
-                  in seconds!
-                </p>
-              </div>
-            </div>
-
-            <div className="about-card p-8 bg-[#11453B] text-white rounded-lg shadow-lg scale-100">
-              <h2 className="font-medium text-xl mb-5">Payroll in Seconds</h2>
-              <div>
-                <p className="text-[12px] pb-4">
-                  Never again will you spend more than 2 minutes on payroll.
-                </p>
-                <p className="text-[12px] pb-4">
-                  Just click on your staff and bulk-pay them at once.
-                </p>
-                <p className="text-[12px]">Payment is done permanently.</p>
-              </div>
-            </div>
-          </div> */}
         </div>
       </section>
     </motion.div>
