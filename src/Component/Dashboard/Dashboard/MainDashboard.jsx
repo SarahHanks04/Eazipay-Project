@@ -2,6 +2,7 @@ import React from "react";
 import "../DashboardLayout/Layout.css";
 import WalletBalance from "./WalletBalance";
 import Chart from "./Chart";
+import RecentActivities from "../../Recent Activities/RecentActivities";
 
 const MainDashboard = () => {
   return (
@@ -19,6 +20,7 @@ const MainDashboard = () => {
         <WalletBalance />
 
         <Chart />
+        <RecentActivities />
       </main>
     </section>
   );

@@ -73,6 +73,7 @@ const RecentActivities = () => {
 
   return (
     <div className="p-4">
+    <h1 className="text-[#292A29] text-[28px] font-[400] pt-10">Recent Activities</h1>
       <div className="flex justify-between items-center mb-4">
         <SearchBar onSearch={handleSearch} />
         <FilterBar onFilter={handleFilter} />
