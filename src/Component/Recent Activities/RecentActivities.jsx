@@ -81,8 +81,6 @@ const RecentActivities = () => {
           <SearchBar onSearch={handleSearch} />
           <FilterBar onFilter={handleFilter} />
         </div>
-        {/* <AddActivityForm onAddActivity={handleAddActivity} />
-      <ActivitiesList activities={filteredActivities} /> */}
         <Activities />
       </div>
     </div>

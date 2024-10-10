@@ -16,7 +16,25 @@ const AddActivityForm = ({ onAddActivity }) => {
       setModalIsOpen(true);
       return;
     }
-
+    
+    // Add New Activity Functionality
+    const handleAddActivity = (date, newActivity) => {
+      const existingDateIndex = filteredActivities.findIndex(
+        (day) => day.date === date
+      );
+  
+      if (existingDateIndex !== -1) {
+        const updatedActivities = [...filteredActivities];
+        updatedActivities[existingDateIndex].records.push(newActivity);
+        setFilteredActivities(updatedActivities);
+      } else {
+        const newDay = {
+          date,
+          records: [newActivity],
+        };
+        setFilteredActivities([...filteredActivities, newDay]);
+      }
+    }
     const currentDate = new Date();
     const day = currentDate.toLocaleString("en-us", { weekday: "long" });
     const month = currentDate.toLocaleString("en-us", { month: "long" });

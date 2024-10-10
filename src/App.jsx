@@ -16,6 +16,7 @@ import MainSettings from "./Component/Settings/MainSettings";
 import LoginPage from "./Component/Login Page/LoginPage";
 import RegisterPage from "./Component/Register Page/RegisterPage";
 import RecentActivities from "./Component/Recent Activities/RecentActivities";
+import AddActivityForm from "./Component/Recent Activities/AddActivitiesForm";
 
 function App() {
   useEffect(() => {
@@ -59,6 +60,7 @@ function App() {
             <Route path="/login" element={<LoginPage />} />
             <Route path="/register" element={<RegisterPage />} />
             <Route path="/recent-activities" element={<RecentActivities />} />
+            <Route path="//filter/new_employee" element={<AddActivityForm />} />
           </Routes>
         </IndividualProvider>
       </div>
