@@ -6,7 +6,7 @@ import RecentActivities from "../../Recent Activities/RecentActivities";
 
 const MainDashboard = () => {
   return (
-    <section className="dashboard bg-[#F2F1F1] min-h-screen w-full">
+    <section className="dashboard bg-gray-50 min-h-screen w-full">
       <main className="px-8">
         <div className="text-center lg:text-left pb-6 lg:pb-10">
           <h1 className="text-xl text-[#292A29] font-sans lg:text-2xl font-bold">
