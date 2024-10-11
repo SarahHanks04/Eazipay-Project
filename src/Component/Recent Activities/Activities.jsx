@@ -68,7 +68,7 @@ const Activities = () => {
         }
       };
   return (
-    <div className="overflow-y-auto h-[17rem] pt-8 bg-[#F2F1F1]">
+    <div className="overflow-y-auto h-[17rem] pt-8 bg-[#F2F1F1] rounded-[16px]">
       {/* <AddActivityForm onAddActivity={handleAddActivity} /> */}
       <ActivitiesList activities={filteredActivities} />
     </div>
