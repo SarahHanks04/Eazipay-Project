@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import activitiesData from "../Recent Activities/ActivitiesDataArray";
 import SearchBar from "./SearchBar";
 import FilterBar from "./FilterBar";
