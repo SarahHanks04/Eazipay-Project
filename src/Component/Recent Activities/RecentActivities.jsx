@@ -2,23 +2,9 @@ import React, { useState, useEffect } from "react";
 import activitiesData from "../Recent Activities/ActivitiesDataArray";
 import SearchBar from "./SearchBar";
 import FilterBar from "./FilterBar";
-import ActivitiesList from "./ActivitiesList";
-import AddActivityForm from "./AddActivitiesForm";
 import Activities from "./Activities";
 
 const RecentActivities = () => {
-  // const [filteredActivities, setFilteredActivities] = useState(() => {
-  //   // Retrieve Already Saved Activities From LS
-  //   const savedActivities = localStorage.getItem("activities");
-  //   return savedActivities ? JSON.parse(savedActivities) : activitiesData;
-  // });
-
-  // // Save Activities To LS
-  // useEffect(() => {
-  //   localStorage.setItem("activities", JSON.stringify(filteredActivities));
-  // }, [filteredActivities]);
-
-  // // Search Functionality
   const handleSearch = (query) => {
     if (!query) {
       setFilteredActivities(activitiesData);
@@ -35,7 +21,7 @@ const RecentActivities = () => {
     }
   };
 
-  // // Filter Functionality
+  // Filter Functionality
   const handleFilter = (filterType) => {
     if (!filterType) {
       setFilteredActivities(activitiesData);
@@ -51,25 +37,6 @@ const RecentActivities = () => {
       setFilteredActivities(result);
     }
   };
-
-  // // Add New Activity Functionality
-  // const handleAddActivity = (date, newActivity) => {
-  //   const existingDateIndex = filteredActivities.findIndex(
-  //     (day) => day.date === date
-  //   );
-
-  //   if (existingDateIndex !== -1) {
-  //     const updatedActivities = [...filteredActivities];
-  //     updatedActivities[existingDateIndex].records.push(newActivity);
-  //     setFilteredActivities(updatedActivities);
-  //   } else {
-  //     const newDay = {
-  //       date,
-  //       records: [newActivity],
-  //     };
-  //     setFilteredActivities([...filteredActivities, newDay]);
-  //   }
-  // };
 
   return (
     <div className="p-4">
