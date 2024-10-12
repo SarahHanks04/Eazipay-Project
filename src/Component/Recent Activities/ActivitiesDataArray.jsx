@@ -4,7 +4,7 @@ const activities = [
     records: [
       {
         employee: "Badmus Kemis",
-        employeeNumber: 52,
+        id: 52,
         payroll: "",
         activity: "Paid November 2022 salary",
         time: "16:15",
@@ -13,7 +13,7 @@ const activities = [
         employee: "Kalu Abasiama",
         payroll: "",
         activity: "Added new employee",
-        employeeNumber: 4,
+        id: 4,
         time: "14:32",
       },
     ],
@@ -40,7 +40,7 @@ const activities = [
     newActivities: [
       {
         employee: "",
-        employeeNumber: "43",
+        id: "43",
         activitiy: "",
         bonusName: "XMAS Bonus",
         amount: "₦11,167,890.00",
