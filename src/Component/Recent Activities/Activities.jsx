@@ -165,8 +165,8 @@ const Activities = () => {
 
   return (
     <div>
-      <button onClick={openModal} className="bg-blue-500 text-white p-2 rounded">
-        Add New Activity
+      <button onClick={openModal} className="bg-[#01AA8C] text-white p-2 w-6 h-6 flex justify-center items-center rounded-full">
+        +
       </button>
       <ActivitiesList activities={filteredActivities} />
       <AddActivityForm
