@@ -75,6 +75,55 @@
 // };
 
 // export default Activities;
+
+
+
+// import React, { useState, useEffect } from "react";
+// import activitiesData from "../Recent Activities/ActivitiesDataArray";
+// import ActivitiesList from "./ActivitiesList";
+// import AddActivityForm from "./AddActivitiesForm";
+
+
+// const Activities = () => {
+//   const [filteredActivities, setFilteredActivities] = useState(() => {
+//     const savedActivities = localStorage.getItem("activities");
+//     return savedActivities ? JSON.parse(savedActivities) : activitiesData;
+//   });
+
+//   useEffect(() => {
+//     localStorage.setItem("activities", JSON.stringify(filteredActivities));
+//   }, [filteredActivities]);
+
+//   // Add New Activity Functionality
+//   const handleAddActivity = (date, newActivity) => {
+//     const existingDateIndex = filteredActivities.findIndex(
+//       (day) => day.date === date
+//     );
+
+//     if (existingDateIndex !== -1) {
+//       const updatedActivities = [...filteredActivities];
+//       updatedActivities[existingDateIndex].records.push(newActivity);
+//       setFilteredActivities(updatedActivities);
+//     } else {
+//       const newDay = {
+//         date,
+//         records: [newActivity],
+//       };
+//       setFilteredActivities([...filteredActivities, newDay]);
+//     }
+//   };
+
+//   return (
+//     <div>
+//       <AddActivityForm onAddActivity={handleAddActivity} />
+//       <ActivitiesList activities={filteredActivities} />
+//     </div>
+//   );
+// };
+
+// export default Activities;
+
+
 import React, { useState, useEffect } from "react";
 import activitiesData from "../Recent Activities/ActivitiesDataArray";
 import ActivitiesList from "./ActivitiesList";
@@ -87,11 +136,12 @@ const Activities = () => {
     return savedActivities ? JSON.parse(savedActivities) : activitiesData;
   });
 
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
   useEffect(() => {
     localStorage.setItem("activities", JSON.stringify(filteredActivities));
   }, [filteredActivities]);
 
-  // Add New Activity Functionality
   const handleAddActivity = (date, newActivity) => {
     const existingDateIndex = filteredActivities.findIndex(
       (day) => day.date === date
@@ -110,10 +160,20 @@ const Activities = () => {
     }
   };
 
+  const openModal = () => setModalIsOpen(true);
+  const closeModal = () => setModalIsOpen(false);
+
   return (
     <div>
-      <AddActivityForm onAddActivity={handleAddActivity} />
+      <button onClick={openModal} className="bg-blue-500 text-white p-2 rounded">
+        Add New Activity
+      </button>
       <ActivitiesList activities={filteredActivities} />
+      <AddActivityForm
+        onAddActivity={handleAddActivity}
+        modalIsOpen={modalIsOpen}
+        closeModal={closeModal}
+      />
     </div>
   );
 };

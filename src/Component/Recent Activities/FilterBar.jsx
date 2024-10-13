@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import Filter from "../../assets/Filter.svg";
 
-const FilterBar = () => {
+const FilterBar = ({onOpenModal}) => {
   const [dropdown, setDropdown] = useState(false);
 
   const toggleDropdown = () => {
@@ -44,6 +44,16 @@ const FilterBar = () => {
             className="block px-4 py-2 hover:bg-gray-200 text-[#4caf50] text-sm md:text-base"
             activeClassName="font-bold"
             onClick={() => setDropdown(false)}
+          >
+            New Employee
+          </NavLink>
+          <NavLink
+            to="#"
+            className="block px-4 py-2 hover:bg-gray-200 text-[#4caf50] text-sm md:text-base"
+            onClick={() => {
+              setDropdown(false);
+              onOpenModal(); // Open the modal for new employee
+            }}
           >
             New Employee
           </NavLink>
