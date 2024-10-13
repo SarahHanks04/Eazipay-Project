@@ -3,11 +3,11 @@ import ActivitiesItem from "./ActivitiesItem";
 
 const ActivitiesList = ({ activities }) => {
   return (
-    <div className="p-8">
+    <div className="p-8 bg-gray-50 rounded-[16px]">
       {/* Map over the activities array and display items for specific dates */}
       {activities.map((activityGroup, index) => (
         <div key={index}>
-          <h2 className="text-lg font-semibold text-[#515251]">
+          <h2 className="text-lg font-semibold text-[#515251] p-4 mt-4">
             {activityGroup.date}
           </h2>
 

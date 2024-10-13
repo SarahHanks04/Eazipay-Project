@@ -57,7 +57,7 @@ const AddActivityForm = ({ onAddActivity, modalIsOpen, closeModal }) => {
       className="bg-white p-4 rounded-md shadow-lg w-[90%] max-w-[500px] mx-auto my-8"
       overlayClassName="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center"
     >
-      <h2 className="text-xl font-bold mb-4">Add New Activity</h2>
+      <h2 className="text-xl font-bold mb-4 text-[#515251]">Add New Activity</h2>
       <form onSubmit={handleSubmit} className="space-y-4">
         <input
           type="text"

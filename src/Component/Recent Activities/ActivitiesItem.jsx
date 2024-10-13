@@ -17,7 +17,7 @@ const ActivitiesItem = ({ activity }) => {
             <span className="text-white bg-[#01AA8C] py-2 px-3 rounded-full text-sm md:text-base">
               {getInitials(activity.employee)}
             </span>
-            <span className="text-[#515251] font-bold text-[16px] md:text-[18px]">
+            <span className="text-[#515251] font-semibold text-[14px] md:text-[16px]">
               {activity.employee}
             </span>
           </div>
