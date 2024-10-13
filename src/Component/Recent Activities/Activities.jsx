@@ -9,12 +9,12 @@
 //         const savedActivities = localStorage.getItem("activities");
 //         return savedActivities ? JSON.parse(savedActivities) : activitiesData;
 //       });
-    
-//       // Save Activities To LS 
+
+//       // Save Activities To LS
 //       useEffect(() => {
 //         localStorage.setItem("activities", JSON.stringify(filteredActivities));
 //       }, [filteredActivities]);
-    
+
 //       // Search Functionality
 //       const handleSearch = (query) => {
 //         if (!query) {
@@ -31,7 +31,7 @@
 //           setFilteredActivities(result);
 //         }
 //       };
-    
+
 //       // Filter Functionality
 //       const handleFilter = (filterType) => {
 //         if (!filterType) {
@@ -48,13 +48,13 @@
 //           setFilteredActivities(result);
 //         }
 //       };
-    
+
 //       // Add New Activity Functionality
 //       const handleAddActivity = (date, newActivity) => {
 //         const existingDateIndex = filteredActivities.findIndex(
 //           (day) => day.date === date
 //         );
-    
+
 //         if (existingDateIndex !== -1) {
 //           const updatedActivities = [...filteredActivities];
 //           updatedActivities[existingDateIndex].records.push(newActivity);
@@ -77,7 +77,6 @@
 
 // export default Activities
 
-
 import React, { useEffect, useState } from "react";
 import activitiesData from "../Recent Activities/ActivitiesDataArray";
 import ActivitiesList from "./ActivitiesList";
@@ -89,7 +88,7 @@ const Activities = () => {
     return savedActivities ? JSON.parse(savedActivities) : activitiesData;
   });
 
-  // Save Activities To LS 
+  // Save Activities To LS
   useEffect(() => {
     localStorage.setItem("activities", JSON.stringify(filteredActivities));
   }, [filteredActivities]);
@@ -148,15 +147,10 @@ const Activities = () => {
   };
 
   return (
-    <div className="overflow-y-auto h-[17rem] pt-8 bg-[#F2F1F1] rounded-[16px]">
-      {/* Search and Filter controls can be added here if needed */}
-      {/* <SearchBar onSearch={handleSearch} /> */}
-      {/* <FilterOptions onFilter={handleFilter} /> */}
-      
+    <div className="overflow-y-auto h-[26rem] pt-8 bg-[#F2F1F1] rounded-[16px]">
       <ActivitiesList activities={filteredActivities} />
     </div>
   );
 };
 
 export default Activities;
-
