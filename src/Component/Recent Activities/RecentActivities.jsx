@@ -5,40 +5,7 @@ import FilterBar from "./FilterBar";
 import Activities from "./Activities";
 
 const RecentActivities = () => {
-  // const handleSearch = (query) => {
-  //   if (!query) {
-  //     setFilteredActivities(activitiesData);
-  //   } else {
-  //     const result = filteredActivities
-  //       .map((day) => ({
-  //         ...day,
-  //         records: day.records.filter((record) =>
-  //           record.employee.toLowerCase().includes(query.toLowerCase())
-  //         ),
-  //       }))
-  //       .filter((day) => day.records.length > 0);
-  //     setFilteredActivities(result);
-  //   }
-  // };
-
-  // // Filter Functionality
-  // const handleFilter = (filterType) => {
-  //   if (!filterType) {
-  //     setFilteredActivities(activitiesData);
-  //   } else {
-  //     const result = filteredActivities
-  //       .map((day) => ({
-  //         ...day,
-  //         records: day.records.filter((record) =>
-  //           record.activity.toLowerCase().includes(filterType)
-  //         ),
-  //       }))
-  //       .filter((day) => day.records.length > 0);
-  //     setFilteredActivities(result);
-  //   }
-  // };
-
-
+  
 
   const [filteredActivities, setFilteredActivities] = useState(activitiesData);
 
@@ -69,12 +36,12 @@ const RecentActivities = () => {
 
   // Handle Search
   const handleSearch = (query) => {
-    filterActivities(query, ""); // Only update search, no filter
+    filterActivities(query, "");
   };
 
   // Handle Filter
   const handleFilter = (filterType) => {
-    filterActivities("", filterType); // Only update filter, no search
+    filterActivities("", filterType);
   };
 
   return (
