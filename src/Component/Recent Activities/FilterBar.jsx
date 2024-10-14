@@ -11,7 +11,7 @@ const FilterBar = ({onOpenModal}) => {
 
   return (
     <div className="relative flex items-center ml-2">
-      {/* Filter button with image and text */}
+      {/* Filter button */}
       <button
         onClick={toggleDropdown}
         className="flex items-center border-[1px] border-[#B5B6B5] bg-white rounded-full text-[#8D8E8D] px-[12px] py-[6px] md:px-[16px] md:py-[8px] w-full max-w-[150px] justify-between"
