@@ -28,7 +28,7 @@ const FilterBar = ({onOpenModal}) => {
             className="block px-4 py-2 hover:bg-gray-200 text-[#4caf50] text-sm md:text-base"
             onClick={() => {
               setDropdown(false);
-              onOpenModal(); // Open the modal for new employee
+              onOpenModal();
             }}
           >
             New Employee
