@@ -8,11 +8,11 @@ const RecentActivities = () => {
   const [filteredActivities, setFilteredActivities] = useState(activitiesData);
 
   const handleSearch = (query) => {
-    filterActivities(query, "");
+    filteredActivities(query, "");
   };
 
   const handleFilter = (filterType) => {
-    filterActivities("", filterType);
+    filteredActivities("", filterType);
   };
 
   const openModal = () => {
