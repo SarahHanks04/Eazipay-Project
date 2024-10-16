@@ -28,7 +28,6 @@ const AboutPage = () => {
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
-          // backgroundColor: '#F0F7EB',
         }}
       >
         <div className="p-10 w-full">
