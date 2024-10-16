@@ -29,7 +29,7 @@ const EasypayDemo = () => {
         </p>
       </div>
 
-      {/* Right Section - Form */}
+      {/* Right Section Form */}
       <div className="md:w-1/2 bg-white p-6 md:p-8 rounded-lg shadow-lg h-auto transition-transform transform hover:scale-105">
         <form className="space-y-4 text-center">
           {/* Centered Title and Description */}
