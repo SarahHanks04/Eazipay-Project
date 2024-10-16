@@ -89,7 +89,6 @@ export const {
   selectAll,
   searchEmployee,
   setDepartments,
-  // toggleView,
   addEmployee,
   archiveEmployees,
 } = teamSlice.actions;
