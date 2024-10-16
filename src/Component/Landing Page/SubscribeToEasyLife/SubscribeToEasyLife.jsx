@@ -52,7 +52,6 @@ const SubscribeToEasyLife = () => {
         <div
           className="image-container md:w-1/2 flex justify-center mt-6 md:mt-0"
           data-aos="fade-up"
-          // data-aos-delay="100"
         >
           <img
             src={SubscriptionImage}
