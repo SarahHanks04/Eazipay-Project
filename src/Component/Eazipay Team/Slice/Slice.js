@@ -68,7 +68,7 @@ export const teamSlice = createSlice({
         (employee) => !state.selectedEmployees.includes(employee.id)
       );
 
-      // Clear selected employees and reset the select all status
+      // Clear selected employees & reset the select all status
       state.selectedEmployees = [];
       state.isAllSelected = false;
     },
