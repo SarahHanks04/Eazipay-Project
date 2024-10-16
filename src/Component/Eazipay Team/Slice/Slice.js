@@ -59,7 +59,7 @@ export const teamSlice = createSlice({
         state.selectedEmployees.includes(employee.id)
       );
 
-      // Update archived employees and remove from the main list
+      // Update archived employees & remove from the main list
       state.archivedEmployees = [
         ...state.archivedEmployees,
         ...employeesToArchive,
