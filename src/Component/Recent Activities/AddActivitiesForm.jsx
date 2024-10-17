@@ -62,9 +62,9 @@ const AddActivityForm = ({ onAddActivity, modalIsOpen, closeModal }) => {
       </h2>
       <form onSubmit={handleSubmit} className="space-y-4">
         <input
+          type="text"
           id="employee"
           name="employee"
-          type="text"
           placeholder="Employee Name"
           value={employee}
           onChange={(e) => setEmployee(e.target.value)}
