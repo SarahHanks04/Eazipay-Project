@@ -60,6 +60,8 @@ const AddActivityForm = ({ onAddActivity, modalIsOpen, closeModal }) => {
       <h2 className="text-xl font-bold mb-4 text-[#515251]">Add New Activity</h2>
       <form onSubmit={handleSubmit} className="space-y-4">
         <input
+        id="employee"
+        name="employee"
           type="text"
           placeholder="Employee Name"
           value={employee}
@@ -69,6 +71,8 @@ const AddActivityForm = ({ onAddActivity, modalIsOpen, closeModal }) => {
         />
         <input
           type="text"
+          id="activity"
+        name="activity"
           placeholder="Activity"
           value={activity}
           onChange={(e) => setActivity(e.target.value)}
@@ -77,6 +81,8 @@ const AddActivityForm = ({ onAddActivity, modalIsOpen, closeModal }) => {
         />
         <input
           type="number"
+          id="number"
+        name="number"
           placeholder="Employee ID (optional)"
           value={id}
           onChange={(e) => setId(e.target.value)}
@@ -84,6 +90,8 @@ const AddActivityForm = ({ onAddActivity, modalIsOpen, closeModal }) => {
         />
         <input
           type="text"
+          id="bonusName"
+        name="bonusName"
           placeholder="Bonus Name (optional)"
           value={bonusName}
           onChange={(e) => setBonusName(e.target.value)}
