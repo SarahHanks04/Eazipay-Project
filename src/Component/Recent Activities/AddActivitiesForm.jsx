@@ -57,11 +57,13 @@ const AddActivityForm = ({ onAddActivity, modalIsOpen, closeModal }) => {
       className="bg-white p-4 rounded-md shadow-lg w-[90%] max-w-[500px] mx-auto my-8"
       overlayClassName="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center"
     >
-      <h2 className="text-xl font-bold mb-4 text-[#515251]">Add New Activity</h2>
+      <h2 className="text-xl font-bold mb-4 text-[#515251]">
+        Add New Activity
+      </h2>
       <form onSubmit={handleSubmit} className="space-y-4">
         <input
-        id="employee"
-        name="employee"
+          id="employee"
+          name="employee"
           type="text"
           placeholder="Employee Name"
           value={employee}
@@ -72,7 +74,7 @@ const AddActivityForm = ({ onAddActivity, modalIsOpen, closeModal }) => {
         <input
           type="text"
           id="activity"
-        name="activity"
+          name="activity"
           placeholder="Activity"
           value={activity}
           onChange={(e) => setActivity(e.target.value)}
@@ -82,7 +84,7 @@ const AddActivityForm = ({ onAddActivity, modalIsOpen, closeModal }) => {
         <input
           type="number"
           id="number"
-        name="number"
+          name="number"
           placeholder="Employee ID (optional)"
           value={id}
           onChange={(e) => setId(e.target.value)}
@@ -91,7 +93,7 @@ const AddActivityForm = ({ onAddActivity, modalIsOpen, closeModal }) => {
         <input
           type="text"
           id="bonusName"
-        name="bonusName"
+          name="bonusName"
           placeholder="Bonus Name (optional)"
           value={bonusName}
           onChange={(e) => setBonusName(e.target.value)}
@@ -99,6 +101,8 @@ const AddActivityForm = ({ onAddActivity, modalIsOpen, closeModal }) => {
         />
         <input
           type="text"
+          id="amount"
+          name="amount"
           placeholder="Amount (optional)"
           value={amount}
           onChange={(e) => setAmount(e.target.value)}
